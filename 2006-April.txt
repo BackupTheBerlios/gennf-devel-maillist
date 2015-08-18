@@ -1,0 +1,704 @@
+From florenz at berlios.de  Sat Apr  1 14:45:55 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Sat, 1 Apr 2006 14:45:55 +0200
+Subject: [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp
+ prototype/miscellaneous.lisp prototype/backend-cvs.lisp prototype/merge.lisp
+ prototype/configuration.lisp prototype/mapping.lisp prototype/sbcl.lisp
+ prototype/gennf.asd prototype/gennf.lisp
+Message-ID: <200604011245.k31CjtBs012972@sheep.berlios.de>
+
+florenz     2006/04/01 14:45:54 CEST
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/branch.lisp 
+                         prototype/miscellaneous.lisp 
+                         prototype/backend-cvs.lisp 
+                         prototype/merge.lisp 
+                         prototype/configuration.lisp 
+                         prototype/mapping.lisp 
+                         prototype/sbcl.lisp 
+                         prototype/gennf.asd 
+                         prototype/gennf.lisp 
+  Log:
+  The info subcommand is now finished. It is only a very rough version
+  but I think it does the job.
+  
+  Revision  Changes    Path
+  1.22      +21 -10    gennf/prototype/change.lisp
+  1.12      +13 -8     gennf/prototype/branch.lisp
+  1.21      +7 -3      gennf/prototype/miscellaneous.lisp
+  1.40      +2 -2      gennf/prototype/backend-cvs.lisp
+  1.7       +12 -2     gennf/prototype/merge.lisp
+  1.19      +2 -2      gennf/prototype/configuration.lisp
+  1.25      +5 -6      gennf/prototype/mapping.lisp
+  1.8       +6 -6      gennf/prototype/sbcl.lisp
+  1.22      +5 -4      gennf/prototype/gennf.asd
+  1.47      +31 -20    gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Sat Apr  1 15:03:35 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Sat, 1 Apr 2006 15:03:35 +0200
+Subject: [gennf-devel] cvs commit: gennf prototype/NOTES doc/gennf-report.tex
+ prototype/gennf.lisp
+Message-ID: <200604011303.k31D3ZvZ017255@sheep.berlios.de>
+
+florenz     2006/04/01 15:03:24 CEST
+
+  Modified files:
+    .                    prototype/NOTES 
+                         doc/gennf-report.tex 
+                         prototype/gennf.lisp 
+  Log:
+  The NOTES is file up to date now.
+  
+  The error message "Specify a subcommand!" is now also printed
+  if a subcommand is forgotten but other options are given (like
+  gennf foo --root ...).
+  
+  Revision  Changes    Path
+  1.18      +9 -14     gennf/prototype/NOTES
+  1.30      +6 -6      gennf/doc/gennf-report.tex
+  1.48      +5 -5      gennf/prototype/gennf.lisp
+
+
+From sigsegv at berlios.de  Mon Apr  3 14:15:34 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Mon, 3 Apr 2006 14:15:34 +0200
+Subject: [gennf-devel] cvs commit: gennf prototype/merging.lisp doc/gennf-report.tex
+ prototype/gennf.lisp
+Message-ID: <200604031215.k33CFYAt008365@sheep.berlios.de>
+
+sigsegv     2006/04/03 14:15:34 CEST
+
+  Modified files:
+    .                    prototype/merging.lisp 
+                         doc/gennf-report.tex 
+                         prototype/gennf.lisp 
+  Log:
+  gennf.lis:
+   *   subcommand-add: changed documentation string
+  doc/:
+   *   filled Implementation
+  
+  Revision  Changes    Path
+  1.14      +1 -2      gennf/prototype/merging.lisp
+  1.31      +71 -6     gennf/doc/gennf-report.tex
+  1.49      +3 -3      gennf/prototype/gennf.lisp
+
+
+From sigsegv at berlios.de  Mon Apr  3 16:12:20 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Mon, 3 Apr 2006 16:12:20 +0200
+Subject: [gennf-devel] cvs commit: gennf prototype/tests/test.sh prototype/gennf.lisp
+Message-ID: <200604031412.k33ECKUR023952@sheep.berlios.de>
+
+sigsegv     2006/04/03 16:12:20 CEST
+
+  Modified files:
+    .                    prototype/tests/test.sh 
+                         prototype/gennf.lisp 
+  Log:
+  gennf.lisp:
+  	sync at least not in do
+  test.sh:
+  	added gennf_up for updateing
+  
+  Revision  Changes    Path
+  1.3       +15 -0     gennf/prototype/tests/test.sh
+  1.50      +3 -3      gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Mon Apr  3 19:28:32 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 3 Apr 2006 19:28:32 +0200
+Subject: [gennf-devel] cvs commit: gennf demo/data/fd.1/tests.lisp prototype/gennf
+ demo/init.sh demo/clear.sh demo/data/fd.1/packages.lisp
+ demo/data/fd.1/fd.asd demo/data/fd.1/sudoku.lisp demo/data/conflicts-resolved/MAP
+ demo/lib.sh demo/data/fd.1/README demo/data/fd.2/send-more-money.lisp ...
+Message-ID: <200604031728.k33HSWdT005294@sheep.berlios.de>
+
+florenz     2006/04/03 19:28:32 CEST
+
+  Modified files:
+    .                    prototype/tests/test.sh 
+                         prototype/packages.lisp 
+                         prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+                         prototype/merging.lisp 
+                         prototype/mapping.lisp 
+                         prototype/sbcl.lisp 
+                         prototype/Makefile 
+                         prototype/gennf.asd 
+                         prototype/gennf.lisp 
+                         MAP 
+  Added files:
+    .                    demo/data/fd.1/tests.lisp 
+                         prototype/gennf 
+                         demo/init.sh 
+                         demo/clear.sh 
+                         demo/data/fd.1/packages.lisp 
+                         demo/data/fd.1/fd.asd 
+                         demo/data/fd.1/sudoku.lisp 
+                         demo/data/conflicts-resolved/MAP 
+                         demo/lib.sh 
+                         demo/data/fd.1/README 
+                         demo/data/fd.2/send-more-money.lisp 
+                         demo/demo.sh 
+                         demo/data/conflicts-resolved/fd.asd 
+                         demo/data/fd.3/fd.asd 
+                         demo/data/fd.1/fd.lisp 
+                         demo/data/fd.2/fd.lisp 
+                         demo/data/fd.1/send-more-money.lisp 
+  Log:
+  This is a rather big commit fixing lots of the bugs we found when
+  trying to sort out the demonstration for the presentation.
+  
+  1. I added a demo/ subdirectory. This contains data and scripts to generate
+     the scenery for the presentation: It creates a branch with some changes
+     containing the fd solver and sets up all repositories.
+     Furthermore, there is a script demo.sh which does more or less the
+     things to do in the presentation, i. e. branching and modifying both
+     branches and causing a crashed merge.
+  2. The test.sh script has no hardwired repository names anymore.
+  3. I removed the cldoc stuff as it was not working anyway.
+  4. The bug concerning common files in distribution-merge is fixed. The
+     routine now checks if files differ before merging them. If they do not,
+     they are not included in the merge entry which is generated afterwards.
+  5. I reduced the length of the conflict markers: they are now just the
+     string "ORIGIN" and "DESTINATION".
+  6. When in debug mode, the function invoke-program-silently is not
+     silent but puts out all output of the program.
+  7. Updated the Makefile, now all Lisp files are in the SOURCES list.
+  8. The command merge-finish now delegates removing the thrash to the user's
+     responsibilty (though the bug observed was just climbing up one
+     directory level too much).
+  9. Lots of small stufff like newlines at file ends, typos, missing
+     documentation strings, superfluous debug code
+  
+  Revision  Changes    Path
+  1.4       +20 -14    gennf/prototype/tests/test.sh
+  1.7       +1 -9      gennf/prototype/packages.lisp
+  1.24      +24 -13    gennf/prototype/distribution.lisp
+  1.20      +2 -2      gennf/prototype/configuration.lisp
+  1.15      +11 -12    gennf/prototype/merging.lisp
+  1.26      +6 -6      gennf/prototype/mapping.lisp
+  1.9       +12 -6     gennf/prototype/sbcl.lisp
+  1.6       +19 -10    gennf/prototype/Makefile
+  1.23      +4 -4      gennf/prototype/gennf.asd
+  1.51      +12 -28    gennf/prototype/gennf.lisp
+  1.36      +51 -0     gennf/MAP
+
+
+From florenz at berlios.de  Mon Apr  3 19:33:43 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 3 Apr 2006 19:33:43 +0200
+Subject: [gennf-devel] cvs commit: gennf prototype/driver-template MAP
+Message-ID: <200604031733.k33HXhQX007281@sheep.berlios.de>
+
+florenz     2006/04/03 19:33:43 CEST
+
+  Modified files:
+    .                    MAP 
+  Added files:
+    .                    prototype/driver-template 
+  Log:
+  Renamed the driver template to what it is: driver-template.
+  
+  Revision  Changes    Path
+  1.37      +3 -3      gennf/MAP
+
+
+From florenz at berlios.de  Mon Apr  3 20:14:10 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 3 Apr 2006 20:14:10 +0200
+Subject: [gennf-devel] cvs commit: gennf doc/gennf-report.tex
+Message-ID: <200604031814.k33IEA7E023515@sheep.berlios.de>
+
+florenz     2006/04/03 20:14:10 CEST
+
+  Modified files:
+    .                    doc/gennf-report.tex 
+  Log:
+  Corrected some typos in the report, some beutifying and a title page with
+  an abstract.
+  
+  Revision  Changes    Path
+  1.32      +93 -64    gennf/doc/gennf-report.tex
+
+
+From florenz at berlios.de  Mon Apr  3 23:47:15 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 3 Apr 2006 23:47:15 +0200
+Subject: [gennf-devel] cvs commit: gennf prototype/gennf.1 F-E5E5A05D81A0BB8A291DF012E6B464E3.1~
+ MAP TYPES
+Message-ID: <200604032147.k33LlFf5015636@sheep.berlios.de>
+
+florenz     2006/04/03 23:47:14 CEST
+
+  Modified files:
+    .                    MAP TYPES 
+  Added files:
+    .                    prototype/gennf.1 
+                         F-E5E5A05D81A0BB8A291DF012E6B464E3.1~ 
+  Log:
+  One more of those very superflous files: a manpage.
+  
+  Revision  Changes    Path
+  1.38      +3 -0      gennf/MAP
+  1.8       +3 -1      gennf/TYPES
+
+
+From florenz at berlios.de  Tue Apr  4 00:37:39 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 4 Apr 2006 00:37:39 +0200
+Subject: [gennf-devel] cvs commit: gennf INSTALL MAP
+Message-ID: <200604032237.k33Mbdis026192@sheep.berlios.de>
+
+florenz     2006/04/04 00:37:39 CEST
+
+  Modified files:
+    .                    MAP 
+  Added files:
+    .                    INSTALL 
+  Log:
+  Restructured the directories such that better fit a release.
+  
+  Revision  Changes    Path
+  1.39      +29 -26    gennf/MAP
+
+
+From florenz at berlios.de  Tue Apr  4 00:42:33 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 4 Apr 2006 00:42:33 +0200
+Subject: [gennf-devel] cvs commit: gennf src/Makefile
+Message-ID: <200604032242.k33MgXwv027189@sheep.berlios.de>
+
+florenz     2006/04/04 00:42:33 CEST
+
+  Modified files:
+    .                    src/Makefile 
+  Log:
+  Made creation of an image the default built.
+  
+  Revision  Changes    Path
+  1.7       +3 -1      gennf/src/Makefile
+
+
+From florenz at berlios.de  Tue Apr  4 01:03:11 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 4 Apr 2006 01:03:11 +0200
+Subject: [gennf-devel] cvs commit: gennf scripts/package.sh INSTALL
+ src/gennf.asd MAP
+Message-ID: <200604032303.k33N3BZJ009666@sheep.berlios.de>
+
+florenz     2006/04/04 01:03:11 CEST
+
+  Modified files:
+    .                    INSTALL 
+                         src/gennf.asd 
+                         MAP 
+  Added files:
+    .                    scripts/package.sh 
+  Log:
+  Added a packageing script. It is not yet complete but this is because
+  there are still some thing missing in the source (like built system etc.).
+  
+  Revision  Changes    Path
+  1.2       +2 -2      gennf/INSTALL
+  1.24      +2 -2      gennf/src/gennf.asd
+  1.40      +3 -0      gennf/MAP
+
+
+From sigsegv at berlios.de  Tue Apr  4 12:55:29 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Tue, 4 Apr 2006 12:55:29 +0200
+Subject: [gennf-devel] cvs commit: gennf Makefile.include Makefile
+ doc/makefile-folien doc/gennf.1 scripts/package.sh
+ doc/Makefile src/Makefile MAP
+ TYPES
+Message-ID: <200604041055.k34AtT5n004496@sheep.berlios.de>
+
+sigsegv     2006/04/04 12:55:28 CEST
+
+  Modified files:
+    .                    doc/gennf.1 
+                         scripts/package.sh 
+                         doc/Makefile 
+                         src/Makefile MAP 
+                         TYPES 
+  Added files:
+    .                    
+                         Makefile.include 
+                         Makefile 
+                         doc/makefile-folien 
+  Log:
+  recursive makefile structure and manpage change
+  
+  Revision  Changes    Path
+  1.2       +4 -2      gennf/doc/gennf.1
+  1.2       +11 -2     gennf/scripts/package.sh
+  1.11      +18 -27    gennf/doc/Makefile
+  1.8       +27 -12    gennf/src/Makefile
+  1.41      +10 -1     gennf/MAP
+  1.9       +1 -0      gennf/TYPES
+
+
+From sigsegv at berlios.de  Tue Apr  4 13:15:27 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Tue, 4 Apr 2006 13:15:27 +0200
+Subject: [gennf-devel] cvs commit: gennf tests/test.sh src/driver.in
+ src/gennf.lisp
+Message-ID: <200604041115.k34BFRU2012160@sheep.berlios.de>
+
+sigsegv     2006/04/04 13:15:27 CEST
+
+  Modified files:
+    .                    tests/test.sh 
+                         src/driver.in 
+                         src/gennf.lisp 
+  Log:
+  driver.in:
+  	corrected the --c to --core
+  gennf.lisp:
+  	cleaned some output
+  
+  Revision  Changes    Path
+  1.5       +1 -1      gennf/tests/test.sh
+  1.2       +1 -1      gennf/src/driver.in
+  1.52      +6 -4      gennf/src/gennf.lisp
+
+
+From sigsegv at berlios.de  Tue Apr  4 14:33:35 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Tue, 4 Apr 2006 14:33:35 +0200
+Subject: [gennf-devel] cvs commit: gennf tests/test.sh src/distribution.lisp
+ src/mapping.lisp src/gennf.lisp
+Message-ID: <200604041233.k34CXZpP010152@sheep.berlios.de>
+
+sigsegv     2006/04/04 14:33:35 CEST
+
+  Modified files:
+    .                    tests/test.sh 
+                         src/distribution.lisp 
+                         src/mapping.lisp 
+                         src/gennf.lisp 
+  Log:
+  various output cleanups
+  
+  Revision  Changes    Path
+  1.6       +20 -24    gennf/tests/test.sh
+  1.25      +3 -3      gennf/src/distribution.lisp
+  1.27      +2 -2      gennf/src/mapping.lisp
+  1.53      +11 -10    gennf/src/gennf.lisp
+
+
+From florenz at berlios.de  Tue Apr  4 16:38:00 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 4 Apr 2006 16:38:00 +0200
+Subject: [gennf-devel] cvs commit: gennf scripts/publish.sh tests/test.sh
+ src/backend.lisp doc/gennf.1 GNUmakefile.include
+ scripts/package.sh doc/GNUmakefile GNUmakefile
+ src/GNUmakefile src/error.lisp doc/GNUmakefile-folien ...
+Message-ID: <200604041438.k34Ec00G014925@sheep.berlios.de>
+
+florenz     2006/04/04 16:38:00 CEST
+
+  Modified files:
+    .                    tests/test.sh 
+                         src/backend.lisp 
+                         doc/gennf.1 
+                         GNUmakefile.include 
+                         scripts/package.sh 
+                         doc/GNUmakefile 
+                         GNUmakefile 
+                         src/GNUmakefile 
+                         src/error.lisp 
+                         doc/GNUmakefile-folien MAP 
+  Added files:
+    .                    scripts/publish.sh 
+  Log:
+  Several changes:
+  
+  1. Renamed Makefiles to GNUmakefiles as they do absolutely nothing with
+  e. g. Sun's make.
+  2. Cleaned up the Makefile for the transparencies.
+  3. Added a script to upload files to the webserver directory.
+  4. The makefile in doc can generate the CLDOC HTML files for our code.
+  5. Modified the packageing script to include all required files.
+  
+  Revision  Changes    Path
+  1.7       +21 -0     gennf/tests/test.sh
+  1.27      +2 -2      gennf/src/backend.lisp
+  1.3       +2 -2      gennf/doc/gennf.1
+  1.2       +29 -12    gennf/GNUmakefile.include
+  1.3       +42 -7     gennf/scripts/package.sh
+  1.12      +46 -13    gennf/doc/GNUmakefile
+  1.2       +9 -8      gennf/GNUmakefile
+  1.9       +14 -14    gennf/src/GNUmakefile
+  1.3       +24 -24    gennf/src/error.lisp
+  1.2       +24 -21    gennf/doc/GNUmakefile-folien
+  1.42      +9 -9      gennf/MAP
+
+
+From florenz at berlios.de  Tue Apr  4 17:32:53 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 4 Apr 2006 17:32:53 +0200
+Subject: [gennf-devel] cvs commit: gennf scripts/package.sh INSTALL
+Message-ID: <200604041532.k34FWrXm025252@sheep.berlios.de>
+
+florenz     2006/04/04 17:32:53 CEST
+
+  Modified files:
+    .                    scripts/package.sh 
+                         INSTALL 
+  Log:
+  1. A INSTALL file is now available with installation instructions.
+  2. Fixed the package script to include the GNUmakefiles.
+  
+  Revision  Changes    Path
+  1.4       +4 -4      gennf/scripts/package.sh
+  1.3       +75 -0     gennf/INSTALL
+
+
+From florenz at berlios.de  Tue Apr  4 18:27:11 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 4 Apr 2006 18:27:11 +0200
+Subject: [gennf-devel] cvs commit: gennf scripts/publish.sh INSTALL
+ htdoc/index.html
+Message-ID: <200604041627.k34GRBu4032587@sheep.berlios.de>
+
+florenz     2006/04/04 18:27:11 CEST
+
+  Modified files:
+    .                    scripts/publish.sh 
+                         INSTALL 
+                         htdoc/index.html 
+  Log:
+  1. Updated the webpage. We have release 0.1 out now.
+  2. Fixed small bugs in publish.sh and in the INSTALL file.
+  
+  Revision  Changes    Path
+  1.2       +4 -3      gennf/scripts/publish.sh
+  1.4       +1 -1      gennf/INSTALL
+  1.15      +20 -9     gennf/htdoc/index.html
+
+
+From florenz at berlios.de  Thu Apr  6 10:47:17 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 6 Apr 2006 10:47:17 +0200
+Subject: [gennf-devel] cvs commit: gennf scripts/publish.sh doc/gennf-report.tex
+Message-ID: <200604060847.k368lHjR029719@sheep.berlios.de>
+
+florenz     2006/04/06 10:47:16 CEST
+
+  Modified files:
+    .                    scripts/publish.sh 
+                         doc/gennf-report.tex 
+  Log:
+  1. Corrected a buf in the publish.sh script.
+  2. Revised the report. There is still one part to be finished, the rest
+     should be fine. pagebreaks have to be examined, though, as last task.
+  
+  Revision  Changes    Path
+  1.3       +7 -6      gennf/scripts/publish.sh
+  1.33      +302 -259  gennf/doc/gennf-report.tex
+
+
+From florenz at berlios.de  Thu Apr  6 11:21:37 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 6 Apr 2006 11:21:37 +0200
+Subject: [gennf-devel] cvs commit: gennf doc/gennf-report.tex
+Message-ID: <200604060921.k369LbJP026355@sheep.berlios.de>
+
+florenz     2006/04/06 11:21:37 CEST
+
+  Modified files:
+    .                    doc/gennf-report.tex 
+  Log:
+  Included a short paragraph about the release 0.1.
+  
+  Revision  Changes    Path
+  1.34      +10 -0     gennf/doc/gennf-report.tex
+
+
+From florenz at berlios.de  Thu Apr  6 13:12:57 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 6 Apr 2006 13:12:57 +0200
+Subject: [gennf-devel] cvs commit: gennf demo/init.sh demo/lib.sh
+ demo/demo.sh
+Message-ID: <200604061112.k36BCvtY000916@sheep.berlios.de>
+
+florenz     2006/04/06 13:12:57 CEST
+
+  Modified files:
+    .                    demo/init.sh 
+                         demo/lib.sh 
+                         demo/demo.sh 
+  Log:
+  Corrected small errors in the demo scripts that they work with sh.
+  
+  Revision  Changes    Path
+  1.2       +3 -2      gennf/demo/init.sh
+  1.2       +1 -1      gennf/demo/lib.sh
+  1.2       +1 -1      gennf/demo/demo.sh
+
+
+From sigsegv at berlios.de  Thu Apr  6 13:20:28 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Thu, 6 Apr 2006 13:20:28 +0200
+Subject: [gennf-devel] cvs commit: gennf doc/gennf-report.tex
+Message-ID: <200604061120.k36BKShC003278@sheep.berlios.de>
+
+sigsegv     2006/04/06 13:20:28 CEST
+
+  Modified files:
+    .                    doc/gennf-report.tex 
+  Log:
+  section about "emacs breaking gennf's structure"
+  
+  Revision  Changes    Path
+  1.35      +11 -6     gennf/doc/gennf-report.tex
+
+
+From florenz at berlios.de  Thu Apr  6 14:33:33 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 6 Apr 2006 14:33:33 +0200
+Subject: [gennf-devel] cvs commit: gennf doc/gennf-praesentation.tex htdoc/index.html
+ doc/gennf-report.tex MAP
+Message-ID: <200604061233.k36CXX5K015899@sheep.berlios.de>
+
+florenz     2006/04/06 14:33:33 CEST
+
+  Modified files:
+    .                    htdoc/index.html 
+                         doc/gennf-report.tex 
+                         MAP 
+  Added files:
+    .                    doc/gennf-praesentation.tex 
+  Log:
+  Added presentation TeX-file.
+  
+  Revision  Changes    Path
+  1.16      +7 -7      gennf/htdoc/index.html
+  1.36      +15 -11    gennf/doc/gennf-report.tex
+  1.43      +3 -0      gennf/MAP
+
+
+From florenz at berlios.de  Thu Apr  6 19:25:06 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 6 Apr 2006 19:25:06 +0200
+Subject: [gennf-devel] cvs commit: gennf doc/demo-ueberblick.tex demo/lib.sh
+ MAP
+Message-ID: <200604061725.k36HP6vj024724@sheep.berlios.de>
+
+florenz     2006/04/06 19:25:06 CEST
+
+  Modified files:
+    .                    demo/lib.sh MAP 
+  Added files:
+    .                    doc/demo-ueberblick.tex 
+  Log:
+  Added a tiny slide with an in principle illustration of the demonstration.
+  Adjusted the demo scripts to reflect that fdis now called find.
+  
+  Revision  Changes    Path
+  1.3       +1 -1      gennf/demo/lib.sh
+  1.44      +3 -0      gennf/MAP
+
+
+From sigsegv at berlios.de  Thu Apr  6 20:07:20 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Thu, 6 Apr 2006 20:07:20 +0200
+Subject: [gennf-devel] cvs commit: gennf doc/gennf-praesentation.tex
+Message-ID: <200604061807.k36I7KhV015156@sheep.berlios.de>
+
+sigsegv     2006/04/06 20:07:19 CEST
+
+  Modified files:
+    .                    doc/gennf-praesentation.tex 
+  Log:
+  Foliensatz ist gestartet
+  ist aber noch nicht fedddich.
+  
+  Revision  Changes    Path
+  1.2       +136 -9    gennf/doc/gennf-praesentation.tex
+
+
+From florenz at berlios.de  Fri Apr  7 13:44:44 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Fri, 7 Apr 2006 13:44:44 +0200
+Subject: [gennf-devel] cvs commit: gennf doc/gennf-praesentation.tex
+Message-ID: <200604071144.k37Biiri015870@sheep.berlios.de>
+
+florenz     2006/04/07 13:44:44 CEST
+
+  Modified files:
+    .                    doc/gennf-praesentation.tex 
+  Log:
+  Ueberarbeitung der Folien.
+  
+  Revision  Changes    Path
+  1.3       +109 -75   gennf/doc/gennf-praesentation.tex
+
+
+From florenz at berlios.de  Fri Apr  7 15:43:56 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Fri, 7 Apr 2006 15:43:56 +0200
+Subject: [gennf-devel] cvs commit: gennf doc/demo-script.txt demo/init.sh
+ demo/demo.sh MAP
+Message-ID: <200604071343.k37Dhucf003592@sheep.berlios.de>
+
+florenz     2006/04/07 15:43:56 CEST
+
+  Modified files:
+    .                    demo/init.sh 
+                         demo/demo.sh MAP 
+  Added files:
+    .                    doc/demo-script.txt 
+  Log:
+  Fixed bugs in demo scripts.
+  
+  Revision  Changes    Path
+  1.3       +1 -1      gennf/demo/init.sh
+  1.3       +1 -1      gennf/demo/demo.sh
+  1.45      +3 -0      gennf/MAP
+
+
+From sigsegv at berlios.de  Fri Apr  7 15:47:28 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Fri, 7 Apr 2006 15:47:28 +0200
+Subject: [gennf-devel] cvs commit: gennf doc/gennf-praesentation.tex
+Message-ID: <200604071347.k37DlSro006703@sheep.berlios.de>
+
+sigsegv     2006/04/07 15:47:27 CEST
+
+  Modified files:
+    .                    doc/gennf-praesentation.tex 
+  Log:
+  small changes in slides
+  
+  Revision  Changes    Path
+  1.4       +23 -21    gennf/doc/gennf-praesentation.tex
+
+
+From florenz at berlios.de  Fri Apr  7 16:03:52 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Fri, 7 Apr 2006 16:03:52 +0200
+Subject: [gennf-devel] cvs commit: gennf htdoc/index.html doc/GNUmakefile-folien
+Message-ID: <200604071403.k37E3q2g027349@sheep.berlios.de>
+
+florenz     2006/04/07 16:03:52 CEST
+
+  Modified files:
+    .                    htdoc/index.html 
+                         doc/GNUmakefile-folien 
+  Log:
+  Slided of final presentation are now available on the webpage.
+  
+  Revision  Changes    Path
+  1.17      +8 -5      gennf/htdoc/index.html
+  1.3       +9 -9      gennf/doc/GNUmakefile-folien
+
+

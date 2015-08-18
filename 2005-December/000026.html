@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] cvs commit: gennf F-21E77680CDA9B7DA5133627E47FA0987.lisp F-A371BDB8A9CF854FE00C63C1264B1D99.lisp
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2005-December/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20F-21E77680CDA9B7DA5133627E47FA0987.lisp%20F-A371BDB8A9CF854FE00C63C1264B1D99.lisp&In-Reply-To=%3C200512282134.jBSLYUOW009201%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000025.html">
+   <LINK REL="Next"  HREF="000027.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] cvs commit: gennf F-21E77680CDA9B7DA5133627E47FA0987.lisp F-A371BDB8A9CF854FE00C63C1264B1D99.lisp</H1>
+    <B>florenz at BerliOS</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20F-21E77680CDA9B7DA5133627E47FA0987.lisp%20F-A371BDB8A9CF854FE00C63C1264B1D99.lisp&In-Reply-To=%3C200512282134.jBSLYUOW009201%40sheep.berlios.de%3E"
+       TITLE="[gennf-devel] cvs commit: gennf F-21E77680CDA9B7DA5133627E47FA0987.lisp F-A371BDB8A9CF854FE00C63C1264B1D99.lisp">florenz at berlios.de
+       </A><BR>
+    <I>Wed Dec 28 22:34:30 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000025.html">[gennf-devel] cvs commit: gennf F-01BFC84C7B5AA5916B1FC95B481B0DEC.lisp F-1474E393BE5A7EE83A4D941FA7F9346D.lisp F-14CAFC7D376F98290437724D067E63D4.lisp F-1923CF213AD21CBF66474E7C068BFECD.lisp F-21E77680CDA9B7DA5133627E47FA0987.lisp F-24AFFF4D581EFC1C6EF802B4AAB5D27B.lisp F-32A3BA955BE6E0F48ABEDF5C42137D5E.lisp F-389E31FE3917AE1504A5DED502AE3D51.lisp F-3C5788EDE4B0D9B8845BDDF41278246B.lisp F-3CDB81902ABA8CED95DEEBDA8590315E.lisp F-40CE98E89C297E85E8209004EE49D372.lisp ...
+</A></li>
+        <LI>Next message: <A HREF="000027.html">[gennf-devel] cvs commit: gennf F-2019E4ADA667C5B63A025FC92E791425 F-6F5CF359180DF63FF524635A543C7BF5 MAP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#26">[ date ]</a>
+              <a href="thread.html#26">[ thread ]</a>
+              <a href="subject.html#26">[ subject ]</a>
+              <a href="author.html#26">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>florenz     2005/12/28 22:34:30 CET
+
+  Modified files:
+    .                    F-21E77680CDA9B7DA5133627E47FA0987.lisp 
+                         F-A371BDB8A9CF854FE00C63C1264B1D99.lisp 
+  Log:
+  It is now possible to start Meta-CVS as an SBCL image.
+  Currently I work on a usable Makefile.
+  
+  There were problems with the terminal handling. In the original
+  Meta-CVS code ctermid was queried and opened as a stream. This
+  causes trouble with SBCL, probably due to buffering issues.
+  It is much easier to use *debug-io* as input-/output-stream
+  for error handling (this way ctermid is not needed and to me
+  it seems quite reasonable that Common Lisp implementation bind
+  this variable to something sensible).
+  
+  Revision  Changes    Path
+  1.3       +1 -0      gennf/F-21E77680CDA9B7DA5133627E47FA0987.lisp
+  1.3       +15 -4     gennf/F-A371BDB8A9CF854FE00C63C1264B1D99.lisp
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000025.html">[gennf-devel] cvs commit: gennf F-01BFC84C7B5AA5916B1FC95B481B0DEC.lisp F-1474E393BE5A7EE83A4D941FA7F9346D.lisp F-14CAFC7D376F98290437724D067E63D4.lisp F-1923CF213AD21CBF66474E7C068BFECD.lisp F-21E77680CDA9B7DA5133627E47FA0987.lisp F-24AFFF4D581EFC1C6EF802B4AAB5D27B.lisp F-32A3BA955BE6E0F48ABEDF5C42137D5E.lisp F-389E31FE3917AE1504A5DED502AE3D51.lisp F-3C5788EDE4B0D9B8845BDDF41278246B.lisp F-3CDB81902ABA8CED95DEEBDA8590315E.lisp F-40CE98E89C297E85E8209004EE49D372.lisp ...
+</A></li>
+	<LI>Next message: <A HREF="000027.html">[gennf-devel] cvs commit: gennf F-2019E4ADA667C5B63A025FC92E791425 F-6F5CF359180DF63FF524635A543C7BF5 MAP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#26">[ date ]</a>
+              <a href="thread.html#26">[ thread ]</a>
+              <a href="subject.html#26">[ subject ]</a>
+              <a href="author.html#26">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

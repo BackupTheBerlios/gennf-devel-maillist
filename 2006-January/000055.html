@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] cvs commit: gennf F-2019E4ADA667C5B63A025FC92E791425 F-4E51556B59366B0B171CCB0B1F4F10A9.lisp F-A371BDB8A9CF854FE00C63C1264B1D99.lisp F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex F-FC7FF8AB6284EA194323C1565C752386.lisp MAP
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2006-January/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20F-2019E4ADA667C5B63A025FC92E791425%20F-4E51556B59366B0B171CCB0B1F4F10A9.lisp%0A%20F-A371BDB8A9CF854FE00C63C1264B1D99.lisp%20F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex%20F-FC7FF8AB6284EA194323C1565C752386.lisp%0A%20MAP&In-Reply-To=%3C200601161052.k0GAqH8v020379%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000054.html">
+   <LINK REL="Next"  HREF="000056.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] cvs commit: gennf F-2019E4ADA667C5B63A025FC92E791425 F-4E51556B59366B0B171CCB0B1F4F10A9.lisp F-A371BDB8A9CF854FE00C63C1264B1D99.lisp F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex F-FC7FF8AB6284EA194323C1565C752386.lisp MAP</H1>
+    <B>florenz at BerliOS</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20F-2019E4ADA667C5B63A025FC92E791425%20F-4E51556B59366B0B171CCB0B1F4F10A9.lisp%0A%20F-A371BDB8A9CF854FE00C63C1264B1D99.lisp%20F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex%20F-FC7FF8AB6284EA194323C1565C752386.lisp%0A%20MAP&In-Reply-To=%3C200601161052.k0GAqH8v020379%40sheep.berlios.de%3E"
+       TITLE="[gennf-devel] cvs commit: gennf F-2019E4ADA667C5B63A025FC92E791425 F-4E51556B59366B0B171CCB0B1F4F10A9.lisp F-A371BDB8A9CF854FE00C63C1264B1D99.lisp F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex F-FC7FF8AB6284EA194323C1565C752386.lisp MAP">florenz at berlios.de
+       </A><BR>
+    <I>Mon Jan 16 11:52:17 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000054.html">[gennf-devel] cvs commit: gennf F-495FEBB82844E29E9B8F3FFCC5A022E2.lisp F-4E51556B59366B0B171CCB0B1F4F10A9.lisp F-251FB522127FF9A2E037DC904E011C8D.lisp F-080CF3710F46A1C94984A6BD78462AC7.lisp F-03018E8471DDD49AD47174CF158A9286.lisp F-EADDB60DB86A4481CF5D126F61D78F8E.lisp F-769D6330165D17D4921D9970720734B7.lisp F-CD3AD5F3865AB17A39CA5B43B888F3F2.lisp F-83B842F2203F2AE6157E430B77F56938.lisp F-FC7FF8AB6284EA194323C1565C752386.lisp F-48D1C070D93800E7560AEE00EF78D0B2.lisp ...
+</A></li>
+        <LI>Next message: <A HREF="000056.html">[gennf-devel] cvs commit: gennf F-B457DDF336218AEBF4158383BC4BB553.html F-3E293DB4FDF7D70F72EC266B13D28C65.txt
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#55">[ date ]</a>
+              <a href="thread.html#55">[ thread ]</a>
+              <a href="subject.html#55">[ subject ]</a>
+              <a href="author.html#55">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>florenz     2006/01/16 11:52:17 CET
+
+  Modified files:
+    .                    F-2019E4ADA667C5B63A025FC92E791425 
+                         F-4E51556B59366B0B171CCB0B1F4F10A9.lisp 
+                         F-A371BDB8A9CF854FE00C63C1264B1D99.lisp 
+                         F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex 
+                         F-FC7FF8AB6284EA194323C1565C752386.lisp 
+                         MAP 
+  Log:
+  cvs-commit is implemented. It signals an error if some files are
+  outdated.
+  
+  Revision  Changes    Path
+  1.3       +7 -4      gennf/F-2019E4ADA667C5B63A025FC92E791425
+  1.2       +32 -57    gennf/F-4E51556B59366B0B171CCB0B1F4F10A9.lisp
+  1.5       +1 -32     gennf/F-A371BDB8A9CF854FE00C63C1264B1D99.lisp
+  1.20      +15 -1     gennf/F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex
+  1.2       +3 -1      gennf/F-FC7FF8AB6284EA194323C1565C752386.lisp
+  1.15      +39 -0     gennf/MAP
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000054.html">[gennf-devel] cvs commit: gennf F-495FEBB82844E29E9B8F3FFCC5A022E2.lisp F-4E51556B59366B0B171CCB0B1F4F10A9.lisp F-251FB522127FF9A2E037DC904E011C8D.lisp F-080CF3710F46A1C94984A6BD78462AC7.lisp F-03018E8471DDD49AD47174CF158A9286.lisp F-EADDB60DB86A4481CF5D126F61D78F8E.lisp F-769D6330165D17D4921D9970720734B7.lisp F-CD3AD5F3865AB17A39CA5B43B888F3F2.lisp F-83B842F2203F2AE6157E430B77F56938.lisp F-FC7FF8AB6284EA194323C1565C752386.lisp F-48D1C070D93800E7560AEE00EF78D0B2.lisp ...
+</A></li>
+	<LI>Next message: <A HREF="000056.html">[gennf-devel] cvs commit: gennf F-B457DDF336218AEBF4158383BC4BB553.html F-3E293DB4FDF7D70F72EC266B13D28C65.txt
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#55">[ date ]</a>
+              <a href="thread.html#55">[ thread ]</a>
+              <a href="subject.html#55">[ subject ]</a>
+              <a href="author.html#55">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] cvs commit: gennf prototype/merging.lisp prototype/backend-cvs.lisp prototype/files.lisp prototype/gennf.asd prototype/directories.lisp prototype/gennf.lisp MAP
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2006-February/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/merging.lisp%20prototype/backend-cvs.lisp%0A%20prototype/files.lisp%20prototype/gennf.asd%20prototype/directories.lisp%0A%20prototype/gennf.lisp%20MAP&In-Reply-To=%3C200602151600.k1FG0L85007450%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000127.html">
+   <LINK REL="Next"  HREF="000129.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] cvs commit: gennf prototype/merging.lisp prototype/backend-cvs.lisp prototype/files.lisp prototype/gennf.asd prototype/directories.lisp prototype/gennf.lisp MAP</H1>
+    <B>florenz at BerliOS</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/merging.lisp%20prototype/backend-cvs.lisp%0A%20prototype/files.lisp%20prototype/gennf.asd%20prototype/directories.lisp%0A%20prototype/gennf.lisp%20MAP&In-Reply-To=%3C200602151600.k1FG0L85007450%40sheep.berlios.de%3E"
+       TITLE="[gennf-devel] cvs commit: gennf prototype/merging.lisp prototype/backend-cvs.lisp prototype/files.lisp prototype/gennf.asd prototype/directories.lisp prototype/gennf.lisp MAP">florenz at berlios.de
+       </A><BR>
+    <I>Wed Feb 15 17:00:21 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000127.html">[gennf-devel] Abschlusscolloquium
+</A></li>
+        <LI>Next message: <A HREF="000129.html">[gennf-devel] cvs commit: gennf prototype/TODO prototype/merging.lisp MAP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#128">[ date ]</a>
+              <a href="thread.html#128">[ thread ]</a>
+              <a href="subject.html#128">[ subject ]</a>
+              <a href="author.html#128">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>florenz     2006/02/15 17:00:21 CET
+
+  Modified files:
+    .                    prototype/backend-cvs.lisp 
+                         prototype/files.lisp 
+                         prototype/gennf.asd 
+                         prototype/directories.lisp 
+                         prototype/gennf.lisp 
+                         MAP 
+  Added files:
+    .                    prototype/merging.lisp 
+  Log:
+  We have now a two-way merge algorithm implemented.
+  Therefore, we have file merging.lisp which performs a two-way merge
+  either on files or sequences.
+  In particular, the following happens:
+  (two-way-merge file1 file2) means that file1 is merged into file2.
+  A diff of the two files is computed using cl-difflib (an implementation
+  of the Gestalt Pattern Matching algorithm by Ratcliff and Obershelp).
+  All chunks of file1 that can be inserted into file2 are inserted.
+  All chunks of file1 that conflict with a chunk in file2 are
+  insrted annotated.
+  All chunks of file2 that do not exist in file1 are inserted
+  with an annotation.
+  The annotations are produced by functions which can be passed to
+  two-way-merge.
+  Furthermore, it is possible to tell two-way-merge, if it shall
+  produce a merge despite conflicts or not. If the corresponding argument
+  is nil, a merge is only produced if no conflicts arise.
+  The return value of two-way-merge is a multiple-value with the
+  first being the merge and the second indicating if conflicts arose or not.
+  
+  I am not sure, if I broke some parts of the code today, may be it is
+  inconsistent after this commit.
+  
+  Next step is probably three-way-merge. This is due to the fact, that on
+  sandbox update or on commits, there is in fact an ancestor which can
+  be used during merge. This can in fact be handled by cvs but I think it is
+  better that all mergeing is either done by cvs or by gennf. And for
+  branching/merging it cannot be done by cvs, so it should be done by gennf
+  for update and commit as well.
+  
+  Revision  Changes    Path
+  1.29      +8 -3      gennf/prototype/backend-cvs.lisp
+  1.6       +12 -2     gennf/prototype/files.lisp
+  1.6       +2 -2      gennf/prototype/gennf.asd
+  1.9       +12 -4     gennf/prototype/directories.lisp
+  1.19      +33 -10    gennf/prototype/gennf.lisp
+  1.24      +3 -0      gennf/MAP
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000127.html">[gennf-devel] Abschlusscolloquium
+</A></li>
+	<LI>Next message: <A HREF="000129.html">[gennf-devel] cvs commit: gennf prototype/TODO prototype/merging.lisp MAP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#128">[ date ]</a>
+              <a href="thread.html#128">[ thread ]</a>
+              <a href="subject.html#128">[ subject ]</a>
+              <a href="author.html#128">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

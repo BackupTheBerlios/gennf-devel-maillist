@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp prototype/backend.lisp prototype/packages.lisp prototype/miscellaneous.lisp prototype/access.lisp prototype/backend-cvs.lisp prototype/configuration.lisp prototype/files.lisp prototype/sbcl.lisp prototype/gennf.asd ...
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2006-February/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/change.lisp%20prototype/branch.lisp%0A%20prototype/backend.lisp%20prototype/packages.lisp%20prototype/miscellaneous.lisp%0A%20prototype/access.lisp%20prototype/backend-cvs.lisp%20prototype/configuration.lisp%0A%20prototype/files.lisp%20prototype/sbcl.lisp%20prototype/gennf.asd%20...&In-Reply-To=%3C200602071805.k17I5ACT011525%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000100.html">
+   <LINK REL="Next"  HREF="000102.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp prototype/backend.lisp prototype/packages.lisp prototype/miscellaneous.lisp prototype/access.lisp prototype/backend-cvs.lisp prototype/configuration.lisp prototype/files.lisp prototype/sbcl.lisp prototype/gennf.asd ...</H1>
+    <B>florenz at BerliOS</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/change.lisp%20prototype/branch.lisp%0A%20prototype/backend.lisp%20prototype/packages.lisp%20prototype/miscellaneous.lisp%0A%20prototype/access.lisp%20prototype/backend-cvs.lisp%20prototype/configuration.lisp%0A%20prototype/files.lisp%20prototype/sbcl.lisp%20prototype/gennf.asd%20...&In-Reply-To=%3C200602071805.k17I5ACT011525%40sheep.berlios.de%3E"
+       TITLE="[gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp prototype/backend.lisp prototype/packages.lisp prototype/miscellaneous.lisp prototype/access.lisp prototype/backend-cvs.lisp prototype/configuration.lisp prototype/files.lisp prototype/sbcl.lisp prototype/gennf.asd ...">florenz at berlios.de
+       </A><BR>
+    <I>Tue Feb  7 19:05:10 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000100.html">[gennf-devel] cvs commit: gennf doc/Makefile htdocs/index.html MAP
+</A></li>
+        <LI>Next message: <A HREF="000102.html">[gennf-devel] cvs commit: gennf doc/folien.tex
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#101">[ date ]</a>
+              <a href="thread.html#101">[ thread ]</a>
+              <a href="subject.html#101">[ subject ]</a>
+              <a href="author.html#101">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>florenz     2006/02/07 19:05:10 CET
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/branch.lisp 
+                         prototype/backend.lisp 
+                         prototype/packages.lisp 
+                         prototype/miscellaneous.lisp 
+                         prototype/access.lisp 
+                         prototype/backend-cvs.lisp 
+                         prototype/configuration.lisp 
+                         prototype/files.lisp 
+                         prototype/sbcl.lisp 
+                         prototype/gennf.asd 
+                         prototype/directories.lisp 
+                         prototype/commit.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  Bugfix: After introduction of the retry macro the creation of
+  empty branches did not work anymore. It is now fixed.
+  
+  Documentation: All files contain a more or less terse description
+  of their content directly below the license header.
+  
+  (By the way: Tinaa is not compiling with SBCL at the moment. I
+  will try the 0.9.9 release or else submit a bug report.)
+  
+  Revision  Changes    Path
+  1.2       +4 -1      gennf/prototype/change.lisp
+  1.2       +3 -1      gennf/prototype/branch.lisp
+  1.21      +4 -1      gennf/prototype/backend.lisp
+  1.2       +7 -2      gennf/prototype/packages.lisp
+  1.9       +52 -41    gennf/prototype/miscellaneous.lisp
+  1.2       +3 -1      gennf/prototype/access.lisp
+  1.20      +5 -1      gennf/prototype/backend-cvs.lisp
+  1.2       +4 -1      gennf/prototype/configuration.lisp
+  1.2       +4 -1      gennf/prototype/files.lisp
+  1.3       +6 -1      gennf/prototype/sbcl.lisp
+  1.2       +9 -8      gennf/prototype/gennf.asd
+  1.3       +7 -1      gennf/prototype/directories.lisp
+  1.2       +3 -1      gennf/prototype/commit.lisp
+  1.9       +12 -5     gennf/prototype/gennf.lisp
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000100.html">[gennf-devel] cvs commit: gennf doc/Makefile htdocs/index.html MAP
+</A></li>
+	<LI>Next message: <A HREF="000102.html">[gennf-devel] cvs commit: gennf doc/folien.tex
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#101">[ date ]</a>
+              <a href="thread.html#101">[ thread ]</a>
+              <a href="subject.html#101">[ subject ]</a>
+              <a href="author.html#101">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

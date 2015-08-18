@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp prototype/TODO prototype/debug.lisp prototype/gennf.lisp
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2006-February/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/change.lisp%20prototype/branch.lisp%0A%20prototype/TODO%20prototype/debug.lisp%20prototype/gennf.lisp&In-Reply-To=%3C200602181618.k1IGIhZW022750%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000139.html">
+   <LINK REL="Next"  HREF="000141.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp prototype/TODO prototype/debug.lisp prototype/gennf.lisp</H1>
+    <B>florenz at BerliOS</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/change.lisp%20prototype/branch.lisp%0A%20prototype/TODO%20prototype/debug.lisp%20prototype/gennf.lisp&In-Reply-To=%3C200602181618.k1IGIhZW022750%40sheep.berlios.de%3E"
+       TITLE="[gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp prototype/TODO prototype/debug.lisp prototype/gennf.lisp">florenz at berlios.de
+       </A><BR>
+    <I>Sat Feb 18 17:18:43 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000139.html">[gennf-devel] cvs commit: gennf prototype/mapping.lisp
+</A></li>
+        <LI>Next message: <A HREF="000141.html">[gennf-devel] cvs commit: gennf doc/scratchpad.tex
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#140">[ date ]</a>
+              <a href="thread.html#140">[ thread ]</a>
+              <a href="subject.html#140">[ subject ]</a>
+              <a href="author.html#140">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>florenz     2006/02/18 17:18:43 CET
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/branch.lisp 
+                         prototype/TODO 
+                         prototype/debug.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  1. Beautified (well, sort of) debug output.
+  2. Some more functions to work with changes and change sequences:
+     There is now a function retrieve-latest changes which returns
+     the latest change sequence directly from the repository without
+     local file modifications.
+     A function to get all files participating in a branch is also
+     available now.
+  3. commit now signals an error if files are to be commited which
+     have changed in the meantime. This has to be extended in the future
+     of course (see TODO).
+     It works now in temporary directories to avoid cvs up calls.
+  
+  Revision  Changes    Path
+  1.10      +26 -4     gennf/prototype/change.lisp
+  1.7       +26 -9     gennf/prototype/branch.lisp
+  1.3       +7 -1      gennf/prototype/TODO
+  1.2       +7 -5      gennf/prototype/debug.lisp
+  1.22      +65 -37    gennf/prototype/gennf.lisp
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000139.html">[gennf-devel] cvs commit: gennf prototype/mapping.lisp
+</A></li>
+	<LI>Next message: <A HREF="000141.html">[gennf-devel] cvs commit: gennf doc/scratchpad.tex
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#140">[ date ]</a>
+              <a href="thread.html#140">[ thread ]</a>
+              <a href="subject.html#140">[ subject ]</a>
+              <a href="author.html#140">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

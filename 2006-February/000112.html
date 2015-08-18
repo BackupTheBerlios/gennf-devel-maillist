@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] cvs commit: gennf prototype/backend-cvs.lisp prototype/gennf.lisp
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2006-February/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/backend-cvs.lisp%20prototype/gennf.lisp&In-Reply-To=%3C200602121830.k1CIUVLi024502%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000111.html">
+   <LINK REL="Next"  HREF="000113.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] cvs commit: gennf prototype/backend-cvs.lisp prototype/gennf.lisp</H1>
+    <B>florenz at BerliOS</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/backend-cvs.lisp%20prototype/gennf.lisp&In-Reply-To=%3C200602121830.k1CIUVLi024502%40sheep.berlios.de%3E"
+       TITLE="[gennf-devel] cvs commit: gennf prototype/backend-cvs.lisp prototype/gennf.lisp">florenz at berlios.de
+       </A><BR>
+    <I>Sun Feb 12 19:30:31 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000111.html">[gennf-devel] cvs commit: gennf doc/scratchpad.tex
+</A></li>
+        <LI>Next message: <A HREF="000113.html">[gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp prototype/packages.lisp prototype/backend-cvs.lisp prototype/merge.lisp prototype/files.lisp prototype/gennf.asd
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#112">[ date ]</a>
+              <a href="thread.html#112">[ thread ]</a>
+              <a href="subject.html#112">[ subject ]</a>
+              <a href="author.html#112">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>florenz     2006/02/12 19:30:30 CET
+
+  Modified files:
+    .                    prototype/backend-cvs.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  I have found a solution for the checkout/commit problem.
+  The trouble was that co/up -r sets sticky tags so that committing
+  with these files is not possible.
+  As cvs is no longer responsible for sensible or insane commits
+  a routine that checks out an older change in a way that committing
+  with these files is possible is necessary.
+  The first approach was to use -p option to co/up and write into
+  appropriate files. But this omits entries in cvs' meta data and
+  committing with these files is not possible.
+  What is done now is perhaps not very beautiful but seems to work:
+  If no revision is given, co/up -jHEAD is executed which yields
+  the same result as co/up without any option. If a certain revision
+  is required (because a certain change is required)
+  co/up -jHEAD -j1.n is passed to cvs. As the checkout-change function
+  is general and defaults to latest change if no told otherwise, two
+  -j options are passed to cvs in any case.
+  An exception is for the change, access and branch files because
+  they are not included in a change and it is always the
+  latest revision which is fetched.
+  Furthermore, there are two backend-cvs routines for checkout: one uses
+  cvs co, the other one uses cvs up. This is because for the first
+  checkout co has to be used to build the cvs meta durectory etc.
+  For subsequent calls up has to be used to keep those meta data intact.
+  The routine cvs-get automatically dispatches to the correct routine
+  (depending on the existence of a CVS directory in the destination
+  directory).
+  
+  Revision  Changes    Path
+  1.25      +82 -77    gennf/prototype/backend-cvs.lisp
+  1.14      +12 -12    gennf/prototype/gennf.lisp
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000111.html">[gennf-devel] cvs commit: gennf doc/scratchpad.tex
+</A></li>
+	<LI>Next message: <A HREF="000113.html">[gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp prototype/packages.lisp prototype/backend-cvs.lisp prototype/merge.lisp prototype/files.lisp prototype/gennf.asd
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#112">[ date ]</a>
+              <a href="thread.html#112">[ thread ]</a>
+              <a href="subject.html#112">[ subject ]</a>
+              <a href="author.html#112">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] cvs commit: gennf demo/data/fd.1/tests.lisp prototype/gennf demo/init.sh demo/clear.sh demo/data/fd.1/packages.lisp demo/data/fd.1/fd.asd demo/data/fd.1/sudoku.lisp demo/data/conflicts-resolved/MAP demo/lib.sh demo/data/fd.1/README demo/data/fd.2/send-more-money.lisp ...
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2006-April/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20demo/data/fd.1/tests.lisp%20prototype/gennf%0A%20demo/init.sh%20demo/clear.sh%20demo/data/fd.1/packages.lisp%0A%20demo/data/fd.1/fd.asd%20demo/data/fd.1/sudoku.lisp%20demo/data/conflicts-resolved/MAP%0A%20demo/lib.sh%20demo/data/fd.1/README%20demo/data/fd.2/send-more-money.lisp%20...&In-Reply-To=%3C200604031728.k33HSWdT005294%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000212.html">
+   <LINK REL="Next"  HREF="000214.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] cvs commit: gennf demo/data/fd.1/tests.lisp prototype/gennf demo/init.sh demo/clear.sh demo/data/fd.1/packages.lisp demo/data/fd.1/fd.asd demo/data/fd.1/sudoku.lisp demo/data/conflicts-resolved/MAP demo/lib.sh demo/data/fd.1/README demo/data/fd.2/send-more-money.lisp ...</H1>
+    <B>florenz at BerliOS</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20demo/data/fd.1/tests.lisp%20prototype/gennf%0A%20demo/init.sh%20demo/clear.sh%20demo/data/fd.1/packages.lisp%0A%20demo/data/fd.1/fd.asd%20demo/data/fd.1/sudoku.lisp%20demo/data/conflicts-resolved/MAP%0A%20demo/lib.sh%20demo/data/fd.1/README%20demo/data/fd.2/send-more-money.lisp%20...&In-Reply-To=%3C200604031728.k33HSWdT005294%40sheep.berlios.de%3E"
+       TITLE="[gennf-devel] cvs commit: gennf demo/data/fd.1/tests.lisp prototype/gennf demo/init.sh demo/clear.sh demo/data/fd.1/packages.lisp demo/data/fd.1/fd.asd demo/data/fd.1/sudoku.lisp demo/data/conflicts-resolved/MAP demo/lib.sh demo/data/fd.1/README demo/data/fd.2/send-more-money.lisp ...">florenz at berlios.de
+       </A><BR>
+    <I>Mon Apr  3 19:28:32 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000212.html">[gennf-devel] cvs commit: gennf prototype/tests/test.sh prototype/gennf.lisp
+</A></li>
+        <LI>Next message: <A HREF="000214.html">[gennf-devel] cvs commit: gennf prototype/driver-template MAP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#213">[ date ]</a>
+              <a href="thread.html#213">[ thread ]</a>
+              <a href="subject.html#213">[ subject ]</a>
+              <a href="author.html#213">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>florenz     2006/04/03 19:28:32 CEST
+
+  Modified files:
+    .                    prototype/tests/test.sh 
+                         prototype/packages.lisp 
+                         prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+                         prototype/merging.lisp 
+                         prototype/mapping.lisp 
+                         prototype/sbcl.lisp 
+                         prototype/Makefile 
+                         prototype/gennf.asd 
+                         prototype/gennf.lisp 
+                         MAP 
+  Added files:
+    .                    demo/data/fd.1/tests.lisp 
+                         prototype/gennf 
+                         demo/init.sh 
+                         demo/clear.sh 
+                         demo/data/fd.1/packages.lisp 
+                         demo/data/fd.1/fd.asd 
+                         demo/data/fd.1/sudoku.lisp 
+                         demo/data/conflicts-resolved/MAP 
+                         demo/lib.sh 
+                         demo/data/fd.1/README 
+                         demo/data/fd.2/send-more-money.lisp 
+                         demo/demo.sh 
+                         demo/data/conflicts-resolved/fd.asd 
+                         demo/data/fd.3/fd.asd 
+                         demo/data/fd.1/fd.lisp 
+                         demo/data/fd.2/fd.lisp 
+                         demo/data/fd.1/send-more-money.lisp 
+  Log:
+  This is a rather big commit fixing lots of the bugs we found when
+  trying to sort out the demonstration for the presentation.
+  
+  1. I added a demo/ subdirectory. This contains data and scripts to generate
+     the scenery for the presentation: It creates a branch with some changes
+     containing the fd solver and sets up all repositories.
+     Furthermore, there is a script demo.sh which does more or less the
+     things to do in the presentation, i. e. branching and modifying both
+     branches and causing a crashed merge.
+  2. The test.sh script has no hardwired repository names anymore.
+  3. I removed the cldoc stuff as it was not working anyway.
+  4. The bug concerning common files in distribution-merge is fixed. The
+     routine now checks if files differ before merging them. If they do not,
+     they are not included in the merge entry which is generated afterwards.
+  5. I reduced the length of the conflict markers: they are now just the
+     string &quot;ORIGIN&quot; and &quot;DESTINATION&quot;.
+  6. When in debug mode, the function invoke-program-silently is not
+     silent but puts out all output of the program.
+  7. Updated the Makefile, now all Lisp files are in the SOURCES list.
+  8. The command merge-finish now delegates removing the thrash to the user's
+     responsibilty (though the bug observed was just climbing up one
+     directory level too much).
+  9. Lots of small stufff like newlines at file ends, typos, missing
+     documentation strings, superfluous debug code
+  
+  Revision  Changes    Path
+  1.4       +20 -14    gennf/prototype/tests/test.sh
+  1.7       +1 -9      gennf/prototype/packages.lisp
+  1.24      +24 -13    gennf/prototype/distribution.lisp
+  1.20      +2 -2      gennf/prototype/configuration.lisp
+  1.15      +11 -12    gennf/prototype/merging.lisp
+  1.26      +6 -6      gennf/prototype/mapping.lisp
+  1.9       +12 -6     gennf/prototype/sbcl.lisp
+  1.6       +19 -10    gennf/prototype/Makefile
+  1.23      +4 -4      gennf/prototype/gennf.asd
+  1.51      +12 -28    gennf/prototype/gennf.lisp
+  1.36      +51 -0     gennf/MAP
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000212.html">[gennf-devel] cvs commit: gennf prototype/tests/test.sh prototype/gennf.lisp
+</A></li>
+	<LI>Next message: <A HREF="000214.html">[gennf-devel] cvs commit: gennf prototype/driver-template MAP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#213">[ date ]</a>
+              <a href="thread.html#213">[ thread ]</a>
+              <a href="subject.html#213">[ subject ]</a>
+              <a href="author.html#213">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

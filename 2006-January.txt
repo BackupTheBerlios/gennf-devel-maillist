@@ -1,0 +1,2186 @@
+From sigsegv at alchiba.ni.cs.tu-berlin.de  Mon Jan  2 10:20:58 2006
+From: sigsegv at alchiba.ni.cs.tu-berlin.de (Fabian Otto)
+Date: Mon, 2 Jan 2006 10:20:58 +0100
+Subject: [gennf-devel] Frohes neues Jahr
+Message-ID: <20060102092058.GA29546@alchiba.ni.cs.tu-berlin.de>
+
+Hallo Leute, 
+
+als erstes moechte ich euch ein frohes neues Jahr wuenschen, um euch gleich
+darauf sagen zu muessen, dass ich mit meinem anstehenden Referat ueber die
+Feiertage nicht so vorrangekommen bin wie ich wollte. D.h. ich werde Morgen
+(am Dienstag) nicht erscheinen, und mich auch ansonsten zurueck nehmen. 
+
+Das Referat ist Vorrausichtlich nach dem 17.1. gehalten, und ich werde wieder
+zurverfuegung stehen.
+
+Desweiteren freue ich mich ueber Florians Fortschritt, hinsichtlich der
+Portierung zu SBCL.  Moeglicherweise wiederhole ich mich hier auch, aber 
+welche Version von mcvs wurde nun schlussendlich fuer den Port benutzt? 
+
+Otto
+
+-- 
+Bookmarks: http://del.icio.us/sigsegv
+jabber: sigsegv at jabber.ccc.de
+wiki/blog: http://blog.jotpee.de
+
+
+From florenz at cs.tu-berlin.de  Mon Jan  2 10:31:34 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Mon, 2 Jan 2006 10:31:34 +0100
+Subject: [gennf-devel] Frohes neues Jahr
+In-Reply-To: <20060102092058.GA29546@alchiba.ni.cs.tu-berlin.de>
+References: <20060102092058.GA29546@alchiba.ni.cs.tu-berlin.de>
+Message-ID: <20060102093134.GA9483@caro.cs.tu-berlin.de>
+
+On Mon, Jan 02, 2006 at 10:20:58AM +0100, Fabian Otto wrote:
+> Hallo Leute, 
+> 
+> als erstes moechte ich euch ein frohes neues Jahr wuenschen,
+Euch auch!
+
+> um euch gleich
+> darauf sagen zu muessen, dass ich mit meinem anstehenden Referat ueber die
+> Feiertage nicht so vorrangekommen bin wie ich wollte. D.h. ich werde Morgen
+> (am Dienstag) nicht erscheinen, und mich auch ansonsten zurueck nehmen. 
+> 
+> Das Referat ist Vorrausichtlich nach dem 17.1. gehalten, und ich werde wieder
+> zurverfuegung stehen.
+> 
+> Desweiteren freue ich mich ueber Florians Fortschritt, hinsichtlich der
+> Portierung zu SBCL.  Moeglicherweise wiederhole ich mich hier auch, aber 
+> welche Version von mcvs wurde nun schlussendlich fuer den Port benutzt? 
+Latest stable, 1.0.13 ist das glaube ich.
+
+Florian
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060102/e03b5327/attachment.pgp>
+
+From florenz at cs.tu-berlin.de  Mon Jan  2 21:25:06 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Mon, 2 Jan 2006 21:25:06 +0100
+Subject: [gennf-devel] Planung
+Message-ID: <20060102202506.GA23380@fiesta.cs.tu-berlin.de>
+
+Hallo zusammen,
+
+da Otto ja morgen nicht da ist, muessen wir uns morgen auch nicht vor der
+Projektsitzung treffen. Ich moechte dann aber spaetestens Anfang
+naechster Woche ein vorbereitetes Treffen ansetzen, um definitiv
+festzulegen, wer eigentlich was bis wann macht. Ich weiss nicht wie das
+bei Euch aussieht, aber ich brauche diesen Schein auf jeden Fall und muss
+den allergroessten Teil meiner Arbeit bis Mitte Februar erledigt haben.
+Ich habe in den Ferien sicherlich 40 bis 50 leider relativ unproduktive
+Stunden investiert; Letzteres lag aber daran, dass ich zwischenzeitlich
+nicht in der Lage war, die einfachen Probleme schnell zu loesen.
+Damit die Angelegenheit jetzt endgueltig in Schuss kommt, habe ich
+beschlossen, meine 6 SWS an der FU zu knicken, um mehr Zeit zu haben.
+Ich wuerde von Euch dann gerne wissen, wie Eure Zeitplanung aussieht.
+Fall es so ist, dass im Wesentlichen bis kurz vor Vorlesungsende nichts
+passiert, muessen wir uns entweder darauf einigen, dass Ihr Euch mit dem
+zufrieden geben muesst, was ich bis dahin fertig habe (was zu groesseren
+Teilen bereits konzipiert ist) oder Ihr muesst mir sagen, was Ihr
+haben wollt. Aus meiner Position muss leider vermieden werden, dass
+dieses Projekt nicht fertig wird, da ich keinen Bock habe, mir wegen
+solches Krames die Diplomzeitplanung um die Ohren fliegen zu lassen.
+Weiterhin muss beschlossen werden, wie mit der Kurzpraesentation Ende
+dieses Monats umgegangen werden soll. Mein Vorschlag ist, dass aus
+Effizienzgruenden einer von uns die Vorbereitung und auch den Vortrag
+uebernimmt. Wegen der Kuerze kann dies auch kurz vorher geschehen, es
+sollte aber bald klar sein, wer das macht. Ich wuerde das machen,
+bestehe aber nicht darauf.
+Da ich letzte Nacht nur drei Stunden schlief, passiert heute nichts
+mehr, ich werde aber morgen vormittag versuchen, die Luecken in der
+Planung zu schliessen und auch evtl. zu ueberlegen, wie wir das am
+besten in den Meta-CVS Code hineinbekommen (ich kenne inzwischen einige
+Ecken von diesem Code -- leider noch nicht alle -- und muss sagen, dass
+er mir eigentlich nicht richtig gut gefaellt).
+Versteht meine Mail nicht so, dass ich jetzt doch sauer werde, dass ich
+bis jetzt der alleine gearbeitet habe, ich will nur wissen, was Sache
+ist.
+
+Gruesse,
+
+Florian
+
+PS. Hannes, ich hatte mit Jan-Olaf gesprochen, und er sagte, dass die
+noch offenen SV-Aufgaben eigentlich noch dieses -- also letztes -- Jahr
+fertig sein sollten. Siehst Du Moeglichkeiten, Dich bis Donnerstag
+nachmittag der Grammatik oder einem der beiden Compiler anzunehmen?
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060102/255b1909/attachment.pgp>
+
+From florenz at berlios.de  Tue Jan  3 11:23:00 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 3 Jan 2006 11:23:00 +0100
+Subject: [gennf-devel] cvs commit: gennf F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex
+Message-ID: <200601031023.k03AN0b1022950@sheep.berlios.de>
+
+florenz     2006/01/03 11:23:00 CET
+
+  Modified files:
+    .                    F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex 
+  Log:
+  To add more confusion: What formerly was called change is now called
+  commit and what formerly was called commit is now called change. That
+  means we have the following inheritance.
+  
+    change
+      |
+      v
+    commit
+      |
+      v
+    merge
+  
+  I have also added a short description of the SBCL port to the
+  implementation issues section.
+  
+  Revision  Changes    Path
+  1.18      +124 -59   gennf/F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex
+
+
+From florenz at berlios.de  Tue Jan  3 13:21:30 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 3 Jan 2006 13:21:30 +0100
+Subject: [gennf-devel] cvs commit: gennf F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex
+Message-ID: <200601031221.k03CLUS7000741@sheep.berlios.de>
+
+florenz     2006/01/03 13:21:30 CET
+
+  Modified files:
+    .                    F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex 
+  Log:
+  Rough descriptions of the operations checkin, branch, merge and
+  update are completed.
+  A simple implementation for the access identifier is sketched and
+  Meta-CVS's routines which have to go are indicated.
+  
+  Revision  Changes    Path
+  1.19      +153 -16   gennf/F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex
+
+
+From florenz at berlios.de  Tue Jan  3 13:37:30 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 3 Jan 2006 13:37:30 +0100
+Subject: [gennf-devel] cvs commit: gennf F-B457DDF336218AEBF4158383BC4BB553.html
+Message-ID: <200601031237.k03CbUCE006624@sheep.berlios.de>
+
+florenz     2006/01/03 13:37:30 CET
+
+  Modified files:
+    .                    F-B457DDF336218AEBF4158383BC4BB553.html 
+  Log:
+  The "current state of project" section is now up to date and
+  the W3C CSS validator warnings have vanished.
+  
+  The term exchange change-commit has been reflected.
+  
+  Revision  Changes    Path
+  1.7       +22 -24    gennf/F-B457DDF336218AEBF4158383BC4BB553.html
+
+
+From hannes at mehnert.org  Tue Jan  3 15:58:01 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Tue, 03 Jan 2006 15:58:01 +0100
+Subject: [gennf-devel] Planung
+In-Reply-To: <20060102202506.GA23380@fiesta.cs.tu-berlin.de>
+References: <20060102202506.GA23380@fiesta.cs.tu-berlin.de>
+Message-ID: <43BA90F9.3000401@mehnert.org>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hallo Florian, Otto,
+
+Florian Lorenzen wrote:
+| da Otto ja morgen nicht da ist, muessen wir uns morgen auch nicht vor der
+| Projektsitzung treffen. Ich moechte dann aber spaetestens Anfang
+| naechster Woche ein vorbereitetes Treffen ansetzen, um definitiv
+| festzulegen, wer eigentlich was bis wann macht. Ich weiss nicht wie das
+| bei Euch aussieht, aber ich brauche diesen Schein auf jeden Fall und muss
+| den allergroessten Teil meiner Arbeit bis Mitte Februar erledigt haben.
+| Ich habe in den Ferien sicherlich 40 bis 50 leider relativ unproduktive
+| Stunden investiert; Letzteres lag aber daran, dass ich zwischenzeitlich
+| nicht in der Lage war, die einfachen Probleme schnell zu loesen.
+| Damit die Angelegenheit jetzt endgueltig in Schuss kommt, habe ich
+| beschlossen, meine 6 SWS an der FU zu knicken, um mehr Zeit zu haben.
+| Ich wuerde von Euch dann gerne wissen, wie Eure Zeitplanung aussieht.
+| Fall es so ist, dass im Wesentlichen bis kurz vor Vorlesungsende nichts
+| passiert, muessen wir uns entweder darauf einigen, dass Ihr Euch mit dem
+| zufrieden geben muesst, was ich bis dahin fertig habe (was zu groesseren
+| Teilen bereits konzipiert ist) oder Ihr muesst mir sagen, was Ihr
+| haben wollt. Aus meiner Position muss leider vermieden werden, dass
+| dieses Projekt nicht fertig wird, da ich keinen Bock habe, mir wegen
+| solches Krames die Diplomzeitplanung um die Ohren fliegen zu lassen.
+| Weiterhin muss beschlossen werden, wie mit der Kurzpraesentation Ende
+| dieses Monats umgegangen werden soll. Mein Vorschlag ist, dass aus
+| Effizienzgruenden einer von uns die Vorbereitung und auch den Vortrag
+| uebernimmt. Wegen der Kuerze kann dies auch kurz vorher geschehen, es
+| sollte aber bald klar sein, wer das macht. Ich wuerde das machen,
+| bestehe aber nicht darauf.
+
+Also, bei mir sieht es gerade zeitlich deutlich besser als letztes Jahr
+aus, schon alleine deshalb, weil ich den congress (inklusive vortrag)
+hinter mir habe. Ich vermute allerdings, nicht bis Mitte Februar fertig
+zu werden, habe aber durchaus Lust, das Projekt fertig zu bekommen, und
+wie schon zu Anfang gesagt, mich primaer um das Code Signing zu kuemmern.
+Die Kurzpraesentation denke ich kann man auch in 2 Teile, einmal
+distributed, einmal Code Signing, aufteilen, so dass sich diese 2 Leute
+teilen => die Haelfte der Arbeit fuer jeden.
+
+| Da ich letzte Nacht nur drei Stunden schlief, passiert heute nichts
+| mehr, ich werde aber morgen vormittag versuchen, die Luecken in der
+| Planung zu schliessen und auch evtl. zu ueberlegen, wie wir das am
+| besten in den Meta-CVS Code hineinbekommen (ich kenne inzwischen einige
+| Ecken von diesem Code -- leider noch nicht alle -- und muss sagen, dass
+| er mir eigentlich nicht richtig gut gefaellt).
+| Versteht meine Mail nicht so, dass ich jetzt doch sauer werde, dass ich
+| bis jetzt der alleine gearbeitet habe, ich will nur wissen, was Sache
+| ist.
+
+Ich bin schon unzufrieden, dass ich bisher ausser dem Plan, Code Signing
+zu implementieren, noch nicht viel geschafft habe (ich waere gerne schon
+weiter mit der Implementation). Und finde es toll, dass du zB den
+sbcl-port gemacht hast. Danke dafuer. Auch ich wuerde dieses Projekt
+gerne erfolgreich zu Ende bringen.
+
+Wie waere es zB Freitag 11:00 mit einem Treffen? Oder Donnerstag 14:00?
+
+
+hannes
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (FreeBSD)
+Comment: Using GnuPG with Thunderbird - http://enigmail.mozdev.org
+
+iD8DBQFDupD4RcuNlziBjRwRAt0TAKCnwnKHhKvJLW60WbOlXJEuMVgF7ACgi3eE
+FimnkHQPiAqx39OiRmnhZu8=
+=gaMY
+-----END PGP SIGNATURE-----
+
+
+From florenz at cs.tu-berlin.de  Tue Jan  3 16:23:46 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Tue, 3 Jan 2006 16:23:46 +0100
+Subject: [gennf-devel] Planung
+In-Reply-To: <43BA90F9.3000401@mehnert.org>
+References: <20060102202506.GA23380@fiesta.cs.tu-berlin.de> <43BA90F9.3000401@mehnert.org>
+Message-ID: <20060103152346.GA9140@caro.cs.tu-berlin.de>
+
+Hallo Hannes, hallo Otto,
+
+wir koennen uns am Donnerstag um 14.00 treffen, Freitag ist unguenstig,
+da ich um 11.00 Sprechstunde habe, 13.00 wuerde gehen. Weitere
+Alternativen sind naechste Woche Montag 16.00 oder eben Dienstag 12.00.
+
+Den Vortrag an den Teilprojekten aufzuteilen finde ich sinnvoll. Das
+sollten wir so machen. Ich schlage dann vor, dass Hannes das Code
+Signing vorstellt, da er auch den Entwurf geschrieben hat.
+Da wir bis dahin wohl noch kein laufendes Programm haben, wird es
+ausreichen, die Konzepte beider Teilprojekte auf ein paar Folien zu skizzieren.
+
+Zur Zeitplanung kann ich sagen, dass ich in der ersten Aprilhaelfte
+wieder Zeit habe, um auf jeden Fall dann am Abschlussbericht
+mitzuschreiben und das Colloq vorzubereiten.
+
+In der Projektsitzung gab es heute nichts, was irgendwie den Gang
+unserer Arbeit beeinflussen wuerde.
+
+Gruesse,
+
+Florian
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060103/c281863f/attachment.pgp>
+
+From florenz at cs.tu-berlin.de  Tue Jan  3 19:18:31 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Tue, 3 Jan 2006 19:18:31 +0100
+Subject: [gennf-devel] setenv/unsetenv auf Solaris?
+Message-ID: <20060103181831.GC26051@caro.cs.tu-berlin.de>
+
+Hallo zusammen,
+
+faellt einem von Euch was zu dem Problem ein, dass ich auf Solaris keine
+setenv, unsetenv Funktionen ueber stdlib.h kriege? Im apropos habe ich
+auch nichts gefunden. Gibt es die nicht oder finde ich die in einem
+anderen Header-File? Ich habe jetzt keine Lust im Uni-Chaos alles
+durchzuwuehlen. Aber ohne diese beiden Funktionen funktioniert der Port
+leider nicht.
+
+Gruesse,
+
+Florian
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060103/baf60fef/attachment.pgp>
+
+From florenz at berlios.de  Wed Jan  4 15:59:38 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 4 Jan 2006 15:59:38 +0100
+Subject: [gennf-devel] cvs commit: osicat-patch F-C5BC257C99D9996303F43B466FBDB6FD.lisp F-E6058D7D82D4A1E1C26BE04A5FBC5362.c
+ F-F3740194C5A9CE17405901A0C86194A3.lisp
+Message-ID: <200601041459.k04Exc6d000598@sheep.berlios.de>
+
+florenz     2006/01/04 15:59:38 CET
+
+  Modified files:
+    .                    F-C5BC257C99D9996303F43B466FBDB6FD.lisp 
+                         F-E6058D7D82D4A1E1C26BE04A5FBC5362.c 
+                         F-F3740194C5A9CE17405901A0C86194A3.lisp 
+  Log:
+  Instead of setenv, unsetenv putenv is now used, because Solaris lacks
+  setenv, unsetenv.
+  But I am not satisfied with this solution, because it might introduce
+  memory leaks (depending on how putenv is implemented) and removing
+  an environment veriable does not seem to work on Solaris either.
+  On glibc systems, calling putenv with name not containing a '='
+  causes removal of environment variable name. Not so on Solaris.
+  Perhaps one of you knows a better solution.
+  
+  Revision  Changes    Path
+  1.3       +9 -8      osicat-patch/F-C5BC257C99D9996303F43B466FBDB6FD.lisp
+  1.3       +36 -0     osicat-patch/F-E6058D7D82D4A1E1C26BE04A5FBC5362.c
+  1.3       +3 -3      osicat-patch/F-F3740194C5A9CE17405901A0C86194A3.lisp
+
+
+From sigsegv at alchiba.ni.cs.tu-berlin.de  Thu Jan  5 11:00:14 2006
+From: sigsegv at alchiba.ni.cs.tu-berlin.de (Fabian Otto)
+Date: Thu, 5 Jan 2006 11:00:14 +0100
+Subject: [gennf-devel] setenv/unsetenv auf Solaris?a
+In-Reply-To: <20060103181831.GC26051@caro.cs.tu-berlin.de>
+References: <20060103181831.GC26051@caro.cs.tu-berlin.de>
+Message-ID: <20060105100014.GB2871@alchiba.ni.cs.tu-berlin.de>
+
+* Florian Lorenzen <florenz at cs.tu-berlin.de> [060103 19:15]:
+> Hallo zusammen,
+
+Hallo Florian, 
+
+> faellt einem von Euch was zu dem Problem ein, dass ich auf Solaris keine
+> setenv, unsetenv Funktionen ueber stdlib.h kriege?
+
+Es sieht so aus, dasz setenv und unsetenv nicht portabel (linux) sind, aber leider
+das bessere/einfache interface haben. Wenn du eine Variable loeschen willst,
+musst du den wert entfernen. Zumindest so habe ich diesen Code[1] verstanden.
+
+>  Im apropos habe ich auch nichts gefunden. Gibt es die nicht oder finde ich die in einem
+> anderen Header-File? Ich habe jetzt keine Lust im Uni-Chaos alles
+> durchzuwuehlen. Aber ohne diese beiden Funktionen funktioniert der Port
+> leider nicht.
+
+Die Funktionen gibt es schlicht nicht.  Ich habe auch noch mal kurz in der zsh
+nachgeschaut, und auch die *scheinen* (der code ist viel groesser als sh) eine
+eigene Liste zu unterhalten, in den die Variablen stehen.  Somit muesste man
+das wrappen.  
+
+Kannst du mal bitte genauere Koordinaten zu (un)setenv geben?
+
+> Gruesse,
+> 
+> Florian
+
+Otto
+
+
+[1]:http://cvs.opensolaris.org/source/xref/on/usr/src/cmd/sh/name.c#unset_name
+[2]:http://cvs.opensolaris.org/source/xref/on/usr/src/cmd/sh/builtin.c#422
+
+-- 
+Bookmarks: http://del.icio.us/sigsegv
+jabber: sigsegv at jabber.ccc.de
+wiki/blog: http://blog.jotpee.de
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060105/d922f964/attachment.pgp>
+
+From sigsegv at alchiba.ni.cs.tu-berlin.de  Thu Jan  5 11:03:45 2006
+From: sigsegv at alchiba.ni.cs.tu-berlin.de (Fabian Otto)
+Date: Thu, 5 Jan 2006 11:03:45 +0100
+Subject: [gennf-devel] Planung
+In-Reply-To: <20060103152346.GA9140@caro.cs.tu-berlin.de>
+References: <20060102202506.GA23380@fiesta.cs.tu-berlin.de> <43BA90F9.3000401@mehnert.org> <20060103152346.GA9140@caro.cs.tu-berlin.de>
+Message-ID: <20060105100345.GC2871@alchiba.ni.cs.tu-berlin.de>
+
+* Florian Lorenzen <florenz at cs.tu-berlin.de> [060103 16:20]:
+> Hallo Hannes, hallo Otto,
+
+Hallo Leute, 
+
+> wir koennen uns am Donnerstag um 14.00 treffen, Freitag ist unguenstig,
+> da ich um 11.00 Sprechstunde habe, 13.00 wuerde gehen. Weitere
+> Alternativen sind naechste Woche Montag 16.00 oder eben Dienstag 12.00.
+
+Montag wollte ich frei machen und hatte euch schon eingeplant, wenn
+dieser Termin nicht klappt, dann stimme ich dem Donnerstag Termin um 14:00 Uhr
+zu.
+
+> Zur Zeitplanung kann ich sagen, dass ich in der ersten Aprilhaelfte
+> wieder Zeit habe, um auf jeden Fall dann am Abschlussbericht
+> mitzuschreiben und das Colloq vorzubereiten.
+
+Ich hoffe nach dem Referat mehr Zeit zu haben.
+
+> Gruesse,
+> 
+> Florian
+
+Otto
+-- 
+Bookmarks: http://del.icio.us/sigsegv
+jabber: sigsegv at jabber.ccc.de
+wiki/blog: http://blog.jotpee.de
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060105/3058e480/attachment.pgp>
+
+From florenz at cs.tu-berlin.de  Thu Jan  5 12:12:10 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Thu, 5 Jan 2006 12:12:10 +0100
+Subject: [gennf-devel] setenv/unsetenv auf Solaris?a
+In-Reply-To: <20060105100014.GB2871@alchiba.ni.cs.tu-berlin.de>
+References: <20060103181831.GC26051@caro.cs.tu-berlin.de> <20060105100014.GB2871@alchiba.ni.cs.tu-berlin.de>
+Message-ID: <20060105111210.GD26051@caro.cs.tu-berlin.de>
+
+Hallo Otto,
+
+Das Problem mit putenv ist zum einen, dass der uebergebene String in
+der Umgebung landet, es also ein und GC stehendes Lisp Objekt sein darf,
+weil dann Umgebungsvariablen verschwinden. Du kannst ja mal in den
+osicat-patch Code hineinschauen, ich habe jetzt einfach dort ein malloc
+platziert (was auch durch ein uffi:allocate-foreign-string geschehen
+koennte). Wenn jetzt die Umgebungsvariable umdefiniert wird, ist mir
+nicht klar, ob der alte String delokiert wird. Ich wuesste auch nicht,
+wie ich das machen soll ausser mit einem kruden
+
+char *p = getenv(name);
+free(p-sizeof(char)*strlen(name)-1);
+
+was auch nur funktionieren wurde, wenn die Umgebungsvariable von unserem
+Programm selber angelegt wurde.
+
+Weiterhin funktioniert das entfernen von Umgebungsvariablen nicht, da
+Solaris putenv die Variable nicht entfernt, wenn putenv(name) aufgerufen
+wird. Auch hier tritt gleichzeitig dasselbe Problem mit der
+Speicherplatzfreigabe auf wie oben.
+
+Irgendwie ist das etwas bescheuert. Fuer uns ist es letztlich nicht so
+wichtig, da wir es vermeiden koennen, Umgebungsvariablen zu setzen. Ich
+haette das nur gerne ordentlich repariert (d. h. nur putenv benutzen, da
+es das offensichtlich auf allen Systemen gibt), damit man nachher ein
+vernuenftiges Patch fuer die Bibliothek hat.
+
+Bis nachher,
+
+Florian
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060105/70e4adca/attachment.pgp>
+
+From hannes at mehnert.org  Thu Jan  5 12:52:49 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Thu, 05 Jan 2006 12:52:49 +0100
+Subject: [gennf-devel] Planung
+In-Reply-To: <20060105100345.GC2871@alchiba.ni.cs.tu-berlin.de>
+References: <20060102202506.GA23380@fiesta.cs.tu-berlin.de> <43BA90F9.3000401@mehnert.org> <20060103152346.GA9140@caro.cs.tu-berlin.de> <20060105100345.GC2871@alchiba.ni.cs.tu-berlin.de>
+Message-ID: <43BD0891.6090803@mehnert.org>
+
+Tag,
+
+Fabian Otto wrote:
+> * Florian Lorenzen <florenz at cs.tu-berlin.de> [060103 16:20]:
+>>wir koennen uns am Donnerstag um 14.00 treffen, Freitag ist unguenstig,
+>>da ich um 11.00 Sprechstunde habe, 13.00 wuerde gehen. Weitere
+>>Alternativen sind naechste Woche Montag 16.00 oder eben Dienstag 12.00.
+> 
+> 
+> Montag wollte ich frei machen und hatte euch schon eingeplant, wenn
+> dieser Termin nicht klappt, dann stimme ich dem Donnerstag Termin um 14:00 Uhr
+> zu.
+
+tja, nun heute (nachher) oder montag um 12?
+
+
+fragt sich,
+
+hannes
+
+
+From florenz at cs.tu-berlin.de  Thu Jan  5 12:56:12 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Thu, 5 Jan 2006 12:56:12 +0100
+Subject: [gennf-devel] Planung
+In-Reply-To: <43BD0891.6090803@mehnert.org>
+References: <20060102202506.GA23380@fiesta.cs.tu-berlin.de> <43BA90F9.3000401@mehnert.org> <20060103152346.GA9140@caro.cs.tu-berlin.de> <20060105100345.GC2871@alchiba.ni.cs.tu-berlin.de> <43BD0891.6090803@mehnert.org>
+Message-ID: <20060105115612.GE26051@caro.cs.tu-berlin.de>
+
+Gleich.
+
+On Thu, Jan 05, 2006 at 12:52:49PM +0100, Hannes Mehnert wrote:
+> Tag,
+> 
+> Fabian Otto wrote:
+> >* Florian Lorenzen <florenz at cs.tu-berlin.de> [060103 16:20]:
+> >>wir koennen uns am Donnerstag um 14.00 treffen, Freitag ist unguenstig,
+> >>da ich um 11.00 Sprechstunde habe, 13.00 wuerde gehen. Weitere
+> >>Alternativen sind naechste Woche Montag 16.00 oder eben Dienstag 12.00.
+> >
+> >
+> >Montag wollte ich frei machen und hatte euch schon eingeplant, wenn
+> >dieser Termin nicht klappt, dann stimme ich dem Donnerstag Termin um 14:00 
+> >Uhr
+> >zu.
+> 
+> tja, nun heute (nachher) oder montag um 12?
+> 
+> 
+> fragt sich,
+> 
+> hannes
+> _______________________________________________
+> gennf-devel mailing list
+> gennf-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/gennf-devel
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060105/a198ffad/attachment.pgp>
+
+From hannes at mehnert.org  Thu Jan  5 13:21:34 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Thu, 05 Jan 2006 13:21:34 +0100
+Subject: [gennf-devel] Planung
+In-Reply-To: <43BD0891.6090803@mehnert.org>
+References: <20060102202506.GA23380@fiesta.cs.tu-berlin.de> <43BA90F9.3000401@mehnert.org> <20060103152346.GA9140@caro.cs.tu-berlin.de> <20060105100345.GC2871@alchiba.ni.cs.tu-berlin.de> <43BD0891.6090803@mehnert.org>
+Message-ID: <43BD0F4E.4050703@mehnert.org>
+
+Hannes Mehnert wrote:
+> Tag,
+> 
+> Fabian Otto wrote:
+>> Montag wollte ich frei machen und hatte euch schon eingeplant, wenn
+>> dieser Termin nicht klappt, dann stimme ich dem Donnerstag Termin um 
+>> 14:00 Uhr
+>> zu.
+> 
+> 
+> tja, nun heute (nachher) oder montag um 12?
+
+ich nehme einfach mal an, am montag um 12; und nicht in 45 minuten.
+
+
+hannes
+
+
+From hannes at mehnert.org  Thu Jan  5 13:25:46 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Thu, 05 Jan 2006 13:25:46 +0100
+Subject: [gennf-devel] Planung
+In-Reply-To: <20060105115612.GE26051@caro.cs.tu-berlin.de>
+References: <20060102202506.GA23380@fiesta.cs.tu-berlin.de> <43BA90F9.3000401@mehnert.org> <20060103152346.GA9140@caro.cs.tu-berlin.de> <20060105100345.GC2871@alchiba.ni.cs.tu-berlin.de> <43BD0891.6090803@mehnert.org> <20060105115612.GE26051@caro.cs.tu-berlin.de>
+Message-ID: <43BD104A.8080300@mehnert.org>
+
+Florian Lorenzen wrote:
+> Gleich.
+
+ok, ich eile. kann aber 10-15 minuten spaeter werden...
+
+
+From florenz at berlios.de  Thu Jan  5 13:39:35 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 5 Jan 2006 13:39:35 +0100
+Subject: [gennf-devel] cvs commit: port-path F-7A7785FBE6038B4802ADCD8577015F59.lisp F-E4E8137ED6A2987D581A8AB6A46FB7DA.lisp
+Message-ID: <200601051239.k05CdZec006710@sheep.berlios.de>
+
+florenz     2006/01/05 13:39:35 CET
+
+  Modified files:
+    .                    F-7A7785FBE6038B4802ADCD8577015F59.lisp 
+                         F-E4E8137ED6A2987D581A8AB6A46FB7DA.lisp 
+  Log:
+  path-exists-p was added to the library. It is similair to probe-file
+  but works on several platforms for both, files and directories.
+  
+  Revision  Changes    Path
+  1.3       +41 -2     port-path/F-7A7785FBE6038B4802ADCD8577015F59.lisp
+  1.3       +3 -1      port-path/F-E4E8137ED6A2987D581A8AB6A46FB7DA.lisp
+
+
+From florenz at cs.tu-berlin.de  Mon Jan  9 18:01:59 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Mon, 9 Jan 2006 18:01:59 +0100
+Subject: [gennf-devel] Problem mit sb-ext:run-program
+Message-ID: <20060109170159.GD20298@caro.cs.tu-berlin.de>
+
+Hallo Hannes, hallo Otto,
+
+testet doch bitte mal, ob der Aufruf
+
+* (sb-ext:run-program "top" () :search t :input t :output t :error t)
+
+auf Solaris 10 (Otto) bzw. FreeBSD (Hannes) mit SBCL 0.9.8 funktioniert.
+Unter Solaris 9 funktioniert alles einwandfrei, unter Linux gibt es
+Probleme: Aus irgendeinem Grund blockiert der Prozess, so, als koenne er
+sich nicht mit dem Terminal verbinden.
+Ich habe das Problem schon an sbcl-help geschickt aber bis jetzt noch
+keine Antwort bekommen.
+Ich wuerde gerne wissen, ob das an Linux (meiner speziellen
+Installation?) haengt oder nicht.
+
+Gruesse,
+
+Florian
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060109/edaba876/attachment.pgp>
+
+From florenz at berlios.de  Mon Jan  9 19:19:17 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 9 Jan 2006 19:19:17 +0100
+Subject: [gennf-devel] cvs commit: gennf F-2019E4ADA667C5B63A025FC92E791425 F-5B815906BE2D64E9BC2E48B76242BFF2.lisp
+ F-97770D7ED2DFF388BC60EAB380950A77.lisp F-A371BDB8A9CF854FE00C63C1264B1D99.lisp F-DBEF23F4E5EC75C4CF994FA5C7DE0326.lisp
+ F-E8B8309E1270A0D1EDB0FB64AB2298D2.lisp
+Message-ID: <200601091819.k09IJHbd027181@sheep.berlios.de>
+
+florenz     2006/01/09 19:19:17 CET
+
+  Modified files:
+    .                    F-2019E4ADA667C5B63A025FC92E791425 
+                         F-5B815906BE2D64E9BC2E48B76242BFF2.lisp 
+                         F-97770D7ED2DFF388BC60EAB380950A77.lisp 
+                         F-A371BDB8A9CF854FE00C63C1264B1D99.lisp 
+                         F-DBEF23F4E5EC75C4CF994FA5C7DE0326.lisp 
+                         F-E8B8309E1270A0D1EDB0FB64AB2298D2.lisp 
+  Log:
+  I was able to create, checkout and commit modules and changes with the
+  SBCL port for Meta-CVS for the first time. Of course, there are still bugs
+  there but I will concentrate on our own stuff from now on and do the
+  debugging as trouble arises.
+  
+  Revision  Changes    Path
+  1.2       +15 -2     gennf/F-2019E4ADA667C5B63A025FC92E791425
+  1.3       +1 -1      gennf/F-5B815906BE2D64E9BC2E48B76242BFF2.lisp
+  1.3       +1 -0      gennf/F-97770D7ED2DFF388BC60EAB380950A77.lisp
+  1.4       +6 -1      gennf/F-A371BDB8A9CF854FE00C63C1264B1D99.lisp
+  1.4       +40 -20    gennf/F-DBEF23F4E5EC75C4CF994FA5C7DE0326.lisp
+  1.3       +1 -1      gennf/F-E8B8309E1270A0D1EDB0FB64AB2298D2.lisp
+
+
+From hannes at mehnert.org  Tue Jan 10 01:14:46 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Tue, 10 Jan 2006 01:14:46 +0100
+Subject: [gennf-devel] distributed repository
+Message-ID: <43C2FC76.7090706@mehnert.org>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hallo,
+
+habe gerade die Dokumentation zu distributed repositories gelesen. Hoert
+sich gut an, ein Feature, das bisher scheinbar noch nicht angesprochen
+wurde (und soweit ich es eben getestet habe, noch nicht in mcvs
+implementiert ist), scheint mir ein moeglicher subdirectory-checkout zu
+sein.
+
+Also, bei gegebender directory-struktur im modul fnord:
+documentation/barf.tex
+documentation/foobar.txt
+foo.txt
+source/bar.lisp
+source/foobar.lisp
+
+faende ich es toll, wenn man durch
+mcvs -d:ext:somewhere:/mcvs co fnord/documentation
+nur das documentation directory auschecken koennte.
+
+Ich denke, das man das dadurch loesen kann, die metadata der files (MAP
+file, etc) in jedem Verzeichnis zu speichern, anstatt in einem zentralen
+MCVS Repository.
+
+Im MCVS directory von fnord muesste man dann nur Informationen ueber
+foo.txt und die directories documentation und source halten.
+
+Die Changes muesste man dann natuerlich auch dezentral speichern,
+genauso wie die rcs-files.
+
+Der primaere Vorteil waere sicherlich, dass man bei einem beliebig
+grossen Repository nicht immer das komplette auschecken muss, sondern
+auch Teilbaeume auschecken kann.
+
+Haette zusaetzlich den Vorteil, dass man dann auch auf directory-Ebene
+branches erzeugen koennte. Wobei ich denke, wir sollten die branches
+schon Repository-weit machen (wobei man natuerlich auch branches von
+subdirectories machen will, also, nicht jeder branch muss das gesamte
+repository umfassen).
+
+Aber ich denke, auch dieses kann eine weitere Ausbaustufe sein,
+moeglicherweise koennte man dann die branches wie bei subversion (durch
+ein Verzeichnis branches) realisieren, aber der im scratchpad
+beschriebene Vorschlag, branches zu implementieren gefaellt mir deutlich
+besser.
+
+Die Changeset-Nummer muss natuerlich immer repository-global vergeben
+werden (und eindeutig in einem repository sein).
+
+
+Bis morgen,
+
+hannes
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (FreeBSD)
+Comment: Using GnuPG with Thunderbird - http://enigmail.mozdev.org
+
+iD8DBQFDwvx2RcuNlziBjRwRAmlpAJ91TNdJR/u4pUiFo46hradDlaJrGQCffSZt
+P8wbB7lBairKstfKSTpCldc=
+=K3PE
+-----END PGP SIGNATURE-----
+
+
+From florenz at cs.tu-berlin.de  Tue Jan 10 11:20:29 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Tue, 10 Jan 2006 11:20:29 +0100
+Subject: [gennf-devel] distributed repository
+In-Reply-To: <43C2FC76.7090706@mehnert.org>
+References: <43C2FC76.7090706@mehnert.org>
+Message-ID: <20060110102029.GG20298@caro.cs.tu-berlin.de>
+
+Hallo zusammen,
+
+Hannes Anmerkung ist richtig, dass Sandboxes, die nur Unterverzeichnisse
+enthalten, nicht beruecksichtigt sind. Meta-CVS kann das von Haus aus:
+
+$ mcvs -d repo co project subdir/subsubdir
+
+erzeugt ein Verezeichnis subsubdir, mit den entsprechenden Dateien.
+Allerdings ist das CVS sandbox im MCVS-Unterverzeichnis nach wie vor
+komplett. Das entspricht dann nicht ganz dem, was Hannes meint.
+
+Ich glaube aber, dass Auschecken von Unterverzeichnissen sich einfach
+dadurch aufbauen laesst, dass eben nur der entsprechende Teil der
+F-Files ausgecheckt wird, der einen entsprechenden Pfad hat.
+Ich wuerde naemlich ungerne Unterverzeichnisse im Repository haben, auch
+nicht fuer Branches. Ich kann das nicht genau begruenden, habe nur das
+Gefuehl, dass wir mit nur einer Indirektionsstufe besser fahren.
+In einem teilweise ausgechecktem Repository muss natuerlich bekannt
+sein, dass nicht alle Dateien da sind, das entspricht in etwa der
+DISPLACED-Datei, die Meta-CVS fuer diese Zwecke einsetzt (allerdings nur
+zur Manipulation von Pfaden).
+
+Zum Thema Branches auf Unterverzeichnisse wurde ich sagen, dass man das
+durch eine Art Lazy-Branching erledigen koennte: Ein Branch wird ueber
+das gesamte Repository angelegt, es werden aber nur fuer die Files
+tatsaechlich F-Files angelegt, die veraendert werden, fuer alle anderen
+wird dies verzoegert und bei Bedarf nachgeholt (mglw. bringt uns das
+allerdings die Links wieder hinein, die eigentlich nicht benoetigt sind
+-- sozusagen als eine Art QUOTE). Auch hier denke ich, dass wir
+konzeptionell nicht so eingeengt sind, das wir das nachher nicht mehr
+unter bekommen.
+
+Gruesse,
+
+Florian
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060110/7f4781d8/attachment.pgp>
+
+From florenz at cs.tu-berlin.de  Thu Jan 12 11:54:14 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Thu, 12 Jan 2006 11:54:14 +0100
+Subject: [gennf-devel] Locking Problem
+Message-ID: <20060112105414.GI20298@caro.cs.tu-berlin.de>
+
+Hallo Hannes, hallo Otto,
+
+ich habe die die Befuerchtung, dass wir ein echtes Problem haben, was
+damit zusammenhaengt, wie wir Changes abspeichern. Dabei wird eine
+Abbildung Dateiname->Revisionsnummer gebildet und abgespeichert. Welche
+Revisionsnummer eine Datei bei einem Commit bekommt, wissen wir aber
+immer erst hinterher. Das bedeutet, dass der Change erst nach dem Commit
+gebildet und im Repository abgelegt werden kann. Scheitert das aus
+irgendeinem Grund, liegt ein nicht registrierter Change im Repository.
+Den koennte man wieder ruckgaengig machen, sozusagen eine Art
+registrierter Rollback. Wenn aber der Commit des Change vorher nicht
+klappte, ist es gut moeglich, dass der Rollback auch nicht klappt.
+
+Eine andere Moeglichkeit ist, zuerst einen trockenen Commit zu machen
+und sich nur die Revisionsnummern zu holen und dann alle Files und den
+Change in einem Atemzug einzuchecken. Es kann aber sein, dass jemand
+dazwischen kommt und dann die Revisionsnummern nicht mehr stimmen. Das
+koennte man nach dem Commit ueberpruefen und so zumindest den Fehler
+feststellen. Ich weiss allerdings gerade nicht, wie man dann damit
+umgehen kann.
+
+Diese Umstaende einfach zu ignorieren, scheint mir wirklich keine gute
+Loesung zu sein.
+habt Ihr Ideen, wie man aus dem Dilemma herauskommt?
+Es ist zwar so, dass CVS sowieso keine atomaren Commits kann aber wir
+sollten nicht noch so einen Problemklotz oben draufsetzen.
+
+Dann noch etwas anderes: Ich hatte am Dienstag die Vermutung geaeussert,
+dass es moeglicherweise besser ist, nocht direkt an den Meta-CVS Code
+anzubauen, sondern nur die fuer uns brauchbaren Teile daraus zu
+uebernehmen (entweder als Ideen oder direkt als Code).
+Dafuer sprechen folgende Punkte, die mir am Code nicht gefallen:
+* CVS ist fest einverdrahtet.
+* Pfadnamen werden als Strings behandelt. Das Umgehen mit Pfaden ist
+  eines der Kernpunkte dieses Programms, deswegen finde ich es besonders
+  ungluecklich, dass hier nicht mit der Pfadnamen Abstraktion gearbeitet
+  wird.
+* Die Unix-Schnittstelle ist unguenstig (die ist zwar nun portiert, aber
+  nur so, dass es mit SBCL laeuft, nicht so, dass es eine gute Loesung
+  ist).
+Das sind alles mehr oder weniger Geschmacksfragen und betreffen im
+Wesentlichen das Design. Es gibt aber noch einen weiteren Punkt, der
+nicht nur mit Design zu tun hat:
+Meta-CVS ueberlaesst es im Wesentlichen CVS, zu ueberpruefen, welche
+Dateien eingecheckt werden muessen und welche nicht. Dabei wird dafuer
+gesorgt, dass das Mapping zwischen F-Files und Dateien in der Sandbox
+konsistent bleibt.
+Wir schieben an dieser Stelle eine Ebene dazwischen, naemlich
+die oben angesprochene Abbildung (die das Locking Problem verursacht).
+Wir wissen also immer genau, welche Aenderungen gemacht wurden und
+koennen explizit sagen, welche Dateien eingecheckt werden muessen,
+welche aktualisiert werden muessen, geloescht wurden, hinzukamen,
+verschoben wurden usw. usf. Und das muessen wir auch so machen, weil
+sonst alles durcheinander kommt. Das bedeutet auch, dass Verschieben,
+Loeschen, Hinzufuegen von Dateien in einer Sandbox nur ueber von uns
+bereitgestellte Kommandos geschen darf, damit das entsprechend
+registriert werden kann. Der ganze Code, um die Sandbox mit dem Mapping
+abzugleichen und umgekehrt, ist also ueberfluessig.
+Die enge Anbindung an CVS scheint mir hier eher hinderlich.
+
+Mein Vorschlag ist deswegen, die Idee von Meta-CVS zu uebernehmen, alle
+Dateien als F-Files abzulegen, eine MAP einzufuehren und die Dateien mir
+Hardlinks in die Sandbox einzuklinken. Hier koennen wir auch Code
+uebernehmen, denke ich. Der ganze Rest, die Anbindung an das Backend,
+das Handling von Branches und Merges (diesbzgl. bringt uns Meta-CVS
+sowieso nichts) wird neu gemacht.
+
+Um nocheinmal auf das eingangs erwaehnte Problem zu kommen: Das kriegen
+wir natuerlich auch nicht damit in den Griff, dass wir mehr
+neuschreiben, sondern nur dadurch dass wir irgendwie ein Locking
+einbauen. Das geht aber meiner Ansicht nur, indem wir CVS nicht mehr so
+benutzen, wie das ueblicherweise gemacht wird. Wir muessen so eine Art
+P, V Operationen haben und das Repository abschliessen, bevor wir
+anfangen, daran Modifikationen zu machen. Und irgendwie muss
+sichergestellt werden, dass die V-Operation immer ausgefuehrt wird und
+das Repository in jedem Fall in einem konsistenten Zustand ist.
+
+Moeglicherweise sieht das gerade alles ziemlich konfus aus, aber ich
+habe massive Zweifel, dass das so geht, wie wir uns das vorgstellt haben
+(und das liegt nicht nur daran, dass ich zu faul bin 5000 Zeilen
+Meta-CVS Code zu lesen und zu kapieren -- ich bin mir naemlich nicht
+sicher, ob uns das ueberhaupt weiterbringt).
+
+Meldet Euch,
+
+Florian
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060112/166ebbc0/attachment.pgp>
+
+From hannes at mehnert.org  Thu Jan 12 15:03:23 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Thu, 12 Jan 2006 15:03:23 +0100
+Subject: [gennf-devel] Locking Problem
+In-Reply-To: <20060112105414.GI20298@caro.cs.tu-berlin.de>
+References: <20060112105414.GI20298@caro.cs.tu-berlin.de>
+Message-ID: <43C661AB.3030905@mehnert.org>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hallo,
+
+Florian Lorenzen wrote:
+| ich habe die die Befuerchtung, dass wir ein echtes Problem haben, was
+| damit zusammenhaengt, wie wir Changes abspeichern. Dabei wird eine
+| Abbildung Dateiname->Revisionsnummer gebildet und abgespeichert. Welche
+| Revisionsnummer eine Datei bei einem Commit bekommt, wissen wir aber
+| immer erst hinterher. Das bedeutet, dass der Change erst nach dem Commit
+| gebildet und im Repository abgelegt werden kann. Scheitert das aus
+| irgendeinem Grund, liegt ein nicht registrierter Change im Repository.
+| Den koennte man wieder ruckgaengig machen, sozusagen eine Art
+| registrierter Rollback. Wenn aber der Commit des Change vorher nicht
+| klappte, ist es gut moeglich, dass der Rollback auch nicht klappt.
+|
+| Eine andere Moeglichkeit ist, zuerst einen trockenen Commit zu machen
+| und sich nur die Revisionsnummern zu holen und dann alle Files und den
+| Change in einem Atemzug einzuchecken. Es kann aber sein, dass jemand
+| dazwischen kommt und dann die Revisionsnummern nicht mehr stimmen. Das
+| koennte man nach dem Commit ueberpruefen und so zumindest den Fehler
+| feststellen. Ich weiss allerdings gerade nicht, wie man dann damit
+| umgehen kann.
+|
+| Diese Umstaende einfach zu ignorieren, scheint mir wirklich keine gute
+| Loesung zu sein.
+| habt Ihr Ideen, wie man aus dem Dilemma herauskommt?
+| Es ist zwar so, dass CVS sowieso keine atomaren Commits kann aber wir
+| sollten nicht noch so einen Problemklotz oben draufsetzen.
+
+Ich denke, bei einem commit sollten wir dann folgendes tun:
+~ * globaler lock (fuer das repo bzw das subdir/den branch)
+~   => dieses geht nur, wenn es noch keinen globalen lock gibt
+~   (durch speichern der process-id und ueberpruefung, ob die process-id
+~    existiert, sollten wir da relativ fail-save sein)
+~ * dry-run des commits, um die versionsnummern zu bekommen
+~   (soweit cvs einen dry-run unterstuetzt)
+~ * commit (inklusive change)
+~ * aufhebung des globalen locks
+
+Wenn nun ein commits abbricht (die tcp-verbindung terminiert, der
+Benutzer strg-c drueckt,...) ist halt irgendwann das Programm (gennf?),
+dessen Process-ID im lock gespeichert ist, auch terminiert, danach
+sollte der lock wieder verfuegbar sein (da die Process-ID nicht mehr
+existiert).
+
+
+| Mein Vorschlag ist deswegen, die Idee von Meta-CVS zu uebernehmen, alle
+| Dateien als F-Files abzulegen, eine MAP einzufuehren und die Dateien mir
+| Hardlinks in die Sandbox einzuklinken. Hier koennen wir auch Code
+| uebernehmen, denke ich. Der ganze Rest, die Anbindung an das Backend,
+| das Handling von Branches und Merges (diesbzgl. bringt uns Meta-CVS
+| sowieso nichts) wird neu gemacht.
+
+Naja, neu schreiben ist natuerlich mehr Arbeit, aber ich denke, nur die
+Teile, die uns sinnvoll erscheinen, zu uebernehmen, hat auch Vorteile.
+Da wir z.B. das branching vollkommen anders machen, brauchen wir da
+natuerlich keinen meta-cvs code. Also, wenn du meinst, meta-cvs sei an
+bestimmten Stellen unbrauchbar, benutze die Teile einfach nicht ;). Das
+Pfad-Handling finde ich auch nicht schoen an dem meta-cvs, und denke,
+das sollten wir besser machen. Wenn tatsaechlich nur das MAP und die
+sandbox uebrig bleibt, nehmen wir halt nur den Teil, und machen den Rest
+selber.
+Was wir uns ueberlegen sollten ist, ob und wie wir cvs/meta-cvs
+Repositories  in gennf importieren (da meta-cvs keine changes kennt,
+werden wir hier was aehnliches wie subversion beim Import von
+cvs-Repositories tun muessen).
+
+
+Hannes
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (FreeBSD)
+Comment: Using GnuPG with Thunderbird - http://enigmail.mozdev.org
+
+iD8DBQFDxmGrRcuNlziBjRwRAre5AJ9awOpnCobrf5lmNSI7Dod+X+PLYQCfaa0h
+4kMaedHBFve9ucujU0ahFD8=
+=0U6b
+-----END PGP SIGNATURE-----
+
+
+From hannes at mehnert.org  Thu Jan 12 15:17:08 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Thu, 12 Jan 2006 15:17:08 +0100
+Subject: [gennf-devel] distributed repository
+In-Reply-To: <20060110102029.GG20298@caro.cs.tu-berlin.de>
+References: <43C2FC76.7090706@mehnert.org> <20060110102029.GG20298@caro.cs.tu-berlin.de>
+Message-ID: <43C664E4.4010803@mehnert.org>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hallo,
+
+Florian Lorenzen wrote:
+| Hannes Anmerkung ist richtig, dass Sandboxes, die nur Unterverzeichnisse
+| enthalten, nicht beruecksichtigt sind. Meta-CVS kann das von Haus aus:
+|
+| $ mcvs -d repo co project subdir/subsubdir
+|
+| erzeugt ein Verezeichnis subsubdir, mit den entsprechenden Dateien.
+| Allerdings ist das CVS sandbox im MCVS-Unterverzeichnis nach wie vor
+| komplett. Das entspricht dann nicht ganz dem, was Hannes meint.
+
+Genau, bei einem beliebig grossen Repository muss man immernoch das
+komplette uebertragen ;).
+
+
+| Ich glaube aber, dass Auschecken von Unterverzeichnissen sich einfach
+| dadurch aufbauen laesst, dass eben nur der entsprechende Teil der
+| F-Files ausgecheckt wird, der einen entsprechenden Pfad hat.
+| Ich wuerde naemlich ungerne Unterverzeichnisse im Repository haben, auch
+| nicht fuer Branches. Ich kann das nicht genau begruenden, habe nur das
+| Gefuehl, dass wir mit nur einer Indirektionsstufe besser fahren.
+
+Ich finde Unterverzeichnisse fuer Branches auch unelegant, allerdings
+finde ich Unterverzeichnisse fuer die F-Files, wie sie real im
+Repository vorliegen, sinnvoll, da es (meinem Gefuehl nach) Komplexitaet
+aus der Implementierung nimmt, da zB das Erzeugen eines Branches einfach
+auf einem Unterverzeichnis passiert, und man kein DISPLACED-File
+braucht. Ich finde die Abbildung einer Verzeichnisstruktur zu einem
+flat-Verzeichnis im Repository deutlich aufwendiger, schon allein bei
+Operationen, die nicht rekursiv passieren sollen (die, wenn man das als
+flat-Verzeichnis abbildet, diejenigen Dateien, die in einem
+Unterverzeichnis der Verzeichnisses sind, rausfiltern muss).
+
+
+| Zum Thema Branches auf Unterverzeichnisse wurde ich sagen, dass man das
+| durch eine Art Lazy-Branching erledigen koennte: Ein Branch wird ueber
+| das gesamte Repository angelegt, es werden aber nur fuer die Files
+| tatsaechlich F-Files angelegt, die veraendert werden, fuer alle anderen
+| wird dies verzoegert und bei Bedarf nachgeholt (mglw. bringt uns das
+| allerdings die Links wieder hinein, die eigentlich nicht benoetigt sind
+| -- sozusagen als eine Art QUOTE). Auch hier denke ich, dass wir
+| konzeptionell nicht so eingeengt sind, das wir das nachher nicht mehr
+| unter bekommen.
+
+Ja, ich denke, all das kann man auch spaeter noch aendern, und erstmal
+so lassen, wie meta-cvs das gerade tut.
+
+
+Hannes
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (FreeBSD)
+Comment: Using GnuPG with Thunderbird - http://enigmail.mozdev.org
+
+iD8DBQFDxmTjRcuNlziBjRwRAqj1AJ4pDqP/jTsjaRZ59spTDMWoEMH0zACfYTwA
+Gn8P/KZUobc+ToQNFP4nnro=
+=6vE6
+-----END PGP SIGNATURE-----
+
+
+From florenz at berlios.de  Mon Jan 16 08:47:44 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 16 Jan 2006 08:47:44 +0100
+Subject: [gennf-devel] cvs commit: gennf F-495FEBB82844E29E9B8F3FFCC5A022E2.lisp F-4E51556B59366B0B171CCB0B1F4F10A9.lisp
+ F-251FB522127FF9A2E037DC904E011C8D.lisp F-080CF3710F46A1C94984A6BD78462AC7.lisp F-03018E8471DDD49AD47174CF158A9286.lisp
+ F-EADDB60DB86A4481CF5D126F61D78F8E.lisp F-769D6330165D17D4921D9970720734B7.lisp F-CD3AD5F3865AB17A39CA5B43B888F3F2.lisp
+ F-83B842F2203F2AE6157E430B77F56938.lisp F-FC7FF8AB6284EA194323C1565C752386.lisp F-48D1C070D93800E7560AEE00EF78D0B2.lisp ...
+Message-ID: <200601160747.k0G7limr007180@sheep.berlios.de>
+
+florenz     2006/01/16 08:47:44 CET
+
+  Added files:
+    .                    F-495FEBB82844E29E9B8F3FFCC5A022E2.lisp 
+                         F-4E51556B59366B0B171CCB0B1F4F10A9.lisp 
+                         F-251FB522127FF9A2E037DC904E011C8D.lisp 
+                         F-080CF3710F46A1C94984A6BD78462AC7.lisp 
+                         F-03018E8471DDD49AD47174CF158A9286.lisp 
+                         F-EADDB60DB86A4481CF5D126F61D78F8E.lisp 
+                         F-769D6330165D17D4921D9970720734B7.lisp 
+                         F-CD3AD5F3865AB17A39CA5B43B888F3F2.lisp 
+                         F-83B842F2203F2AE6157E430B77F56938.lisp 
+                         F-FC7FF8AB6284EA194323C1565C752386.lisp 
+                         F-48D1C070D93800E7560AEE00EF78D0B2.lisp 
+                         F-42DFD065A78C998A3E47C9493FF221E7.lisp 
+                         F-88B873BF8C20BA949EB0547CD571F5B0.lisp 
+  Log:
+  The begin of the distribution prototype. It is build- and loadable but
+  not very operable yet.
+  
+  It will implement all branch, merge, init, commit, checkout, update
+  operations for a flat repository. The Meta-CVS-like structuring via MAP
+  files will be set on top of this.
+
+
+From florenz at berlios.de  Mon Jan 16 11:52:17 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 16 Jan 2006 11:52:17 +0100
+Subject: [gennf-devel] cvs commit: gennf F-2019E4ADA667C5B63A025FC92E791425 F-4E51556B59366B0B171CCB0B1F4F10A9.lisp
+ F-A371BDB8A9CF854FE00C63C1264B1D99.lisp F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex F-FC7FF8AB6284EA194323C1565C752386.lisp
+ MAP
+Message-ID: <200601161052.k0GAqH8v020379@sheep.berlios.de>
+
+florenz     2006/01/16 11:52:17 CET
+
+  Modified files:
+    .                    F-2019E4ADA667C5B63A025FC92E791425 
+                         F-4E51556B59366B0B171CCB0B1F4F10A9.lisp 
+                         F-A371BDB8A9CF854FE00C63C1264B1D99.lisp 
+                         F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex 
+                         F-FC7FF8AB6284EA194323C1565C752386.lisp 
+                         MAP 
+  Log:
+  cvs-commit is implemented. It signals an error if some files are
+  outdated.
+  
+  Revision  Changes    Path
+  1.3       +7 -4      gennf/F-2019E4ADA667C5B63A025FC92E791425
+  1.2       +32 -57    gennf/F-4E51556B59366B0B171CCB0B1F4F10A9.lisp
+  1.5       +1 -32     gennf/F-A371BDB8A9CF854FE00C63C1264B1D99.lisp
+  1.20      +15 -1     gennf/F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex
+  1.2       +3 -1      gennf/F-FC7FF8AB6284EA194323C1565C752386.lisp
+  1.15      +39 -0     gennf/MAP
+
+
+From florenz at berlios.de  Wed Jan 18 18:18:36 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 18 Jan 2006 18:18:36 +0100
+Subject: [gennf-devel] cvs commit: gennf F-B457DDF336218AEBF4158383BC4BB553.html F-3E293DB4FDF7D70F72EC266B13D28C65.txt
+Message-ID: <200601181718.k0IHIacb025344@sheep.berlios.de>
+
+florenz     2006/01/18 18:18:36 CET
+
+  Modified files:
+    .                    F-B457DDF336218AEBF4158383BC4BB553.html 
+                         F-3E293DB4FDF7D70F72EC266B13D28C65.txt 
+  Log:
+  The webpage now contains a short project description.
+  Furthermore, I have reflected the change in development strategy concerning
+  the connection to Meta-CVS and the prototype in development.
+  
+  Revision  Changes    Path
+  1.8       +45 -16    gennf/F-B457DDF336218AEBF4158383BC4BB553.html
+  1.3       +1 -2      gennf/F-3E293DB4FDF7D70F72EC266B13D28C65.txt
+
+
+From florenz at berlios.de  Wed Jan 18 19:22:55 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 18 Jan 2006 19:22:55 +0100
+Subject: [gennf-devel] cvs commit: gennf F-4E51556B59366B0B171CCB0B1F4F10A9.lisp F-251FB522127FF9A2E037DC904E011C8D.lisp
+ F-FC7FF8AB6284EA194323C1565C752386.lisp F-48D1C070D93800E7560AEE00EF78D0B2.lisp
+Message-ID: <200601181822.k0IIMtFq030809@sheep.berlios.de>
+
+florenz     2006/01/18 19:22:55 CET
+
+  Modified files:
+    .                    F-4E51556B59366B0B171CCB0B1F4F10A9.lisp 
+                         F-251FB522127FF9A2E037DC904E011C8D.lisp 
+                         F-FC7FF8AB6284EA194323C1565C752386.lisp 
+                         F-48D1C070D93800E7560AEE00EF78D0B2.lisp 
+  Log:
+  backend-commit is finished.
+  For create-empty-branch a backend-update ist still missing.
+  cvs-add can now handle adding of paths (dir1/dir2/dir3/file) by
+  subsequently adding all directories and the file at last.
+  
+  Revision  Changes    Path
+  1.3       +13 -7     gennf/F-4E51556B59366B0B171CCB0B1F4F10A9.lisp
+  1.2       +19 -4     gennf/F-251FB522127FF9A2E037DC904E011C8D.lisp
+  1.3       +14 -7     gennf/F-FC7FF8AB6284EA194323C1565C752386.lisp
+  1.2       +21 -2     gennf/F-48D1C070D93800E7560AEE00EF78D0B2.lisp
+
+
+From sigsegv at alchiba.ni.cs.tu-berlin.de  Thu Jan 19 18:23:35 2006
+From: sigsegv at alchiba.ni.cs.tu-berlin.de (Fabian Otto)
+Date: Thu, 19 Jan 2006 18:23:35 +0100
+Subject: [gennf-devel] branches
+Message-ID: <20060119172335.GA17718@alchiba.ni.cs.tu-berlin.de>
+
+Hallo Leute, 
+
+ich wollte gerade mal so langsam anfangen in der Doku was
+bezueglich unseren "neuen" Plaenen zu aendern.  
+
+Ich habe mit den Branches angefangen, und da kam mir auch gleich die 
+erste frage.
+
+Gibt es einen 0ten Branch?
+Oder anders gefragt: 
+
+Gibt es immer ein brachnverz? z.b: 0
+
+
+otto
+-- 
+Bookmarks: http://del.icio.us/sigsegv
+jabber: sigsegv at jabber.ccc.de
+wiki/blog: http://blog.jotpee.de
+
+
+From florenz at cs.tu-berlin.de  Thu Jan 19 18:36:33 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Thu, 19 Jan 2006 18:36:33 +0100
+Subject: [gennf-devel] branches
+In-Reply-To: <20060119172335.GA17718@alchiba.ni.cs.tu-berlin.de>
+References: <20060119172335.GA17718@alchiba.ni.cs.tu-berlin.de>
+Message-ID: <20060119173633.GD24758@caro.cs.tu-berlin.de>
+
+Hallo Otto,
+
+der erste Branch bekommt die Nummer 1. Wenn ein neues Repository
+angelegt wird, wird auch gleich dieser Branch 1 erzeugt. Es sind dabei
+aber zwei Operationen im Spiel:
+
+1) Repository anlegen. Die Operation gibt es auch schon. Sie legt das
+entsprechende cvs Modul an und legt eine leere BRANCH Datei ab sowie ein
+ACCESS file, dass den cvs root String fuer dieses Modul enthaelt.
+2) Einen leeren Branch in dem Repository anlegen. Wenn das Repository
+vorher {} war, so enthaelt es danach eben den Branch 1, der aber noch
+leer ist. Es wird also ein Verzeichnis 1 angelegt sowie ein noch leeres
+CHANGE File. An dieser Operation arbeite ich gerade.
+
+So etwas wie ein cvs import beinhaltet dann die Operationen 1 und 2
+sowie ein nachfolgendes hinzufuegen aller Dateien, die importiert werden
+sollen. In den ersten Branch. Hinzufuegen und andere Operationen, die
+irgendwie mit Dateien der Benuzter hantieren, gibt es alle noch nicht.
+
+Ich hoffe, dass beantwortet die Frage.
+
+Florian
+
+On Thu, Jan 19, 2006 at 06:23:35PM +0100, Fabian Otto wrote:
+> Hallo Leute, 
+> 
+> ich wollte gerade mal so langsam anfangen in der Doku was
+> bezueglich unseren "neuen" Plaenen zu aendern.  
+> 
+> Ich habe mit den Branches angefangen, und da kam mir auch gleich die 
+> erste frage.
+> 
+> Gibt es einen 0ten Branch?
+> Oder anders gefragt: 
+> 
+> Gibt es immer ein brachnverz? z.b: 0
+> 
+> 
+> otto
+> -- 
+> Bookmarks: http://del.icio.us/sigsegv
+> jabber: sigsegv at jabber.ccc.de
+> wiki/blog: http://blog.jotpee.de
+> _______________________________________________
+> gennf-devel mailing list
+> gennf-devel at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/gennf-devel
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060119/2960e622/attachment.pgp>
+
+From florenz at berlios.de  Mon Jan 23 19:20:23 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 23 Jan 2006 19:20:23 +0100
+Subject: [gennf-devel] cvs commit: gennf F-4E51556B59366B0B171CCB0B1F4F10A9.lisp F-251FB522127FF9A2E037DC904E011C8D.lisp
+ F-CD3AD5F3865AB17A39CA5B43B888F3F2.lisp F-FC7FF8AB6284EA194323C1565C752386.lisp
+Message-ID: <200601231820.k0NIKNwH014638@sheep.berlios.de>
+
+florenz     2006/01/23 19:20:22 CET
+
+  Modified files:
+    .                    F-4E51556B59366B0B171CCB0B1F4F10A9.lisp 
+                         F-251FB522127FF9A2E037DC904E011C8D.lisp 
+                         F-CD3AD5F3865AB17A39CA5B43B888F3F2.lisp 
+                         F-FC7FF8AB6284EA194323C1565C752386.lisp 
+  Log:
+  Still working on create-empty-branch but it is much closer to be working
+  than before.
+  
+  Revision  Changes    Path
+  1.4       +61 -16    gennf/F-4E51556B59366B0B171CCB0B1F4F10A9.lisp
+  1.3       +4 -8      gennf/F-251FB522127FF9A2E037DC904E011C8D.lisp
+  1.2       +38 -2     gennf/F-CD3AD5F3865AB17A39CA5B43B888F3F2.lisp
+  1.4       +33 -24    gennf/F-FC7FF8AB6284EA194323C1565C752386.lisp
+
+
+From florenz at berlios.de  Mon Jan 23 23:41:59 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 23 Jan 2006 23:41:59 +0100
+Subject: [gennf-devel] cvs commit: gennf F-4CDCC62803E43FE41DF6D4127912E9FA.tex
+Message-ID: <200601232241.k0NMfxmZ021297@sheep.berlios.de>
+
+florenz     2006/01/23 23:41:59 CET
+
+  Added files:
+    .                    F-4CDCC62803E43FE41DF6D4127912E9FA.tex 
+  Log:
+  Ich habe mal eine Gliederung fuer den Vortrag entworfen.
+  Die meisten Folien sind noch leer.
+  Und mir faellt gerade noch ein, das natuerlich noch die Motivation fuer
+  das Code Signing eine Platz braucht.
+
+
+From florenz at berlios.de  Tue Jan 24 14:10:16 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 24 Jan 2006 14:10:16 +0100
+Subject: [gennf-devel] cvs commit: gennf F-4E51556B59366B0B171CCB0B1F4F10A9.lisp F-88B873BF8C20BA949EB0547CD571F5B0.lisp
+Message-ID: <200601241310.k0ODAGbJ018023@sheep.berlios.de>
+
+florenz     2006/01/24 14:10:16 CET
+
+  Modified files:
+    .                    F-4E51556B59366B0B171CCB0B1F4F10A9.lisp 
+                         F-88B873BF8C20BA949EB0547CD571F5B0.lisp 
+  Log:
+  Creation of an empty branch is implemented.
+  
+  Revision  Changes    Path
+  1.5       +12 -33    gennf/F-4E51556B59366B0B171CCB0B1F4F10A9.lisp
+  1.2       +4 -2      gennf/F-88B873BF8C20BA949EB0547CD571F5B0.lisp
+
+
+From florenz at berlios.de  Tue Jan 24 15:14:02 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 24 Jan 2006 15:14:02 +0100
+Subject: [gennf-devel] cvs commit: gennf F-972969458DDA322E03A1AAD19BF8ADC0.asd
+Message-ID: <200601241414.k0OEE2ui017161@sheep.berlios.de>
+
+florenz     2006/01/24 15:14:02 CET
+
+  Added files:
+    .                    F-972969458DDA322E03A1AAD19BF8ADC0.asd 
+  Log:
+  I forgot to add the ASDF definition.
+
+
+From florenz at berlios.de  Tue Jan 24 15:23:24 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 24 Jan 2006 15:23:24 +0100
+Subject: [gennf-devel] cvs commit: gennf F-B457DDF336218AEBF4158383BC4BB553.html MAP
+ TYPES
+Message-ID: <200601241423.k0OENOPG011722@sheep.berlios.de>
+
+florenz     2006/01/24 15:23:23 CET
+
+  Modified files:
+    .                    F-B457DDF336218AEBF4158383BC4BB553.html 
+                         MAP TYPES 
+  Log:
+  MAP was not updated.
+  
+  Revision  Changes    Path
+  1.9       +3 -3      gennf/F-B457DDF336218AEBF4158383BC4BB553.html
+  1.16      +6 -0      gennf/MAP
+  1.5       +2 -1      gennf/TYPES
+
+
+From sigsegv at berlios.de  Tue Jan 24 18:38:08 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Tue, 24 Jan 2006 18:38:08 +0100
+Subject: [gennf-devel] cvs commit: gennf F-48D1C070D93800E7560AEE00EF78D0B2.lisp F-4E51556B59366B0B171CCB0B1F4F10A9.lisp
+ F-B457DDF336218AEBF4158383BC4BB553.html F-FC7FF8AB6284EA194323C1565C752386.lisp
+Message-ID: <200601241738.k0OHc8kS012023@sheep.berlios.de>
+
+sigsegv     2006/01/24 18:38:08 CET
+
+  Modified files:
+    .                    F-48D1C070D93800E7560AEE00EF78D0B2.lisp 
+                         F-4E51556B59366B0B171CCB0B1F4F10A9.lisp 
+                         F-B457DDF336218AEBF4158383BC4BB553.html 
+                         F-FC7FF8AB6284EA194323C1565C752386.lisp 
+  Log:
+  minor changes
+  
+  Revision  Changes    Path
+  1.3       +15 -2     gennf/F-48D1C070D93800E7560AEE00EF78D0B2.lisp
+  1.6       +19 -11    gennf/F-4E51556B59366B0B171CCB0B1F4F10A9.lisp
+  1.10      +3 -2      gennf/F-B457DDF336218AEBF4158383BC4BB553.html
+  1.5       +3 -2      gennf/F-FC7FF8AB6284EA194323C1565C752386.lisp
+
+
+From florenz at berlios.de  Tue Jan 24 21:17:34 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 24 Jan 2006 21:17:34 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/backend-cvs.lisp prototype/backend.lisp
+Message-ID: <200601242017.k0OKHYVp028009@sheep.berlios.de>
+
+florenz     2006/01/24 21:17:34 CET
+
+  Modified files:
+    .                    prototype/backend-cvs.lisp 
+                         prototype/backend.lisp 
+  Log:
+  Sorry for all those previous BOGUS messages. The commit mailer
+  is now able to replace F-file names by sensible names and it took
+  some time and testing to get it working. The two files prototype/backend.lisp
+  and prototype/backend-cvs.lisp have very high revision numbers which is
+  due to all the tests.
+  
+  Revision  Changes    Path
+  1.18      +1 -3      gennf/prototype/backend-cvs.lisp
+  1.20      +1 -3      gennf/prototype/backend.lisp
+
+
+From florenz at berlios.de  Wed Jan 25 12:39:01 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 25 Jan 2006 12:39:01 +0100
+Subject: [gennf-devel] cvs commit: gennf htdocs/index.html
+Message-ID: <200601251139.k0PBd17c020372@sheep.berlios.de>
+
+florenz     2006/01/25 12:39:00 CET
+
+  Modified files:
+    .                    htdocs/index.html 
+  Log:
+  Background color is now set by CSS rather than body-attribut.
+  
+  Revision  Changes    Path
+  1.11      +6 -3      gennf/htdocs/index.html
+
+
+From florenz at berlios.de  Wed Jan 25 13:19:28 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 25 Jan 2006 13:19:28 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/miscallenous.lisp
+Message-ID: <200601251219.k0PCJS6E018508@sheep.berlios.de>
+
+florenz     2006/01/25 13:19:27 CET
+
+  Modified files:
+    .                    prototype/miscallenous.lisp 
+  Log:
+  BOGUS
+  
+  Revision  Changes    Path
+  1.4       +20 -1     gennf/prototype/miscallenous.lisp
+
+
+From florenz at berlios.de  Wed Jan 25 14:08:58 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 25 Jan 2006 14:08:58 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/gennf.lisp prototype/miscallenous.lisp
+Message-ID: <200601251308.k0PD8wRm011815@sheep.berlios.de>
+
+florenz     2006/01/25 14:08:57 CET
+
+  Modified files:
+    .                    prototype/gennf.lisp 
+                         prototype/miscallenous.lisp 
+  Log:
+  Lasr version of retry macro by Otto and rewritten create-empty-branch
+  using this macro.
+  
+  Revision  Changes    Path
+  1.6       +29 -2     gennf/prototype/gennf.lisp
+  1.5       +42 -23    gennf/prototype/miscallenous.lisp
+
+
+From florenz at berlios.de  Wed Jan 25 18:49:11 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 25 Jan 2006 18:49:11 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/miscallenous.lisp
+Message-ID: <200601251749.k0PHnBwo020340@sheep.berlios.de>
+
+florenz     2006/01/25 18:49:11 CET
+
+  Modified files:
+    .                    prototype/miscallenous.lisp 
+  Log:
+  Probably the most complicated macro I have written so far: retry, which
+  is generalization of retry-until-finished with an optional maximum
+  repetition per condition.
+  
+  Revision  Changes    Path
+  1.6       +84 -38    gennf/prototype/miscallenous.lisp
+
+
+From florenz at berlios.de  Wed Jan 25 20:51:26 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 25 Jan 2006 20:51:26 +0100
+Subject: [gennf-devel] cvs commit: port-path port-path.lisp packages.lisp
+Message-ID: <200601251951.k0PJpQuG015645@sheep.berlios.de>
+
+florenz     2006/01/25 20:51:25 CET
+
+  Modified files:
+    .                    port-path.lisp 
+                         packages.lisp 
+  Log:
+  pathname-prefixes is moved into port-path (was in miscellanuous.lisp
+  of gennf).
+  
+  Revision  Changes    Path
+  1.4       +21 -2     port-path/port-path.lisp
+  1.4       +3 -2      port-path/packages.lisp
+
+
+From florenz at berlios.de  Wed Jan 25 20:55:02 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 25 Jan 2006 20:55:02 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/gennf.lisp prototype/miscallenous.lisp
+ prototype/backend-cvs.lisp
+Message-ID: <200601251955.k0PJt2HH017902@sheep.berlios.de>
+
+florenz     2006/01/25 20:55:02 CET
+
+  Modified files:
+    .                    prototype/gennf.lisp 
+                         prototype/miscallenous.lisp 
+                         prototype/backend-cvs.lisp 
+  Log:
+  create-empty-branch uses the new retry macro now. There was some trouble
+  using a variable in the macro's body and in the cleanup code. This can
+  only be done by specialising the variable, which is not so nice, or
+  wrapping the whole retry-expression with a let to lexically introduce
+  the variable, which is how it is done now.
+  
+  pathname-prefixes is moved to port-path.
+  
+  Revision  Changes    Path
+  1.7       +12 -46    gennf/prototype/gennf.lisp
+  1.7       +51 -49    gennf/prototype/miscallenous.lisp
+  1.19      +2 -2      gennf/prototype/backend-cvs.lisp
+
+
+From sigsegv at berlios.de  Thu Jan 26 11:45:18 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Thu, 26 Jan 2006 11:45:18 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601261045.k0QAjIrq021146@sheep.berlios.de>
+
+sigsegv     2006/01/26 11:45:18 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  folien.tex uses now \framtitle instead of the fram env for naming the slides
+  
+  Revision  Changes    Path
+  1.2       +46 -27    gennf/doc/folien.tex
+
+
+From sigsegv at berlios.de  Thu Jan 26 13:55:21 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Thu, 26 Jan 2006 13:55:21 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601261255.k0QCtLZp006623@sheep.berlios.de>
+
+sigsegv     2006/01/26 13:55:20 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  Minor changes
+  
+  Revision  Changes    Path
+  1.3       +61 -14    gennf/doc/folien.tex
+
+
+From hannes23 at berlios.de  Thu Jan 26 14:40:09 2006
+From: hannes23 at berlios.de (hannes23 at BerliOS)
+Date: Thu, 26 Jan 2006 14:40:09 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601261340.k0QDe90s030810@sheep.berlios.de>
+
+hannes23    2006/01/26 14:40:08 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  ein bisschen code signing content...
+  vermutlich teilweise noch am falschen platz
+  
+  Revision  Changes    Path
+  1.4       +33 -2     gennf/doc/folien.tex
+
+
+From florenz at berlios.de  Thu Jan 26 14:55:32 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 26 Jan 2006 14:55:32 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601261355.k0QDtWtB004570@sheep.berlios.de>
+
+florenz     2006/01/26 14:55:32 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  Corrected some of Hannes' and Otto's Typos.
+  All slides previously written by myself now use the block/itemize layout
+  rather than the itemize/itemize layout.
+  Begun to describe mete data structures for distributed repositories.
+  
+  Revision  Changes    Path
+  1.5       +92 -68    gennf/doc/folien.tex
+
+
+From hannes23 at berlios.de  Thu Jan 26 15:15:44 2006
+From: hannes23 at berlios.de (hannes23 at BerliOS)
+Date: Thu, 26 Jan 2006 15:15:44 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601261415.k0QEFiS9006597@sheep.berlios.de>
+
+hannes23    2006/01/26 15:15:43 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  moved some content around... there are currently only 2 slides,
+  and content needed for the third...
+  
+  Revision  Changes    Path
+  1.6       +14 -18    gennf/doc/folien.tex
+
+
+From florenz at cs.tu-berlin.de  Thu Jan 26 15:41:07 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Thu, 26 Jan 2006 15:41:07 +0100
+Subject: [gennf-devel] Eine generelle Sachen zu den Folien
+Message-ID: <20060126144107.GB638@conde.cs.tu-berlin.de>
+
+Hallo zusammen,
+
+ich finde, dass wir uns bemuehen sollten, auf den Folien zumindest fuer
+Verben nicht so viele Englisch zu schreiben. Bei Begriffen wie Branch,
+Merge, Repositopry laesst sich das schlecht vermeiden, ohne dass es
+albern aussieht, aber revoken oder leaken muessen wir nicht unbedingt.
+Das verstoesst irgendwie gegen mein Aesthetisches Verstaendnis und ich wurde
+mich freuen, wenn wir uns da einigen.
+
+Florian
+
+PS. Alternative ist Folien __und__ Vortrag auf englisch...
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060126/3d3c8c46/attachment.pgp>
+
+From florenz at berlios.de  Thu Jan 26 15:53:20 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 26 Jan 2006 15:53:20 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601261453.k0QErKdC016214@sheep.berlios.de>
+
+florenz     2006/01/26 15:53:20 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  Distribution: structures is finished, at least as a first approximation,
+  operations and examples is to be continued.
+  
+  Revision  Changes    Path
+  1.7       +45 -10    gennf/doc/folien.tex
+
+
+From hannes at mehnert.org  Thu Jan 26 19:52:47 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Thu, 26 Jan 2006 19:52:47 +0100
+Subject: [gennf-devel] Eine generelle Sachen zu den Folien
+In-Reply-To: <20060126144107.GB638@conde.cs.tu-berlin.de>
+References: <20060126144107.GB638@conde.cs.tu-berlin.de>
+Message-ID: <43D91A7F.2050100@mehnert.org>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Tag,
+
+Florian Lorenzen wrote:
+| ich finde, dass wir uns bemuehen sollten, auf den Folien zumindest fuer
+| Verben nicht so viele Englisch zu schreiben. Bei Begriffen wie Branch,
+| Merge, Repositopry laesst sich das schlecht vermeiden, ohne dass es
+| albern aussieht, aber revoken oder leaken muessen wir nicht unbedingt.
+| Das verstoesst irgendwie gegen mein Aesthetisches Verstaendnis und ich
+wurde
+| mich freuen, wenn wir uns da einigen.
+
+ja, bin ich auch dafuer, wobei es immer wieder Worte gibt, deren
+Uebersetzung nicht wirklich gut ist...
+
+
+Hannes
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (FreeBSD)
+Comment: Using GnuPG with Thunderbird - http://enigmail.mozdev.org
+
+iD8DBQFD2Rp/RcuNlziBjRwRAuwkAKCRvpWQqOYhfM6L2T4OiVFLdjqy5QCffZTp
+KrRAZDu8n4B/k14FvVZANbE=
+=jEj5
+-----END PGP SIGNATURE-----
+
+
+From florenz at cs.tu-berlin.de  Thu Jan 26 20:28:09 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Thu, 26 Jan 2006 20:28:09 +0100
+Subject: [gennf-devel] Eine generelle Sachen zu den Folien
+In-Reply-To: <43D91A7F.2050100@mehnert.org>
+References: <20060126144107.GB638@conde.cs.tu-berlin.de> <43D91A7F.2050100@mehnert.org>
+Message-ID: <20060126192809.GD638@conde.cs.tu-berlin.de>
+
+Hallo alle,
+
+On Thu, Jan 26, 2006 at 07:52:47PM +0100, Hannes Mehnert wrote:
+> Tag,
+> 
+> ja, bin ich auch dafuer, wobei es immer wieder Worte gibt, deren
+> Uebersetzung nicht wirklich gut ist...
+Da hast Du recht. Mir ist nur aufgefallen, dass es bei Verben meist noch
+recht gut geht (besser als bei Server, Repository, Merge, ...).
+Deswegen die Bitte.
+
+Gruss,
+
+Florian
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060126/f98879c4/attachment.pgp>
+
+From florenz at berlios.de  Thu Jan 26 20:29:25 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 26 Jan 2006 20:29:25 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601261929.k0QJTPr1002779@sheep.berlios.de>
+
+florenz     2006/01/26 20:29:24 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  The operations are finished.
+  We also have a fancy footline now showing the frame number.
+  
+  Revision  Changes    Path
+  1.8       +41 -6     gennf/doc/folien.tex
+
+
+From florenz at berlios.de  Thu Jan 26 22:36:07 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 26 Jan 2006 22:36:07 +0100
+Subject: [gennf-devel] cvs commit: gennf F-2AAD1C1E791A31FF4200BDBC0A9E3ED6.fig F-64F03E4083CDA7BB01BEE06595ED006F.fig
+ F-D636EE3C0CFBE5D4BF3AE6987E95B71A.fig doc/folien.tex doc/Makefile
+Message-ID: <200601262136.k0QLa7pj031984@sheep.berlios.de>
+
+florenz     2006/01/26 22:36:07 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+                         doc/Makefile 
+  Added files:
+    .                    F-2AAD1C1E791A31FF4200BDBC0A9E3ED6.fig 
+                         F-64F03E4083CDA7BB01BEE06595ED006F.fig 
+                         F-D636EE3C0CFBE5D4BF3AE6987E95B71A.fig 
+  Log:
+  Changed operations a bit. It is now easier (fewer formulae).
+  The examples slide is finished with some figures.
+  The Makefile is able to build the pdf and pdf_t files of
+  the figures (requires fig2dev) using make folien.pdf.
+  
+  Revision  Changes    Path
+  1.9       +54 -19    gennf/doc/folien.tex
+  1.6       +10 -8     gennf/doc/Makefile
+
+
+From hannes at mehnert.org  Fri Jan 27 14:38:12 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Fri, 27 Jan 2006 14:38:12 +0100
+Subject: [gennf-devel] cvs commit: gennf F-2AAD1C1E791A31FF4200BDBC0A9E3ED6.fig
+ F-64F03E4083CDA7BB01BEE06595ED006F.fig F-D636EE3C0CFBE5D4BF3AE6987E95B71A.fig
+ doc/folien.tex doc/Makefile
+In-Reply-To: <200601262136.k0QLa7pj031984@sheep.berlios.de>
+References: <200601262136.k0QLa7pj031984@sheep.berlios.de>
+Message-ID: <43DA2244.60402@mehnert.org>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hallo,
+
+florenz at BerliOS wrote:
+| florenz     2006/01/26 22:36:07 CET
+|
+|   Modified files:
+|     .                    doc/folien.tex
+|                          doc/Makefile
+|   Added files:
+|     .                    F-2AAD1C1E791A31FF4200BDBC0A9E3ED6.fig
+|                          F-64F03E4083CDA7BB01BEE06595ED006F.fig
+|                          F-D636EE3C0CFBE5D4BF3AE6987E95B71A.fig
+|   Log:
+|   Changed operations a bit. It is now easier (fewer formulae).
+|   The examples slide is finished with some figures.
+|   The Makefile is able to build the pdf and pdf_t files of
+|   the figures (requires fig2dev) using make folien.pdf.
+
+Hier fehlt wohl noch ein update des MAP-files, oder?
+Zumindest haben sich die .fig files nicht materialisiert in meiner
+working copy...
+
+
+Hannes
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (FreeBSD)
+Comment: Using GnuPG with Thunderbird - http://enigmail.mozdev.org
+
+iD8DBQFD2iJERcuNlziBjRwRAljtAKDFHW+ZR9WE8bZ75z58xCiYOSAKvQCeJ32f
+fMhzgeAb0hkos5NJg2AcpI8=
+=asxf
+-----END PGP SIGNATURE-----
+
+
+From hannes23 at berlios.de  Fri Jan 27 15:24:43 2006
+From: hannes23 at berlios.de (hannes23 at BerliOS)
+Date: Fri, 27 Jan 2006 15:24:43 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601271424.k0REOhqt012771@sheep.berlios.de>
+
+hannes23    2006/01/27 15:24:42 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  added block{} statements
+  added implementationskonzept-slide
+  
+  Revision  Changes    Path
+  1.10      +55 -22    gennf/doc/folien.tex
+
+
+From florenz at cs.tu-berlin.de  Fri Jan 27 15:33:22 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Fri, 27 Jan 2006 15:33:22 +0100
+Subject: [gennf-devel] cvs commit: gennf F-2AAD1C1E791A31FF4200BDBC0A9E3ED6.fig F-64F03E4083CDA7BB01BEE06595ED006F.fig F-D636EE3C0CFBE5D4BF3AE6987E95B71A.fig doc/folien.tex doc/Makefile
+In-Reply-To: <43DA2244.60402@mehnert.org>
+References: <200601262136.k0QLa7pj031984@sheep.berlios.de> <43DA2244.60402@mehnert.org>
+Message-ID: <20060127143322.GC26352@conde.cs.tu-berlin.de>
+
+Hi,
+
+On Fri, Jan 27, 2006 at 02:38:12PM +0100, Hannes Mehnert wrote:
+> Hier fehlt wohl noch ein update des MAP-files, oder?
+> Zumindest haben sich die .fig files nicht materialisiert in meiner
+> working copy...
+Ja stimmt. Ich mache meist ein mcvs ci file1 file2 usw. weil auch
+noch Muell bei mir rumliegt, der noch nicht hoch soll und dann vergisst
+Meta-CVS wohl MAP.
+
+Florian
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060127/c7773868/attachment.pgp>
+
+From florenz at berlios.de  Fri Jan 27 15:54:00 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Fri, 27 Jan 2006 15:54:00 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/miscallenous.lisp doc/folien.tex
+ prototype/gennf.lisp MAP TYPES
+Message-ID: <200601271454.k0REs0iS016078@sheep.berlios.de>
+
+florenz     2006/01/27 15:54:00 CET
+
+  Modified files:
+    .                    prototype/miscallenous.lisp 
+                         doc/folien.tex 
+                         prototype/gennf.lisp 
+                         MAP TYPES 
+  Log:
+  Still not up to date?
+  
+  Revision  Changes    Path
+  1.8       +5 -6      gennf/prototype/miscallenous.lisp
+  1.11      +3 -3      gennf/doc/folien.tex
+  1.8       +2 -1      gennf/prototype/gennf.lisp
+  1.17      +9 -0      gennf/MAP
+  1.6       +1 -0      gennf/TYPES
+
+
+From hannes23 at berlios.de  Fri Jan 27 16:04:53 2006
+From: hannes23 at berlios.de (hannes23 at BerliOS)
+Date: Fri, 27 Jan 2006 16:04:53 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601271504.k0RF4rkS018239@sheep.berlios.de>
+
+hannes23    2006/01/27 16:04:53 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  some more blocks
+  
+  Revision  Changes    Path
+  1.12      +6 -6      gennf/doc/folien.tex
+
+
+From sigsegv at berlios.de  Fri Jan 27 22:41:00 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Fri, 27 Jan 2006 22:41:00 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/orthogonal.png doc/folien.tex
+ MAP TYPES
+Message-ID: <200601272141.k0RLf007029901@sheep.berlios.de>
+
+sigsegv     2006/01/27 22:41:00 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+                         MAP TYPES 
+  Added files:
+    .                    doc/orthogonal.png 
+  Log:
+  Bin muede, arbeite morgen waerend der Arbeit weiter.
+  Die umfeld folie ist mir immer noch suspekt. Ich bin mir nicht sicher
+  was wir da eigentlich sagen wollen.
+  
+  Revision  Changes    Path
+  1.13      +31 -20    gennf/doc/folien.tex
+  1.18      +3 -0      gennf/MAP
+  1.7       +1 -0      gennf/TYPES
+
+
+From florenz at cs.tu-berlin.de  Fri Jan 27 23:02:29 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Fri, 27 Jan 2006 23:02:29 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/orthogonal.png doc/folien.tex MAP TYPES
+In-Reply-To: <200601272141.k0RLf007029901@sheep.berlios.de>
+References: <200601272141.k0RLf007029901@sheep.berlios.de>
+Message-ID: <20060127220229.GA22031@fiesta.cs.tu-berlin.de>
+
+>   Bin muede, arbeite morgen waerend der Arbeit weiter.
+>   Die umfeld folie ist mir immer noch suspekt. Ich bin mir nicht sicher
+>   was wir da eigentlich sagen wollen.
+Es geht darum, darzulegen, das wir was machen, was es in der Form noch
+nicht gibt. Sonst koennten wir das ja auch lassen. Von mir aus kann die
+Folie auch so bleiben.
+
+Florian
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060127/c4d0f76e/attachment.pgp>
+
+From florenz at berlios.de  Fri Jan 27 23:12:17 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Fri, 27 Jan 2006 23:12:17 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601272212.k0RMCHSt000290@sheep.berlios.de>
+
+florenz     2006/01/27 23:12:17 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  Minor corrections.
+  
+  Revision  Changes    Path
+  1.14      +9 -10     gennf/doc/folien.tex
+
+
+From sigsegv at berlios.de  Sat Jan 28 14:53:46 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Sat, 28 Jan 2006 14:53:46 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601281353.k0SDrk48012524@sheep.berlios.de>
+
+sigsegv     2006/01/28 14:53:46 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  * Die Umfeld Folie ist entfernt
+  * Die Argumentation verbessert
+  * METACVS ueberarbeitet
+  * kleinere Aenderungen
+  
+  Revision  Changes    Path
+  1.15      +70 -60    gennf/doc/folien.tex
+
+
+From florenz at berlios.de  Sat Jan 28 18:14:00 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Sat, 28 Jan 2006 18:14:00 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/orthogonal.fig doc/folien.tex
+ doc/Makefile MAP
+Message-ID: <200601281714.k0SHE0ix028374@sheep.berlios.de>
+
+florenz     2006/01/28 18:14:00 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+                         doc/Makefile MAP 
+  Added files:
+    .                    doc/orthogonal.fig 
+  Log:
+  Moeglicherweise schon die Endfassung. Ich habe noch ein kleines bisschen
+  an der einen oder anderen Formulierung gedreht und die Graphik mit
+  dem Koordinatensystem etwas geaendert. Wenn Ihr zufrieden seid kann das
+  Ganze jetzt so bleiben (abgesehen von Tippfehlern o. ae., die wir
+  noch finden).
+  
+  Revision  Changes    Path
+  1.16      +25 -18    gennf/doc/folien.tex
+  1.7       +1 -1      gennf/doc/Makefile
+  1.19      +3 -0      gennf/MAP
+
+
+From hannes at mehnert.org  Mon Jan 30 03:38:23 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Mon, 30 Jan 2006 03:38:23 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/orthogonal.fig doc/folien.tex
+ doc/Makefile MAP
+In-Reply-To: <200601281714.k0SHE0ix028374@sheep.berlios.de>
+References: <200601281714.k0SHE0ix028374@sheep.berlios.de>
+Message-ID: <43DD7C1F.2040402@mehnert.org>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hallo,
+
+florenz at BerliOS wrote:
+|   Moeglicherweise schon die Endfassung. Ich habe noch ein kleines bisschen
+|   an der einen oder anderen Formulierung gedreht und die Graphik mit
+|   dem Koordinatensystem etwas geaendert. Wenn Ihr zufrieden seid kann das
+|   Ganze jetzt so bleiben (abgesehen von Tippfehlern o. ae., die wir
+|   noch finden).
+
+Ja, ich finde die Folien, wie sie sind, brauchbar (habe allerdings keine
+Tippfehler gesucht).
+
+
+Hannes
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (FreeBSD)
+Comment: Using GnuPG with Thunderbird - http://enigmail.mozdev.org
+
+iD8DBQFD3XwfRcuNlziBjRwRAhm4AJ9WgFDt+VM/dvddiovTqiNzKaU0DwCfQ9+h
+O9CZPiV0EpQ2w/XtvJdq+M0=
+=3YOT
+-----END PGP SIGNATURE-----
+
+
+From florenz at berlios.de  Mon Jan 30 18:43:58 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 30 Jan 2006 18:43:58 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601301743.k0UHhws8018516@sheep.berlios.de>
+
+florenz     2006/01/30 18:43:57 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  Korrektur der letzten Tippfehler.
+  
+  Revision  Changes    Path
+  1.17      +4 -4      gennf/doc/folien.tex
+
+
+From florenz at cs.tu-berlin.de  Mon Jan 30 18:48:31 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Mon, 30 Jan 2006 18:48:31 +0100
+Subject: [gennf-devel] Zum Vortrag morgen
+In-Reply-To: <200601301743.k0UHhws8018516@sheep.berlios.de>
+References: <200601301743.k0UHhws8018516@sheep.berlios.de>
+Message-ID: <20060130174831.GE21765@bruja.cs.tu-berlin.de>
+
+Hallo Otto, hallo Hannes,
+
+ich habe eben die letzten Tippfehler (hoffe ich) in den Folien
+beseitigt.
+Hannes, bringst Du Deinen Laptop mit? Ich werde meinen zur Reserve
+mitnehmen. Weiter bringe ich -- Hannes kennt das -- eine Uhr zum auf den
+Tisch stellen und die Antenne meines Kuechenradios als Zeigestab mit.
+
+Vielleicht treffen wir uns morgen kurz vorher, um noch die genauen
+Folien fuer die Wechsel festzulegen. Es duerfte ungefaehr klar sein,
+aber es ist besser, denke ich, das wir uns nochmal kurz abstimmen.
+Gegen halb zwei im i-Cafe?
+
+Bis morgen,
+
+Florian
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060130/d6be6c9b/attachment.pgp>
+
+From hannes at mehnert.org  Mon Jan 30 18:54:59 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Mon, 30 Jan 2006 18:54:59 +0100
+Subject: [gennf-devel] Zum Vortrag morgen
+In-Reply-To: <20060130174831.GE21765@bruja.cs.tu-berlin.de>
+References: <200601301743.k0UHhws8018516@sheep.berlios.de> <20060130174831.GE21765@bruja.cs.tu-berlin.de>
+Message-ID: <43DE52F3.3010809@mehnert.org>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hallo Florian,
+
+Florian Lorenzen wrote:
+| Hannes, bringst Du Deinen Laptop mit?
+
+Klar.
+
+| Vielleicht treffen wir uns morgen kurz vorher, um noch die genauen
+| Folien fuer die Wechsel festzulegen. Es duerfte ungefaehr klar sein,
+| aber es ist besser, denke ich, das wir uns nochmal kurz abstimmen.
+| Gegen halb zwei im i-Cafe?
+
+klingt wie eine gute Idee.
+
+
+Hannes
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (FreeBSD)
+Comment: Using GnuPG with Thunderbird - http://enigmail.mozdev.org
+
+iD8DBQFD3lLzRcuNlziBjRwRAhpRAKDFyWIJ9oJfQZYhxQB46BKZ3/T3CwCfZD+1
+tNoPVL8khasOu4HLEUTRx0g=
+=f0kK
+-----END PGP SIGNATURE-----
+
+
+From florenz at berlios.de  Tue Jan 31 18:26:44 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 31 Jan 2006 18:26:44 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/folien.tex
+Message-ID: <200601311726.k0VHQig4031570@sheep.berlios.de>
+
+florenz     2006/01/31 18:26:44 CET
+
+  Modified files:
+    .                    doc/folien.tex 
+  Log:
+  Corrected typos.
+  
+  Revision  Changes    Path
+  1.18      +3 -3      gennf/doc/folien.tex
+
+

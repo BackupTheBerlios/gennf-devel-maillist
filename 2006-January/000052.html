@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] Locking Problem
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2006-January/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20Locking%20Problem&In-Reply-To=%3C43C661AB.3030905%40mehnert.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000051.html">
+   <LINK REL="Next"  HREF="000054.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] Locking Problem</H1>
+    <B>Hannes Mehnert</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20Locking%20Problem&In-Reply-To=%3C43C661AB.3030905%40mehnert.org%3E"
+       TITLE="[gennf-devel] Locking Problem">hannes at mehnert.org
+       </A><BR>
+    <I>Thu Jan 12 15:03:23 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000051.html">[gennf-devel] Locking Problem
+</A></li>
+        <LI>Next message: <A HREF="000054.html">[gennf-devel] cvs commit: gennf F-495FEBB82844E29E9B8F3FFCC5A022E2.lisp F-4E51556B59366B0B171CCB0B1F4F10A9.lisp F-251FB522127FF9A2E037DC904E011C8D.lisp F-080CF3710F46A1C94984A6BD78462AC7.lisp F-03018E8471DDD49AD47174CF158A9286.lisp F-EADDB60DB86A4481CF5D126F61D78F8E.lisp F-769D6330165D17D4921D9970720734B7.lisp F-CD3AD5F3865AB17A39CA5B43B888F3F2.lisp F-83B842F2203F2AE6157E430B77F56938.lisp F-FC7FF8AB6284EA194323C1565C752386.lisp F-48D1C070D93800E7560AEE00EF78D0B2.lisp ...
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#52">[ date ]</a>
+              <a href="thread.html#52">[ thread ]</a>
+              <a href="subject.html#52">[ subject ]</a>
+              <a href="author.html#52">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hallo,
+
+Florian Lorenzen wrote:
+|<i> ich habe die die Befuerchtung, dass wir ein echtes Problem haben, was
+</I>|<i> damit zusammenhaengt, wie wir Changes abspeichern. Dabei wird eine
+</I>|<i> Abbildung Dateiname-&gt;Revisionsnummer gebildet und abgespeichert. Welche
+</I>|<i> Revisionsnummer eine Datei bei einem Commit bekommt, wissen wir aber
+</I>|<i> immer erst hinterher. Das bedeutet, dass der Change erst nach dem Commit
+</I>|<i> gebildet und im Repository abgelegt werden kann. Scheitert das aus
+</I>|<i> irgendeinem Grund, liegt ein nicht registrierter Change im Repository.
+</I>|<i> Den koennte man wieder ruckgaengig machen, sozusagen eine Art
+</I>|<i> registrierter Rollback. Wenn aber der Commit des Change vorher nicht
+</I>|<i> klappte, ist es gut moeglich, dass der Rollback auch nicht klappt.
+</I>|<i>
+</I>|<i> Eine andere Moeglichkeit ist, zuerst einen trockenen Commit zu machen
+</I>|<i> und sich nur die Revisionsnummern zu holen und dann alle Files und den
+</I>|<i> Change in einem Atemzug einzuchecken. Es kann aber sein, dass jemand
+</I>|<i> dazwischen kommt und dann die Revisionsnummern nicht mehr stimmen. Das
+</I>|<i> koennte man nach dem Commit ueberpruefen und so zumindest den Fehler
+</I>|<i> feststellen. Ich weiss allerdings gerade nicht, wie man dann damit
+</I>|<i> umgehen kann.
+</I>|<i>
+</I>|<i> Diese Umstaende einfach zu ignorieren, scheint mir wirklich keine gute
+</I>|<i> Loesung zu sein.
+</I>|<i> habt Ihr Ideen, wie man aus dem Dilemma herauskommt?
+</I>|<i> Es ist zwar so, dass CVS sowieso keine atomaren Commits kann aber wir
+</I>|<i> sollten nicht noch so einen Problemklotz oben draufsetzen.
+</I>
+Ich denke, bei einem commit sollten wir dann folgendes tun:
+~ * globaler lock (fuer das repo bzw das subdir/den branch)
+~   =&gt; dieses geht nur, wenn es noch keinen globalen lock gibt
+~   (durch speichern der process-id und ueberpruefung, ob die process-id
+~    existiert, sollten wir da relativ fail-save sein)
+~ * dry-run des commits, um die versionsnummern zu bekommen
+~   (soweit cvs einen dry-run unterstuetzt)
+~ * commit (inklusive change)
+~ * aufhebung des globalen locks
+
+Wenn nun ein commits abbricht (die tcp-verbindung terminiert, der
+Benutzer strg-c drueckt,...) ist halt irgendwann das Programm (gennf?),
+dessen Process-ID im lock gespeichert ist, auch terminiert, danach
+sollte der lock wieder verfuegbar sein (da die Process-ID nicht mehr
+existiert).
+
+
+|<i> Mein Vorschlag ist deswegen, die Idee von Meta-CVS zu uebernehmen, alle
+</I>|<i> Dateien als F-Files abzulegen, eine MAP einzufuehren und die Dateien mir
+</I>|<i> Hardlinks in die Sandbox einzuklinken. Hier koennen wir auch Code
+</I>|<i> uebernehmen, denke ich. Der ganze Rest, die Anbindung an das Backend,
+</I>|<i> das Handling von Branches und Merges (diesbzgl. bringt uns Meta-CVS
+</I>|<i> sowieso nichts) wird neu gemacht.
+</I>
+Naja, neu schreiben ist natuerlich mehr Arbeit, aber ich denke, nur die
+Teile, die uns sinnvoll erscheinen, zu uebernehmen, hat auch Vorteile.
+Da wir z.B. das branching vollkommen anders machen, brauchen wir da
+natuerlich keinen meta-cvs code. Also, wenn du meinst, meta-cvs sei an
+bestimmten Stellen unbrauchbar, benutze die Teile einfach nicht ;). Das
+Pfad-Handling finde ich auch nicht schoen an dem meta-cvs, und denke,
+das sollten wir besser machen. Wenn tatsaechlich nur das MAP und die
+sandbox uebrig bleibt, nehmen wir halt nur den Teil, und machen den Rest
+selber.
+Was wir uns ueberlegen sollten ist, ob und wie wir cvs/meta-cvs
+Repositories  in gennf importieren (da meta-cvs keine changes kennt,
+werden wir hier was aehnliches wie subversion beim Import von
+cvs-Repositories tun muessen).
+
+
+Hannes
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (FreeBSD)
+Comment: Using GnuPG with Thunderbird - <A HREF="http://enigmail.mozdev.org">http://enigmail.mozdev.org</A>
+
+iD8DBQFDxmGrRcuNlziBjRwRAre5AJ9awOpnCobrf5lmNSI7Dod+X+PLYQCfaa0h
+4kMaedHBFve9ucujU0ahFD8=
+=0U6b
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000051.html">[gennf-devel] Locking Problem
+</A></li>
+	<LI>Next message: <A HREF="000054.html">[gennf-devel] cvs commit: gennf F-495FEBB82844E29E9B8F3FFCC5A022E2.lisp F-4E51556B59366B0B171CCB0B1F4F10A9.lisp F-251FB522127FF9A2E037DC904E011C8D.lisp F-080CF3710F46A1C94984A6BD78462AC7.lisp F-03018E8471DDD49AD47174CF158A9286.lisp F-EADDB60DB86A4481CF5D126F61D78F8E.lisp F-769D6330165D17D4921D9970720734B7.lisp F-CD3AD5F3865AB17A39CA5B43B888F3F2.lisp F-83B842F2203F2AE6157E430B77F56938.lisp F-FC7FF8AB6284EA194323C1565C752386.lisp F-48D1C070D93800E7560AEE00EF78D0B2.lisp ...
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#52">[ date ]</a>
+              <a href="thread.html#52">[ thread ]</a>
+              <a href="subject.html#52">[ subject ]</a>
+              <a href="author.html#52">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

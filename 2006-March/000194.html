@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp prototype/backend.lisp prototype/packages.lisp prototype/miscellaneous.lisp prototype/access.lisp prototype/backend-cvs.lisp prototype/merge.lisp prototype/distribution.lisp prototype/configuration.lisp prototype/merging.lisp ...
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2006-March/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/change.lisp%20prototype/branch.lisp%0A%20prototype/backend.lisp%20prototype/packages.lisp%20prototype/miscellaneous.lisp%0A%20prototype/access.lisp%20prototype/backend-cvs.lisp%20prototype/merge.lisp%0A%20prototype/distribution.lisp%20prototype/configuration.lisp%20prototype/merging.lisp%20...&In-Reply-To=%3C200603182337.k2INbNrx002430%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000193.html">
+   <LINK REL="Next"  HREF="000195.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp prototype/backend.lisp prototype/packages.lisp prototype/miscellaneous.lisp prototype/access.lisp prototype/backend-cvs.lisp prototype/merge.lisp prototype/distribution.lisp prototype/configuration.lisp prototype/merging.lisp ...</H1>
+    <B>florenz at BerliOS</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/change.lisp%20prototype/branch.lisp%0A%20prototype/backend.lisp%20prototype/packages.lisp%20prototype/miscellaneous.lisp%0A%20prototype/access.lisp%20prototype/backend-cvs.lisp%20prototype/merge.lisp%0A%20prototype/distribution.lisp%20prototype/configuration.lisp%20prototype/merging.lisp%20...&In-Reply-To=%3C200603182337.k2INbNrx002430%40sheep.berlios.de%3E"
+       TITLE="[gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp prototype/backend.lisp prototype/packages.lisp prototype/miscellaneous.lisp prototype/access.lisp prototype/backend-cvs.lisp prototype/merge.lisp prototype/distribution.lisp prototype/configuration.lisp prototype/merging.lisp ...">florenz at berlios.de
+       </A><BR>
+    <I>Sun Mar 19 00:37:23 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000193.html">[gennf-devel] cvs commit: port-path port-path.asd port-path-posix.c port-path.lisp packages.lisp
+</A></li>
+        <LI>Next message: <A HREF="000195.html">[gennf-devel] cvs commit: gennf prototype/command-line.lisp prototype/configuration.lisp prototype/gennf.asd doc/gennf-report.tex prototype/gennf.lisp MAP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#194">[ date ]</a>
+              <a href="thread.html#194">[ thread ]</a>
+              <a href="subject.html#194">[ subject ]</a>
+              <a href="author.html#194">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>florenz     2006/03/19 00:37:23 CET
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/branch.lisp 
+                         prototype/backend.lisp 
+                         prototype/packages.lisp 
+                         prototype/miscellaneous.lisp 
+                         prototype/access.lisp 
+                         prototype/backend-cvs.lisp 
+                         prototype/merge.lisp 
+                         prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+                         prototype/merging.lisp 
+                         prototype/debug.lisp 
+                         prototype/files.lisp 
+                         prototype/mapping.lisp 
+                         prototype/sbcl.lisp 
+                         prototype/Makefile 
+                         prototype/gennf.asd 
+                         doc/gennf-report.tex 
+                         prototype/directories.lisp 
+                         prototype/error.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  I did so many changes that I don't know all of them anymore.
+  Basically, gennf is somewhat operable now. Merging is half-way implemented,
+  branching, checkout, commit, update seem to work. The handling
+  of the directory structure has still some quirks but I have introduced
+  a *sandbox-directory* and a *startup-directory* variable to resolve
+  filenames against. The map file now only stores string, no pathnames.
+  Furthermore, the identification must not contain a META/n with n being
+  a branch number because that makes merging much harder.
+  There is now a hook to plug in customized merge routines for files.
+  This is used to overcome an initial difficulty when merging
+  a NIL map file againts some sequence of mappings. But it can as
+  well be improved a lot for better merging, which is very poor at the moment.
+  
+  Revision  Changes    Path
+  1.19      +24 -7     gennf/prototype/change.lisp
+  1.9       +3 -3      gennf/prototype/branch.lisp
+  1.26      +12 -8     gennf/prototype/backend.lisp
+  1.6       +3 -3      gennf/prototype/packages.lisp
+  1.20      +2 -2      gennf/prototype/miscellaneous.lisp
+  1.10      +2 -2      gennf/prototype/access.lisp
+  1.38      +15 -6     gennf/prototype/backend-cvs.lisp
+  1.5       +2 -2      gennf/prototype/merge.lisp
+  1.19      +73 -49    gennf/prototype/distribution.lisp
+  1.13      +51 -6     gennf/prototype/configuration.lisp
+  1.10      +58 -13    gennf/prototype/merging.lisp
+  1.4       +11 -21    gennf/prototype/debug.lisp
+  1.9       +2 -2      gennf/prototype/files.lisp
+  1.19      +146 -149  gennf/prototype/mapping.lisp
+  1.6       +2 -2      gennf/prototype/sbcl.lisp
+  1.3       +8 -3      gennf/prototype/Makefile
+  1.16      +9 -7      gennf/prototype/gennf.asd
+  1.28      +40 -22    gennf/doc/gennf-report.tex
+  1.14      +12 -6     gennf/prototype/directories.lisp
+  1.2       +6 -2      gennf/prototype/error.lisp
+  1.35      +147 -148  gennf/prototype/gennf.lisp
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000193.html">[gennf-devel] cvs commit: port-path port-path.asd port-path-posix.c port-path.lisp packages.lisp
+</A></li>
+	<LI>Next message: <A HREF="000195.html">[gennf-devel] cvs commit: gennf prototype/command-line.lisp prototype/configuration.lisp prototype/gennf.asd doc/gennf-report.tex prototype/gennf.lisp MAP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#194">[ date ]</a>
+              <a href="thread.html#194">[ thread ]</a>
+              <a href="subject.html#194">[ subject ]</a>
+              <a href="author.html#194">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

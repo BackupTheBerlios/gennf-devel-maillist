@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] cvs commit: gennf F-01BFC84C7B5AA5916B1FC95B481B0DEC.lisp F-24AFFF4D581EFC1C6EF802B4AAB5D27B.lisp F-DBEF23F4E5EC75C4CF994FA5C7DE0326.lisp
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2005-December/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20F-01BFC84C7B5AA5916B1FC95B481B0DEC.lisp%20F-24AFFF4D581EFC1C6EF802B4AAB5D27B.lisp%0A%20F-DBEF23F4E5EC75C4CF994FA5C7DE0326.lisp&In-Reply-To=%3C200512301808.jBUI83J5001942%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000027.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] cvs commit: gennf F-01BFC84C7B5AA5916B1FC95B481B0DEC.lisp F-24AFFF4D581EFC1C6EF802B4AAB5D27B.lisp F-DBEF23F4E5EC75C4CF994FA5C7DE0326.lisp</H1>
+    <B>florenz at BerliOS</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20F-01BFC84C7B5AA5916B1FC95B481B0DEC.lisp%20F-24AFFF4D581EFC1C6EF802B4AAB5D27B.lisp%0A%20F-DBEF23F4E5EC75C4CF994FA5C7DE0326.lisp&In-Reply-To=%3C200512301808.jBUI83J5001942%40sheep.berlios.de%3E"
+       TITLE="[gennf-devel] cvs commit: gennf F-01BFC84C7B5AA5916B1FC95B481B0DEC.lisp F-24AFFF4D581EFC1C6EF802B4AAB5D27B.lisp F-DBEF23F4E5EC75C4CF994FA5C7DE0326.lisp">florenz at berlios.de
+       </A><BR>
+    <I>Fri Dec 30 19:08:03 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000027.html">[gennf-devel] cvs commit: gennf F-2019E4ADA667C5B63A025FC92E791425 F-6F5CF359180DF63FF524635A543C7BF5 MAP
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#28">[ date ]</a>
+              <a href="thread.html#28">[ thread ]</a>
+              <a href="subject.html#28">[ subject ]</a>
+              <a href="author.html#28">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>florenz     2005/12/30 19:08:03 CET
+
+  Modified files:
+    .                    F-01BFC84C7B5AA5916B1FC95B481B0DEC.lisp 
+                         F-24AFFF4D581EFC1C6EF802B4AAB5D27B.lisp 
+                         F-DBEF23F4E5EC75C4CF994FA5C7DE0326.lisp 
+  Log:
+  Lots of bugfixes concerning the SBCL port. The SBCL build was successful
+  used to do a
+  
+  $ gennf create
+  
+  but there remains one stupid problem:
+  
+  The sb-ext:run-program on Linux with SBCL v0.9.0.18 has trouble
+  with in- and output for visual programs like vi. On Solaris with
+  SBCL v0.8.18 it works. I suspect that it is a SBCL bug (as 0.9.0.18
+  is not the newest version) but this has to be investigated. I think I
+  try a newer SBCL version but 0.9.6 or something had trouble wih SLIME.
+  
+  Revision  Changes    Path
+  1.3       +1 -1      gennf/F-01BFC84C7B5AA5916B1FC95B481B0DEC.lisp
+  1.3       +2 -0      gennf/F-24AFFF4D581EFC1C6EF802B4AAB5D27B.lisp
+  1.3       +24 -8     gennf/F-DBEF23F4E5EC75C4CF994FA5C7DE0326.lisp
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000027.html">[gennf-devel] cvs commit: gennf F-2019E4ADA667C5B63A025FC92E791425 F-6F5CF359180DF63FF524635A543C7BF5 MAP
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#28">[ date ]</a>
+              <a href="thread.html#28">[ thread ]</a>
+              <a href="subject.html#28">[ subject ]</a>
+              <a href="author.html#28">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

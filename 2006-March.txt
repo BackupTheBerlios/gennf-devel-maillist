@@ -1,0 +1,1605 @@
+From sigsegv at alchiba.ni.cs.tu-berlin.de  Thu Mar  2 15:42:25 2006
+From: sigsegv at alchiba.ni.cs.tu-berlin.de (Fabian Otto)
+Date: Thu, 2 Mar 2006 15:42:25 +0100
+Subject: [gennf-devel] Mitteilung
+Message-ID: <20060302144225.GB7542@alchiba.ni.cs.tu-berlin.de>
+
+Hallo Leute, 
+
+ich wollte nur meinen (gedanklichen) Status mitteilen und euren (vor allem
+Hannes seinen) erfragen..
+
+Seit anfang dieser Woche habe ich den besagten Kurs beucht und wollte
+eignetlich danach noch am Projekt arbeiten. So wie das jetzt aber abgelaufen
+ist,  war mir das nicht moeglich. (9:00 - 17:00 Uhr). Der plan ist also am
+naechsten Montag mit dem Projekt weiter zu machen, da der Kurs nur bis Freitag
+stattfinden wird. 
+
+Hannes wollte doch diese Woche schon anfangen an dem Crypto code zu arbeiten,
+da er ja nicht am kurs teilnimmt. Hier auf der Liste ist aber noch nichts
+drueber gegangen. Daher die Frage;  was passiert derzeit?
+
+
+Vieleicht koennten wir uns montag in der Uni zu einem *kurzem* gespreach
+treffen? 
+
+
+Gr?sse Otto
+
+Otto
+
+
+-- 
+Bookmarks: http://del.icio.us/sigsegv
+jabber: sigsegv at jabber.ccc.de
+wiki/blog: http://blog.jotpee.de
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060302/79b55494/attachment.pgp>
+
+From hannes at mehnert.org  Thu Mar  2 15:58:44 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Thu, 02 Mar 2006 15:58:44 +0100
+Subject: [gennf-devel] Mitteilung
+In-Reply-To: <20060302144225.GB7542@alchiba.ni.cs.tu-berlin.de>
+References: <20060302144225.GB7542@alchiba.ni.cs.tu-berlin.de>
+Message-ID: <44070824.9090108@mehnert.org>
+
+Hallo,
+
+Fabian Otto wrote:
+> ich wollte nur meinen (gedanklichen) Status mitteilen und euren (vor allem
+> Hannes seinen) erfragen..
+
+Ich habe schon mehr Design-Notizen gemacht, leider noch nicht digital.
+
+
+> Seit anfang dieser Woche habe ich den besagten Kurs beucht und wollte
+> eignetlich danach noch am Projekt arbeiten. So wie das jetzt aber abgelaufen
+> ist,  war mir das nicht moeglich. (9:00 - 17:00 Uhr). Der plan ist also am
+> naechsten Montag mit dem Projekt weiter zu machen, da der Kurs nur bis Freitag
+> stattfinden wird. 
+> 
+> Hannes wollte doch diese Woche schon anfangen an dem Crypto code zu arbeiten,
+> da er ja nicht am kurs teilnimmt. Hier auf der Liste ist aber noch nichts
+> drueber gegangen. Daher die Frage;  was passiert derzeit?
+
+Derzeit habe ich leider immernoch keine Zeit gefunden, mich darum zu 
+kuemmern. Zusaetzlich bin ich am Sonntag in Bochum, um dort einen 
+Vortrag zu halten -> Ich hoffe, naechste Woche endlich Zeit fuer das 
+Projekt zu finden.
+
+> Vieleicht koennten wir uns montag in der Uni zu einem *kurzem* gespreach
+> treffen? 
+
+Gerne, auch wenn ich bis Montag nicht viel Zeit fuer das Projekt haben 
+werde; und momentan nicht weiss, wie/ob ich das mit dem Projekt 
+tatsaechlich schaffe. Ich wuerde so um 14 Uhr im icafe sagen, wenn es 
+offen hat.
+
+
+Hannes
+
+
+From sigsegv at alchiba.ni.cs.tu-berlin.de  Fri Mar  3 16:52:26 2006
+From: sigsegv at alchiba.ni.cs.tu-berlin.de (Fabian Otto)
+Date: Fri, 3 Mar 2006 16:52:26 +0100
+Subject: [gennf-devel] Mitteilung
+In-Reply-To: <44070824.9090108@mehnert.org>
+References: <20060302144225.GB7542@alchiba.ni.cs.tu-berlin.de> <44070824.9090108@mehnert.org>
+Message-ID: <20060303155226.GA7620@alchiba.ni.cs.tu-berlin.de>
+
+* Hannes Mehnert <hannes at mehnert.org> [060302 15:54]:
+> Hallo,
+
+Hi
+
+> Gerne, auch wenn ich bis Montag nicht viel Zeit fuer das Projekt haben 
+> werde; und momentan nicht weiss, wie/ob ich das mit dem Projekt 
+> tatsaechlich schaffe. Ich wuerde so um 14 Uhr im icafe sagen, wenn es 
+> offen hat.
+
+Also leider hat das I-cafe nicht offen. Ich koennte es oeffnen, aber
+Joerg hat mich gebeten am Montag (mal wieder) auf Arbeiten vorbeizuschauen..
+
+Mir waere es lieber wenn wir es auf Dienstag verschieben, oder uns
+aber Montag frueh treffen. 
+
+> Hannes
+
+Otto
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060303/7be0e638/attachment.pgp>
+
+From hannes at mehnert.org  Fri Mar  3 17:02:30 2006
+From: hannes at mehnert.org (Hannes Mehnert)
+Date: Fri, 03 Mar 2006 17:02:30 +0100
+Subject: [gennf-devel] Mitteilung
+In-Reply-To: <20060303155226.GA7620@alchiba.ni.cs.tu-berlin.de>
+References: <20060302144225.GB7542@alchiba.ni.cs.tu-berlin.de> <44070824.9090108@mehnert.org> <20060303155226.GA7620@alchiba.ni.cs.tu-berlin.de>
+Message-ID: <44086896.5000700@mehnert.org>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Tag,
+
+Fabian Otto wrote:
+| * Hannes Mehnert <hannes at mehnert.org> [060302 15:54]:
+|>Gerne, auch wenn ich bis Montag nicht viel Zeit fuer das Projekt haben
+|>werde; und momentan nicht weiss, wie/ob ich das mit dem Projekt
+|>tatsaechlich schaffe. Ich wuerde so um 14 Uhr im icafe sagen, wenn es
+|>offen hat.
+|
+|
+| Also leider hat das I-cafe nicht offen. Ich koennte es oeffnen, aber
+| Joerg hat mich gebeten am Montag (mal wieder) auf Arbeiten
+vorbeizuschauen..
+|
+| Mir waere es lieber wenn wir es auf Dienstag verschieben, oder uns
+| aber Montag frueh treffen.
+
+Dann bin ich fuer Dienstag, wenn 14 Uhr fuer euch ok ist.
+
+
+Hannes
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (FreeBSD)
+Comment: Using GnuPG with Thunderbird - http://enigmail.mozdev.org
+
+iD8DBQFECGiWRcuNlziBjRwRAmJqAKCD2l6hDO27G7Y1Pl3Rx2MGcaHbUQCcDeNU
+Cooxihq3PQvaf6Pz3xpIXHE=
+=AZHm
+-----END PGP SIGNATURE-----
+
+
+From florenz at berlios.de  Fri Mar  3 17:53:05 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Fri, 3 Mar 2006 17:53:05 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/TODO prototype/miscellaneous.lisp
+ prototype/access.lisp prototype/distribution.lisp prototype/configuration.lisp
+Message-ID: <200603031653.k23Gr5JI010068@sheep.berlios.de>
+
+florenz     2006/03/03 17:53:05 CET
+
+  Modified files:
+    .                    prototype/TODO 
+                         prototype/miscellaneous.lisp 
+                         prototype/access.lisp 
+                         prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+  Log:
+  Proper log messages are now generated for a merge.
+  For a commit they can be passed to the commit function.
+  They should be handled by temporary files and not by commandline
+  in the backend. Command line passing poses a length restriction on
+  the log message.
+  
+  Revision  Changes    Path
+  1.7       +9 -3      gennf/prototype/TODO
+  1.15      +11 -1     gennf/prototype/miscellaneous.lisp
+  1.6       +7 -2      gennf/prototype/access.lisp
+  1.4       +12 -5     gennf/prototype/distribution.lisp
+  1.7       +6 -2      gennf/prototype/configuration.lisp
+
+
+From florenz at berlios.de  Fri Mar  3 17:55:22 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Fri, 3 Mar 2006 17:55:22 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/TODO
+Message-ID: <200603031655.k23GtM60010480@sheep.berlios.de>
+
+florenz     2006/03/03 17:55:21 CET
+
+  Modified files:
+    .                    prototype/TODO 
+  Log:
+  Added two TODOs and removed one.
+  There is an ABONDONED section now: those things won't
+  definitely be implemented.
+  
+  Revision  Changes    Path
+  1.8       +4 -1      gennf/prototype/TODO
+
+
+From florenz at berlios.de  Sun Mar  5 19:46:53 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Sun, 5 Mar 2006 19:46:53 +0100
+Subject: [gennf-devel] cvs commit: port-path port-path.asd port-path.lisp
+ packages.lisp
+Message-ID: <200603051846.k25IkrHa001244@sheep.berlios.de>
+
+florenz     2006/03/05 19:46:53 CET
+
+  Modified files:
+    .                    port-path.asd 
+                         port-path.lisp 
+                         packages.lisp 
+  Log:
+  Lots of functions from gennf moved in. Mainly for copying, moveing
+  files and directories.
+  
+  Revision  Changes    Path
+  1.3       +2 -2      port-path/port-path.asd
+  1.8       +194 -20   port-path/port-path.lisp
+  1.10      +14 -2     port-path/packages.lisp
+
+
+From florenz at berlios.de  Sun Mar  5 19:48:15 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Sun, 5 Mar 2006 19:48:15 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/TODO
+ prototype/miscellaneous.lisp prototype/backend-cvs.lisp prototype/distribution.lisp
+ prototype/configuration.lisp prototype/debug.lisp prototype/gennf.asd
+ prototype/directories.lisp MAP
+Message-ID: <200603051848.k25ImFtU002172@sheep.berlios.de>
+
+florenz     2006/03/05 19:48:15 CET
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/TODO 
+                         prototype/miscellaneous.lisp 
+                         prototype/backend-cvs.lisp 
+                         prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+                         prototype/debug.lisp 
+                         prototype/gennf.asd 
+                         prototype/directories.lisp 
+                         MAP 
+  Log:
+  Cleanup: Lots of functions from directories.lisp moved into
+  the port-path library.
+  
+  Revision  Changes    Path
+  1.13      +4 -5      gennf/prototype/change.lisp
+  1.9       +0 -3      gennf/prototype/TODO
+  1.16      +1 -7      gennf/prototype/miscellaneous.lisp
+  1.31      +9 -9      gennf/prototype/backend-cvs.lisp
+  1.5       +26 -21    gennf/prototype/distribution.lisp
+  1.8       +2 -2      gennf/prototype/configuration.lisp
+  1.3       +2 -4      gennf/prototype/debug.lisp
+  1.11      +4 -6      gennf/prototype/gennf.asd
+  1.10      +7 -168    gennf/prototype/directories.lisp
+  1.28      +0 -3      gennf/MAP
+
+
+From florenz at berlios.de  Sun Mar  5 20:00:11 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Sun, 5 Mar 2006 20:00:11 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/error.lisp prototype/miscellaneous.lisp
+ prototype/gennf.asd prototype/directories.lisp MAP
+Message-ID: <200603051900.k25J0BiV008886@sheep.berlios.de>
+
+florenz     2006/03/05 20:00:10 CET
+
+  Modified files:
+    .                    prototype/miscellaneous.lisp 
+                         prototype/gennf.asd 
+                         prototype/directories.lisp 
+                         MAP 
+  Added files:
+    .                    prototype/error.lisp 
+  Log:
+  Restructuring: The error handling macros are now in error.lisp.
+  More error handling code will go there as well.
+  
+  Revision  Changes    Path
+  1.17      +2 -118    gennf/prototype/miscellaneous.lisp
+  1.12      +5 -2      gennf/prototype/gennf.asd
+  1.11      +5 -9      gennf/prototype/directories.lisp
+  1.29      +3 -0      gennf/MAP
+
+
+From florenz at berlios.de  Mon Mar  6 15:34:04 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 6 Mar 2006 15:34:04 +0100
+Subject: [gennf-devel] cvs commit: port-path port-path.lisp packages.lisp
+Message-ID: <200603061434.k26EY4Un031351@sheep.berlios.de>
+
+florenz     2006/03/06 15:34:03 CET
+
+  Modified files:
+    .                    port-path.lisp 
+                         packages.lisp 
+  Log:
+  1. Added a function and a macro to work with temporary files.
+     Those are available in osicat in principle but they do not return
+     the name of the temporary file but only an open stream. As
+     it is sometimes necessary to pass the name of the temporary file
+     to another program or routine it is returned as second value or
+     bound to an optional argument.
+  2. in-temporary-directory and in-directory now restore the old state on
+     non-local exits. in-temporary-directory allows to disable this behaviour.
+  
+  Revision  Changes    Path
+  1.9       +66 -17    port-path/port-path.lisp
+  1.11      +4 -2      port-path/packages.lisp
+
+
+From florenz at berlios.de  Mon Mar  6 15:58:17 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 6 Mar 2006 15:58:17 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/TODO
+ prototype/backend-cvs.lisp prototype/distribution.lisp
+Message-ID: <200603061458.k26EwHmL006281@sheep.berlios.de>
+
+florenz     2006/03/06 15:58:16 CET
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/TODO 
+                         prototype/backend-cvs.lisp 
+                         prototype/distribution.lisp 
+  Log:
+  Removed a TODO:
+  Log messages are now handled via temporary files. They have to be passed to
+  the commit routine as additional argument. The log messages for each change
+  can be extracted from the log messages of the changes file (which is not
+  implemented yet).
+  
+  Revision  Changes    Path
+  1.14      +2 -2      gennf/prototype/change.lisp
+  1.10      +0 -9      gennf/prototype/TODO
+  1.32      +27 -22    gennf/prototype/backend-cvs.lisp
+  1.6       +13 -7     gennf/prototype/distribution.lisp
+
+
+From florenz at berlios.de  Mon Mar  6 16:52:46 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 6 Mar 2006 16:52:46 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/backend.lisp prototype/backend-cvs.lisp
+ prototype/distribution.lisp
+Message-ID: <200603061552.k26Fqk0C014125@sheep.berlios.de>
+
+florenz     2006/03/06 16:52:46 CET
+
+  Modified files:
+    .                    prototype/backend.lisp 
+                         prototype/backend-cvs.lisp 
+                         prototype/distribution.lisp 
+  Log:
+  Removed a TODO:
+  Before creation of a new module it is now checked if there is already
+  a module of that name. If so, a backend-module-exists-error is signalled.
+  
+  Revision  Changes    Path
+  1.24      +7 -1      gennf/prototype/backend.lisp
+  1.33      +20 -1     gennf/prototype/backend-cvs.lisp
+  1.7       +3 -2      gennf/prototype/distribution.lisp
+
+
+From florenz at berlios.de  Mon Mar  6 16:55:31 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 6 Mar 2006 16:55:31 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/TODO
+Message-ID: <200603061555.k26FtVX1014508@sheep.berlios.de>
+
+florenz     2006/03/06 16:55:31 CET
+
+  Modified files:
+    .                    prototype/TODO 
+  Log:
+  Forgot to commit the cleaned up TODO list.
+  
+  Revision  Changes    Path
+  1.11      +0 -2      gennf/prototype/TODO
+
+
+From sigsegv at berlios.de  Wed Mar  8 15:35:37 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Wed, 8 Mar 2006 15:35:37 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/distribution.lisp prototype/mapping.lisp
+Message-ID: <200603081435.k28EZbxv031446@sheep.berlios.de>
+
+sigsegv     2006/03/08 15:35:36 CET
+
+  Modified files:
+    .                    prototype/distribution.lisp 
+                         prototype/mapping.lisp 
+  Log:
+  tiny tiny changes
+  
+  Revision  Changes    Path
+  1.8       +2 -2      gennf/prototype/distribution.lisp
+  1.10      +20 -10    gennf/prototype/mapping.lisp
+
+
+From florenz at berlios.de  Wed Mar  8 16:20:08 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 8 Mar 2006 16:20:08 +0100
+Subject: [gennf-devel] cvs commit: port-path port-path.lisp packages.lisp
+Message-ID: <200603081520.k28FK82m026391@sheep.berlios.de>
+
+florenz     2006/03/08 16:20:08 CET
+
+  Modified files:
+    .                    port-path.lisp 
+                         packages.lisp 
+  Log:
+  The in-temporary-macro was a little dirty. The directory
+  was deleted before the old working directory was restored.
+  
+  Revision  Changes    Path
+  1.10      +13 -9     port-path/port-path.lisp
+  1.12      +2 -1      port-path/packages.lisp
+
+
+From sigsegv at berlios.de  Thu Mar  9 12:17:16 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Thu, 9 Mar 2006 12:17:16 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/distribution.lisp
+Message-ID: <200603091117.k29BHGxc007904@sheep.berlios.de>
+
+sigsegv     2006/03/09 12:17:16 CET
+
+  Modified files:
+    .                    prototype/distribution.lisp 
+  Log:
+  distribution: create-empty-branch:
+  
+  * generates also empty MAP files.
+  
+  Revision  Changes    Path
+  1.9       +9 -3      gennf/prototype/distribution.lisp
+
+
+From sigsegv at berlios.de  Thu Mar  9 12:17:47 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Thu, 9 Mar 2006 12:17:47 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/backend-cvs.lisp prototype/mapping.lisp
+Message-ID: <200603091117.k29BHlpJ007980@sheep.berlios.de>
+
+sigsegv     2006/03/09 12:17:47 CET
+
+  Modified files:
+    .                    prototype/backend-cvs.lisp 
+                         prototype/mapping.lisp 
+  Log:
+  minor changes
+  
+  Revision  Changes    Path
+  1.34      +2 -2      gennf/prototype/backend-cvs.lisp
+  1.11      +2 -2      gennf/prototype/mapping.lisp
+
+
+From sigsegv at berlios.de  Thu Mar  9 13:57:52 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Thu, 9 Mar 2006 13:57:52 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/distribution.lisp
+Message-ID: <200603091257.k29CvqmW020382@sheep.berlios.de>
+
+sigsegv     2006/03/09 13:57:52 CET
+
+  Modified files:
+    .                    prototype/distribution.lisp 
+  Log:
+  checkout respects map files
+  
+  Revision  Changes    Path
+  1.10      +7 -4      gennf/prototype/distribution.lisp
+
+
+From sigsegv at berlios.de  Thu Mar  9 17:46:09 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Thu, 9 Mar 2006 17:46:09 +0100
+Subject: [gennf-devel] cvs commit: port-path port-path.lisp
+Message-ID: <200603091646.k29Gk9m0011776@sheep.berlios.de>
+
+sigsegv     2006/03/09 17:46:09 CET
+
+  Modified files:
+    .                    port-path.lisp 
+  Log:
+  - corrected in-directory to use only one argument
+  - i-t-d:
+  
+  Revision  Changes    Path
+  1.11      +15 -15    port-path/port-path.lisp
+
+
+From sigsegv at berlios.de  Thu Mar  9 17:48:23 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Thu, 9 Mar 2006 17:48:23 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/backend-cvs.lisp prototype/distribution.lisp
+ prototype/mapping.lisp
+Message-ID: <200603091648.k29GmNDr012064@sheep.berlios.de>
+
+sigsegv     2006/03/09 17:48:23 CET
+
+  Modified files:
+    .                    prototype/backend-cvs.lisp 
+                         prototype/distribution.lisp 
+                         prototype/mapping.lisp 
+  Log:
+  created method sync:
+  -  creates dirs and hardlinks out of map file
+  
+  Revision  Changes    Path
+  1.35      +2 -2      gennf/prototype/backend-cvs.lisp
+  1.11      +4 -4      gennf/prototype/distribution.lisp
+  1.12      +49 -17    gennf/prototype/mapping.lisp
+
+
+From sigsegv at berlios.de  Fri Mar 10 14:47:54 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Fri, 10 Mar 2006 14:47:54 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/mapping.lisp prototype/gennf.asd
+Message-ID: <200603101347.k2ADls5P031183@sheep.berlios.de>
+
+sigsegv     2006/03/10 14:47:53 CET
+
+  Modified files:
+    .                    prototype/mapping.lisp 
+                         prototype/gennf.asd 
+  Log:
+  mapping.lisp:
+  -    changes to use common file interface.
+  -    started a make-instace wrapper with consistency checks
+  
+  Revision  Changes    Path
+  1.13      +130 -93   gennf/prototype/mapping.lisp
+  1.13      +2 -2      gennf/prototype/gennf.asd
+
+
+From florenz at berlios.de  Mon Mar 13 14:47:28 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 13 Mar 2006 14:47:28 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/gennf-report.tex MAP
+Message-ID: <200603131347.k2DDlScI006067@sheep.berlios.de>
+
+florenz     2006/03/13 14:47:27 CET
+
+  Modified files:
+    .                    doc/gennf-report.tex 
+                         MAP 
+  Log:
+  Included a small section due to Hannes leaving of the project in the
+  report.
+  
+  Revision  Changes    Path
+  1.26      +918 -932  gennf/doc/gennf-report.tex
+  1.30      +1 -1      gennf/MAP
+
+
+From florenz at berlios.de  Mon Mar 13 15:40:59 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 13 Mar 2006 15:40:59 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/directories.lisp
+Message-ID: <200603131440.k2DEexgv029584@sheep.berlios.de>
+
+florenz     2006/03/13 15:40:59 CET
+
+  Modified files:
+    .                    prototype/directories.lisp 
+  Log:
+  in-meta-directory was not unwind-protected. It now uses in-directory which
+  is unwind-protected.
+  
+  Revision  Changes    Path
+  1.12      +3 -6      gennf/prototype/directories.lisp
+
+
+From florenz at berlios.de  Mon Mar 13 15:52:07 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 13 Mar 2006 15:52:07 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/directories.lisp
+Message-ID: <200603131452.k2DEq7Ch003970@sheep.berlios.de>
+
+florenz     2006/03/13 15:52:07 CET
+
+  Modified files:
+    .                    prototype/directories.lisp 
+  Log:
+  Forgot the package qualifier for the in-directory macro.
+  
+  Revision  Changes    Path
+  1.13      +2 -2      gennf/prototype/directories.lisp
+
+
+From sigsegv at berlios.de  Mon Mar 13 16:07:35 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Mon, 13 Mar 2006 16:07:35 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/mapping.lisp prototype/gennf.lisp
+Message-ID: <200603131507.k2DF7Zhr027572@sheep.berlios.de>
+
+sigsegv     2006/03/13 16:07:35 CET
+
+  Modified files:
+    .                    prototype/mapping.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  mapping.lisp:
+  - changed create-new-mapping to a dwim-function
+  
+  gennf.lisp:
+  - added add-file
+  
+  Revision  Changes    Path
+  1.14      +45 -23    gennf/prototype/mapping.lisp
+  1.26      +26 -2     gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Mon Mar 13 16:40:28 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 13 Mar 2006 16:40:28 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/miscellaneous.lisp
+Message-ID: <200603131540.k2DFeSks008088@sheep.berlios.de>
+
+florenz     2006/03/13 16:40:27 CET
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/miscellaneous.lisp 
+  Log:
+  Restructured the get-change routines a little bit. They do not require
+  a change identifier anymore.
+  There is now a log-message-format method for changes.
+  
+  A tweakable list-to-string conversion routine is available in
+  miscellaneous.lisp now.
+  
+  Revision  Changes    Path
+  1.15      +17 -7     gennf/prototype/change.lisp
+  1.18      +17 -1     gennf/prototype/miscellaneous.lisp
+
+
+From florenz at berlios.de  Mon Mar 13 17:22:56 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 13 Mar 2006 17:22:56 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/access.lisp
+ prototype/merge.lisp prototype/distribution.lisp prototype/gennf.lisp
+Message-ID: <200603131622.k2DGMuAS015965@sheep.berlios.de>
+
+florenz     2006/03/13 17:22:56 CET
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/access.lisp 
+                         prototype/merge.lisp 
+                         prototype/distribution.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  Generalized and beautified the log message handling.
+  There is a generic function log-message-format that translates
+  entities like changes, merges etc. into a log-message suitable
+  human readable format.
+  
+  Revision  Changes    Path
+  1.16      +1 -1      gennf/prototype/change.lisp
+  1.7       +2 -2      gennf/prototype/access.lisp
+  1.4       +17 -2     gennf/prototype/merge.lisp
+  1.12      +5 -7      gennf/prototype/distribution.lisp
+  1.27      +2 -6      gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Tue Mar 14 15:13:23 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 14 Mar 2006 15:13:23 +0100
+Subject: [gennf-devel] cvs commit: port-path port-path.lisp packages.lisp
+Message-ID: <200603141413.k2EEDNwc022125@sheep.berlios.de>
+
+florenz     2006/03/14 15:13:12 CET
+
+  Modified files:
+    .                    port-path.lisp 
+                         packages.lisp 
+  Log:
+  Added a with-file-form macro.
+  
+  Revision  Changes    Path
+  1.12      +10 -1     port-path/port-path.lisp
+  1.13      +3 -2      port-path/packages.lisp
+
+
+From florenz at berlios.de  Tue Mar 14 15:40:07 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 14 Mar 2006 15:40:07 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/merging.lisp
+Message-ID: <200603141440.k2EEe7xJ007217@sheep.berlios.de>
+
+florenz     2006/03/14 15:40:06 CET
+
+  Modified files:
+    .                    prototype/merging.lisp 
+  Log:
+  Merging is negation complete now: added samep.
+  
+  Revision  Changes    Path
+  1.8       +14 -1     gennf/prototype/merging.lisp
+
+
+From florenz at berlios.de  Tue Mar 14 17:27:51 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 14 Mar 2006 17:27:51 +0100
+Subject: [gennf-devel] cvs commit: port-path port-path.lisp packages.lisp
+Message-ID: <200603141627.k2EGRpgF005017@sheep.berlios.de>
+
+florenz     2006/03/14 17:27:51 CET
+
+  Modified files:
+    .                    port-path.lisp 
+                         packages.lisp 
+  Log:
+  I have added a function to append pathnames.
+  
+  Revision  Changes    Path
+  1.13      +24 -2     port-path/port-path.lisp
+  1.14      +2 -1      port-path/packages.lisp
+
+
+From florenz at berlios.de  Tue Mar 14 18:06:15 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 14 Mar 2006 18:06:15 +0100
+Subject: [gennf-devel] cvs commit: port-path port-path.lisp
+Message-ID: <200603141706.k2EH6FMB007855@sheep.berlios.de>
+
+florenz     2006/03/14 18:06:15 CET
+
+  Modified files:
+    .                    port-path.lisp 
+  Log:
+  append-pathnames from my previous commit was completely unusable.
+  Seems to be better now but functional programming with Lisp is not
+  so much fun: too many #' and lambdas.
+  
+  Revision  Changes    Path
+  1.14      +26 -16    port-path/port-path.lisp
+
+
+From florenz at berlios.de  Tue Mar 14 18:13:21 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 14 Mar 2006 18:13:21 +0100
+Subject: [gennf-devel] cvs commit: port-path port-path.lisp
+Message-ID: <200603141713.k2EHDLhX008445@sheep.berlios.de>
+
+florenz     2006/03/14 18:13:21 CET
+
+  Modified files:
+    .                    port-path.lisp 
+  Log:
+  That must be some kind of curse with this function...
+  
+  Revision  Changes    Path
+  1.15      +1 -2      port-path/port-path.lisp
+
+
+From florenz at berlios.de  Tue Mar 14 18:36:32 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 14 Mar 2006 18:36:32 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/distribution.lisp prototype/configuration.lisp
+ prototype/merging.lisp prototype/files.lisp
+Message-ID: <200603141736.k2EHaWMN014426@sheep.berlios.de>
+
+florenz     2006/03/14 18:36:31 CET
+
+  Modified files:
+    .                    prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+                         prototype/merging.lisp 
+                         prototype/files.lisp 
+  Log:
+  A function to check which files have changed in a sandbox
+  is now available.
+  
+  Revision  Changes    Path
+  1.13      +72 -14    gennf/prototype/distribution.lisp
+  1.9       +18 -8     gennf/prototype/configuration.lisp
+  1.9       +0 -0      gennf/prototype/merging.lisp
+  1.8       +25 -2     gennf/prototype/files.lisp
+
+
+From sigsegv at berlios.de  Tue Mar 14 19:51:31 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Tue, 14 Mar 2006 19:51:31 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/TODO prototype/mapping.lisp
+ prototype/sbcl.lisp sbcl-port/mcvs-main.lisp prototype/gennf.lisp
+Message-ID: <200603141851.k2EIpVux020093@sheep.berlios.de>
+
+sigsegv     2006/03/14 19:51:31 CET
+
+  Modified files:
+    .                    prototype/TODO 
+                         prototype/mapping.lisp 
+                         prototype/sbcl.lisp 
+                         sbcl-port/mcvs-main.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  many changes, too tired
+  
+  Revision  Changes    Path
+  1.12      +17 -1     gennf/prototype/TODO
+  1.15      +51 -24    gennf/prototype/mapping.lisp
+  1.4       +7 -1      gennf/prototype/sbcl.lisp
+  1.6       +1 -1      gennf/sbcl-port/mcvs-main.lisp
+  1.28      +42 -7     gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Tue Mar 14 22:55:21 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 14 Mar 2006 22:55:21 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/NOTES prototype/distribution.lisp
+ MAP
+Message-ID: <200603142155.k2ELtLcZ010537@sheep.berlios.de>
+
+florenz     2006/03/14 22:55:21 CET
+
+  Modified files:
+    .                    prototype/NOTES 
+                         prototype/distribution.lisp 
+                         MAP 
+  Log:
+  1. TODO renamed in NOTES.
+  2. A function to get the list of changed files from the
+     repository is now available. Utilizing this function
+     a proper update function can be built.
+  3. There was some stupid error with sandbox-changed-files.
+  
+  Revision  Changes    Path
+  1.13      +3 -2      gennf/prototype/NOTES
+  1.14      +35 -5     gennf/prototype/distribution.lisp
+  1.31      +1 -1      gennf/MAP
+
+
+From florenz at berlios.de  Tue Mar 14 23:18:20 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 14 Mar 2006 23:18:20 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/Makefile prototype/sbcl.lisp
+ prototype/gennf.lisp MAP
+Message-ID: <200603142218.k2EMIKre014840@sheep.berlios.de>
+
+florenz     2006/03/14 23:18:20 CET
+
+  Modified files:
+    .                    prototype/sbcl.lisp 
+                         prototype/gennf.lisp 
+                         MAP 
+  Added files:
+    .                    prototype/Makefile 
+  Log:
+  Added a Makefile to build an executable (core plus image). Otto,
+  can you have a look in that file? I am sure, it is awful.
+  
+  Revision  Changes    Path
+  1.5       +4 -2      gennf/prototype/sbcl.lisp
+  1.29      +7 -2      gennf/prototype/gennf.lisp
+  1.32      +3 -0      gennf/MAP
+
+
+From florenz at berlios.de  Wed Mar 15 12:04:47 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 15 Mar 2006 12:04:47 +0100
+Subject: [gennf-devel] cvs commit: gennf htdocs/index.html
+Message-ID: <200603151104.k2FB4lrP018880@sheep.berlios.de>
+
+florenz     2006/03/15 12:04:47 CET
+
+  Modified files:
+    .                    htdocs/index.html 
+  Log:
+  Updated webpage. No Code signing anymore.
+  
+  Revision  Changes    Path
+  1.14      +7 -43     gennf/htdocs/index.html
+
+
+From florenz at berlios.de  Wed Mar 15 12:05:34 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 15 Mar 2006 12:05:34 +0100
+Subject: [gennf-devel] cvs commit: gennf doc/gennf-report.tex
+Message-ID: <200603151105.k2FB5YXI018976@sheep.berlios.de>
+
+florenz     2006/03/15 12:05:34 CET
+
+  Modified files:
+    .                    doc/gennf-report.tex 
+  Log:
+  Corrected the bibliography and added a review section.
+  
+  Revision  Changes    Path
+  1.27      +140 -178  gennf/doc/gennf-report.tex
+
+
+From florenz at berlios.de  Wed Mar 15 19:08:01 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 15 Mar 2006 19:08:01 +0100
+Subject: [gennf-devel] cvs commit: port-path port-path.lisp
+Message-ID: <200603151808.k2FI81eg017260@sheep.berlios.de>
+
+florenz     2006/03/15 19:08:01 CET
+
+  Modified files:
+    .                    port-path.lisp 
+  Log:
+  Another stupid error in append-pathnames.
+  
+  Revision  Changes    Path
+  1.16      +2 -2      port-path/port-path.lisp
+
+
+From sigsegv at berlios.de  Wed Mar 15 20:04:14 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Wed, 15 Mar 2006 20:04:14 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/Makefile prototype/gennf.lisp
+Message-ID: <200603151904.k2FJ4E5G009252@sheep.berlios.de>
+
+sigsegv     2006/03/15 20:04:14 CET
+
+  Modified files:
+    .                    prototype/Makefile 
+                         prototype/gennf.lisp 
+  Log:
+  mapping.lisp:
+  - new macro defsubcommand
+  - changed subcommands  to uses new macro
+  
+  Revision  Changes    Path
+  1.2       +2 -2      gennf/prototype/Makefile
+  1.30      +79 -41    gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Wed Mar 15 20:15:09 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Wed, 15 Mar 2006 20:15:09 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/NOTES prototype/configuration.lisp
+ prototype/mapping.lisp prototype/gennf.asd prototype/gennf.lisp
+Message-ID: <200603151915.k2FJF9P9016064@sheep.berlios.de>
+
+florenz     2006/03/15 20:15:08 CET
+
+  Modified files:
+    .                    prototype/NOTES 
+                         prototype/configuration.lisp 
+                         prototype/mapping.lisp 
+                         prototype/gennf.asd 
+                         prototype/gennf.lisp 
+  Log:
+  Moved *subcommand-list* to configuration.lisp.
+  
+  Revision  Changes    Path
+  1.14      +1 -0      gennf/prototype/NOTES
+  1.10      +4 -1      gennf/prototype/configuration.lisp
+  1.16      +5 -4      gennf/prototype/mapping.lisp
+  1.14      +2 -2      gennf/prototype/gennf.asd
+  1.31      +1 -3      gennf/prototype/gennf.lisp
+
+
+From sigsegv at berlios.de  Thu Mar 16 12:44:58 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Thu, 16 Mar 2006 12:44:58 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp
+ prototype/access.lisp prototype/backend-cvs.lisp prototype/distribution.lisp
+ prototype/configuration.lisp prototype/mapping.lisp prototype/gennf.lisp
+Message-ID: <200603161144.k2GBiwCa024145@sheep.berlios.de>
+
+sigsegv     2006/03/16 12:44:58 CET
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/branch.lisp 
+                         prototype/access.lisp 
+                         prototype/backend-cvs.lisp 
+                         prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+                         prototype/mapping.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  - renamed *xxx-file* in *xxx-file-name*
+  - added *map-file*
+  
+  Revision  Changes    Path
+  1.17      +6 -6      gennf/prototype/change.lisp
+  1.8       +6 -6      gennf/prototype/branch.lisp
+  1.8       +3 -3      gennf/prototype/access.lisp
+  1.36      +2 -2      gennf/prototype/backend-cvs.lisp
+  1.15      +23 -23    gennf/prototype/distribution.lisp
+  1.11      +18 -7     gennf/prototype/configuration.lisp
+  1.17      +4 -4      gennf/prototype/mapping.lisp
+  1.32      +4 -1      gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Thu Mar 16 12:50:38 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 16 Mar 2006 12:50:38 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/distribution.lisp
+Message-ID: <200603161150.k2GBocoD029881@sheep.berlios.de>
+
+florenz     2006/03/16 12:50:38 CET
+
+  Modified files:
+    .                    prototype/distribution.lisp 
+  Log:
+  Fixed typo.
+  
+  Revision  Changes    Path
+  1.16      +2 -2      gennf/prototype/distribution.lisp
+
+
+From florenz at berlios.de  Fri Mar 17 09:58:24 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Fri, 17 Mar 2006 09:58:24 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/NOTES prototype/miscellaneous.lisp
+ prototype/distribution.lisp prototype/mapping.lisp prototype/gennf.asd
+ prototype/gennf.lisp
+Message-ID: <200603170858.k2H8wOED010727@sheep.berlios.de>
+
+florenz     2006/03/17 09:58:24 CET
+
+  Modified files:
+    .                    prototype/NOTES 
+                         prototype/miscellaneous.lisp 
+                         prototype/distribution.lisp 
+                         prototype/mapping.lisp 
+                         prototype/gennf.asd 
+                         prototype/gennf.lisp 
+  Log:
+  The following user commands are implemented:
+  * add,
+  * checkout,
+  * remove.
+  
+  Revision  Changes    Path
+  1.15      +30 -15    gennf/prototype/NOTES
+  1.19      +12 -13    gennf/prototype/miscellaneous.lisp
+  1.17      +2 -2      gennf/prototype/distribution.lisp
+  1.18      +11 -6     gennf/prototype/mapping.lisp
+  1.15      +2 -2      gennf/prototype/gennf.asd
+  1.33      +87 -58    gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Fri Mar 17 15:09:02 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Fri, 17 Mar 2006 15:09:02 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/backend.lisp
+ prototype/access.lisp prototype/backend-cvs.lisp prototype/distribution.lisp
+ prototype/configuration.lisp prototype/gennf.lisp
+Message-ID: <200603171409.k2HE9293013026@sheep.berlios.de>
+
+florenz     2006/03/17 15:09:01 CET
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/backend.lisp 
+                         prototype/access.lisp 
+                         prototype/backend-cvs.lisp 
+                         prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  Implemented commit operation.
+  Difficilties were that no change for the initial (empty) MAP file
+  was created and handling of freshly added files.
+  
+  Revision  Changes    Path
+  1.18      +9 -3      gennf/prototype/change.lisp
+  1.25      +11 -1     gennf/prototype/backend.lisp
+  1.9       +3 -3      gennf/prototype/access.lisp
+  1.37      +3 -2      gennf/prototype/backend-cvs.lisp
+  1.18      +23 -15    gennf/prototype/distribution.lisp
+  1.12      +3 -2      gennf/prototype/configuration.lisp
+  1.34      +31 -12    gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Sun Mar 19 00:31:24 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Sun, 19 Mar 2006 00:31:24 +0100
+Subject: [gennf-devel] cvs commit: port-path port-path.asd port-path-posix.c
+ port-path.lisp packages.lisp
+Message-ID: <200603182331.k2INVOnx031963@sheep.berlios.de>
+
+florenz     2006/03/19 00:31:24 CET
+
+  Modified files:
+    .                    port-path.asd 
+                         port-path-posix.c 
+                         port-path.lisp 
+                         packages.lisp 
+  Log:
+  Implemented a more suitable hard link routine.
+  search-directory-in-directories now takes a pathname instead of a string.
+  
+  Revision  Changes    Path
+  1.4       +3 -3      port-path/port-path.asd
+  1.2       +3 -2      port-path/port-path-posix.c
+  1.17      +25 -10    port-path/port-path.lisp
+  1.15      +3 -2      port-path/packages.lisp
+
+
+From florenz at berlios.de  Sun Mar 19 00:37:23 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Sun, 19 Mar 2006 00:37:23 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp
+ prototype/backend.lisp prototype/packages.lisp prototype/miscellaneous.lisp
+ prototype/access.lisp prototype/backend-cvs.lisp prototype/merge.lisp
+ prototype/distribution.lisp prototype/configuration.lisp prototype/merging.lisp ...
+Message-ID: <200603182337.k2INbNrx002430@sheep.berlios.de>
+
+florenz     2006/03/19 00:37:23 CET
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/branch.lisp 
+                         prototype/backend.lisp 
+                         prototype/packages.lisp 
+                         prototype/miscellaneous.lisp 
+                         prototype/access.lisp 
+                         prototype/backend-cvs.lisp 
+                         prototype/merge.lisp 
+                         prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+                         prototype/merging.lisp 
+                         prototype/debug.lisp 
+                         prototype/files.lisp 
+                         prototype/mapping.lisp 
+                         prototype/sbcl.lisp 
+                         prototype/Makefile 
+                         prototype/gennf.asd 
+                         doc/gennf-report.tex 
+                         prototype/directories.lisp 
+                         prototype/error.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  I did so many changes that I don't know all of them anymore.
+  Basically, gennf is somewhat operable now. Merging is half-way implemented,
+  branching, checkout, commit, update seem to work. The handling
+  of the directory structure has still some quirks but I have introduced
+  a *sandbox-directory* and a *startup-directory* variable to resolve
+  filenames against. The map file now only stores string, no pathnames.
+  Furthermore, the identification must not contain a META/n with n being
+  a branch number because that makes merging much harder.
+  There is now a hook to plug in customized merge routines for files.
+  This is used to overcome an initial difficulty when merging
+  a NIL map file againts some sequence of mappings. But it can as
+  well be improved a lot for better merging, which is very poor at the moment.
+  
+  Revision  Changes    Path
+  1.19      +24 -7     gennf/prototype/change.lisp
+  1.9       +3 -3      gennf/prototype/branch.lisp
+  1.26      +12 -8     gennf/prototype/backend.lisp
+  1.6       +3 -3      gennf/prototype/packages.lisp
+  1.20      +2 -2      gennf/prototype/miscellaneous.lisp
+  1.10      +2 -2      gennf/prototype/access.lisp
+  1.38      +15 -6     gennf/prototype/backend-cvs.lisp
+  1.5       +2 -2      gennf/prototype/merge.lisp
+  1.19      +73 -49    gennf/prototype/distribution.lisp
+  1.13      +51 -6     gennf/prototype/configuration.lisp
+  1.10      +58 -13    gennf/prototype/merging.lisp
+  1.4       +11 -21    gennf/prototype/debug.lisp
+  1.9       +2 -2      gennf/prototype/files.lisp
+  1.19      +146 -149  gennf/prototype/mapping.lisp
+  1.6       +2 -2      gennf/prototype/sbcl.lisp
+  1.3       +8 -3      gennf/prototype/Makefile
+  1.16      +9 -7      gennf/prototype/gennf.asd
+  1.28      +40 -22    gennf/doc/gennf-report.tex
+  1.14      +12 -6     gennf/prototype/directories.lisp
+  1.2       +6 -2      gennf/prototype/error.lisp
+  1.35      +147 -148  gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Mon Mar 20 00:24:27 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 20 Mar 2006 00:24:27 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/command-line.lisp prototype/configuration.lisp
+ prototype/gennf.asd doc/gennf-report.tex prototype/gennf.lisp
+ MAP
+Message-ID: <200603192324.k2JNORhj009873@sheep.berlios.de>
+
+florenz     2006/03/20 00:24:27 CET
+
+  Modified files:
+    .                    prototype/configuration.lisp 
+                         prototype/gennf.asd 
+                         doc/gennf-report.tex 
+                         prototype/gennf.lisp 
+                         MAP 
+  Added files:
+    .                    prototype/command-line.lisp 
+  Log:
+  Added a full blown command line parser with two parser generators and
+  stuff. The macro for subcommands is extended and is called
+  define-subcommand (the old macro is still there).
+  The command line parser is able to parse key and rest parameters
+  as well as direct parameters.
+  
+  Revision  Changes    Path
+  1.14      +6 -3      gennf/prototype/configuration.lisp
+  1.17      +4 -2      gennf/prototype/gennf.asd
+  1.29      +13 -0     gennf/doc/gennf-report.tex
+  1.36      +27 -30    gennf/prototype/gennf.lisp
+  1.33      +3 -0      gennf/MAP
+
+
+From florenz at berlios.de  Mon Mar 20 01:29:59 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 20 Mar 2006 01:29:59 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/command-line.lisp prototype/gennf.asd
+ prototype/gennf.lisp
+Message-ID: <200603200029.k2K0TxD9004692@sheep.berlios.de>
+
+florenz     2006/03/20 01:29:59 CET
+
+  Modified files:
+    .                    prototype/command-line.lisp 
+                         prototype/gennf.asd 
+                         prototype/gennf.lisp 
+  Log:
+  Fixed some bugs in the new define-subcommand. There was a function object
+  created at compile time which could not be stored in a FASL. This is
+  not so anymore.
+  
+  Revision  Changes    Path
+  1.2       +30 -29    gennf/prototype/command-line.lisp
+  1.18      +3 -2      gennf/prototype/gennf.asd
+  1.37      +44 -56    gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Mon Mar 20 02:01:10 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Mon, 20 Mar 2006 02:01:10 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/command-line.lisp prototype/configuration.lisp
+ prototype/Makefile prototype/gennf.lisp
+Message-ID: <200603200101.k2K11AN8013490@sheep.berlios.de>
+
+florenz     2006/03/20 02:01:08 CET
+
+  Modified files:
+    .                    prototype/command-line.lisp 
+                         prototype/configuration.lisp 
+                         prototype/Makefile 
+                         prototype/gennf.lisp 
+  Log:
+  Added a help command line function which puts out
+  the command descriptions from the code.
+  
+  Revision  Changes    Path
+  1.3       +6 -4      gennf/prototype/command-line.lisp
+  1.15      +5 -2      gennf/prototype/configuration.lisp
+  1.4       +3 -3      gennf/prototype/Makefile
+  1.38      +15 -3     gennf/prototype/gennf.lisp
+
+
+From sigsegv at berlios.de  Wed Mar 22 09:47:16 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Wed, 22 Mar 2006 09:47:16 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/command-line.lisp
+Message-ID: <200603220847.k2M8lGF9011736@sheep.berlios.de>
+
+sigsegv     2006/03/22 09:47:15 CET
+
+  Modified files:
+    .                    prototype/command-line.lisp 
+  Log:
+  changes commandline parser to understand required keywords
+  
+  Revision  Changes    Path
+  1.4       +74 -51    gennf/prototype/command-line.lisp
+
+
+From sigsegv at alchiba.ni.cs.tu-berlin.de  Wed Mar 22 10:05:40 2006
+From: sigsegv at alchiba.ni.cs.tu-berlin.de (Fabian Otto)
+Date: Wed, 22 Mar 2006 10:05:40 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/command-line.lisp
+In-Reply-To: <200603220847.k2M8lGF9011736@sheep.berlios.de>
+References: <200603220847.k2M8lGF9011736@sheep.berlios.de>
+Message-ID: <20060322090540.GB27246@alchiba.ni.cs.tu-berlin.de>
+
+Hi Florian,
+
+es scheint, dass sich hier ein Fehler in dieses commit eingeschlichen hat. 
+Ich bin mir noch nicht sicher, ob es ein Bug in sbcl sein koennte.
+
+ich werde erstmal heute nachmittag versuchen in erfahrung zu bringen,
+was ich geaendert habe. 
+
+Die Meldung:
+
+|; note: Return type not fixed values, so can't use known return convention:
+|;   *
+|; 
+
+kommt von (defun generate-key-parser-case (abstract-syntax).
+vieleicht kannst du ja nochmal einen blick drauf werfen.
+
+Ich bin einwenig ueberfragt, denn ich benutze hier kein values.
+
+
+Otto
+-- 
+Bookmarks: http://del.icio.us/sigsegv
+jabber: sigsegv at jabber.ccc.de
+wiki/blog: http://blog.jotpee.de
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060322/de93c88b/attachment.pgp>
+
+From florenz at cs.tu-berlin.de  Wed Mar 22 11:43:52 2006
+From: florenz at cs.tu-berlin.de (Florian Lorenzen)
+Date: Wed, 22 Mar 2006 11:43:52 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/command-line.lisp
+In-Reply-To: <20060322090540.GB27246@alchiba.ni.cs.tu-berlin.de>
+References: <200603220847.k2M8lGF9011736@sheep.berlios.de> <20060322090540.GB27246@alchiba.ni.cs.tu-berlin.de>
+Message-ID: <20060322104352.GA4793@conde.cs.tu-berlin.de>
+
+Hallo Otto,
+
+ich kann die Fehlermeldung nicht reproduzieren, deswegen jetzt wenig
+dazu sagen.
+
+Florian
+
+On Wed, Mar 22, 2006 at 10:05:40AM +0100, Fabian Otto wrote:
+> Hi Florian,
+> 
+> es scheint, dass sich hier ein Fehler in dieses commit eingeschlichen hat. 
+> Ich bin mir noch nicht sicher, ob es ein Bug in sbcl sein koennte.
+> 
+> ich werde erstmal heute nachmittag versuchen in erfahrung zu bringen,
+> was ich geaendert habe. 
+> 
+> Die Meldung:
+> 
+> |; note: Return type not fixed values, so can't use known return convention:
+> |;   *
+> |; 
+> 
+> kommt von (defun generate-key-parser-case (abstract-syntax).
+> vieleicht kannst du ja nochmal einen blick drauf werfen.
+> 
+> Ich bin einwenig ueberfragt, denn ich benutze hier kein values.
+> 
+> 
+> Otto
+> -- 
+> Bookmarks: http://del.icio.us/sigsegv
+> jabber: sigsegv at jabber.ccc.de
+> wiki/blog: http://blog.jotpee.de
+
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gennf-devel/attachments/20060322/0e3ee207/attachment.pgp>
+
+From sigsegv at berlios.de  Wed Mar 22 13:55:49 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Wed, 22 Mar 2006 13:55:49 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/command-line.lisp prototype/gennf.lisp
+Message-ID: <200603221255.k2MCtn97000846@sheep.berlios.de>
+
+sigsegv     2006/03/22 13:55:49 CET
+
+  Modified files:
+    .                    prototype/command-line.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  using required keywords for various subcommands
+  
+  Revision  Changes    Path
+  1.5       +0 -1      gennf/prototype/command-line.lisp
+  1.40      +10 -6     gennf/prototype/gennf.lisp
+
+
+From sigsegv at berlios.de  Wed Mar 22 15:00:12 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Wed, 22 Mar 2006 15:00:12 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/command-line.lisp prototype/gennf.lisp
+Message-ID: <200603221400.k2ME0C2T031071@sheep.berlios.de>
+
+sigsegv     2006/03/22 15:00:11 CET
+
+  Modified files:
+    .                    prototype/command-line.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  command-line.lisp:
+  
+  -    corrected help output
+  
+  gennf.lisp
+  
+  -    branch creates empty branches in repos
+  
+  Revision  Changes    Path
+  1.6       +4 -4      gennf/prototype/command-line.lisp
+  1.41      +5 -5      gennf/prototype/gennf.lisp
+
+
+From sigsegv at berlios.de  Fri Mar 24 15:10:36 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Fri, 24 Mar 2006 15:10:36 +0100
+Subject: [gennf-devel] cvs commit: gennf prototype/checkpoint.lisp prototype/merge.lisp
+ prototype/distribution.lisp prototype/configuration.lisp prototype/merging.lisp
+ prototype/mapping.lisp prototype/gennf.asd prototype/gennf.lisp
+ MAP
+Message-ID: <200603241410.k2OEAa4j004365@sheep.berlios.de>
+
+sigsegv     2006/03/24 15:10:36 CET
+
+  Modified files:
+    .                    prototype/merge.lisp 
+                         prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+                         prototype/merging.lisp 
+                         prototype/mapping.lisp 
+                         prototype/gennf.asd 
+                         prototype/gennf.lisp 
+                         MAP 
+  Added files:
+    .                    prototype/checkpoint.lisp 
+  Log:
+  - new class CHECKPOINT
+  
+  - broken merge save now status in CHECKPOINT file.
+  
+  - new subcommand sync tollerates CHECKPOINT files
+  
+  - broken mapfiles throw malformed-map-file-error
+  
+  Revision  Changes    Path
+  1.6       +9 -8      gennf/prototype/merge.lisp
+  1.21      +10 -11    gennf/prototype/distribution.lisp
+  1.16      +5 -1      gennf/prototype/configuration.lisp
+  1.12      +1 -3      gennf/prototype/merging.lisp
+  1.21      +59 -25    gennf/prototype/mapping.lisp
+  1.20      +4 -2      gennf/prototype/gennf.asd
+  1.42      +86 -14    gennf/prototype/gennf.lisp
+  1.34      +3 -0      gennf/MAP
+
+
+From sigsegv at berlios.de  Mon Mar 27 16:27:31 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Mon, 27 Mar 2006 16:27:31 +0200
+Subject: [gennf-devel] cvs commit: gennf prototype/tests/test.sh prototype/distribution.lisp
+ prototype/mapping.lisp prototype/gennf.lisp MAP
+Message-ID: <200603271427.k2RERV0W030965@sheep.berlios.de>
+
+sigsegv     2006/03/27 16:27:30 CEST
+
+  Modified files:
+    .                    prototype/distribution.lisp 
+                         prototype/mapping.lisp 
+                         prototype/gennf.lisp 
+                         MAP 
+  Added files:
+    .                    prototype/tests/test.sh 
+  Log:
+  - added test shell script which generates a conflict in a user file
+  - add subcommand merge-finish
+  - deleted pp:delete-subdirectory from distribution-merge-finish
+  
+  Revision  Changes    Path
+  1.22      +4 -5      gennf/prototype/distribution.lisp
+  1.22      +2 -4      gennf/prototype/mapping.lisp
+  1.43      +72 -38    gennf/prototype/gennf.lisp
+  1.35      +3 -0      gennf/MAP
+
+
+From sigsegv at berlios.de  Tue Mar 28 16:11:46 2006
+From: sigsegv at berlios.de (sigsegv at BerliOS)
+Date: Tue, 28 Mar 2006 16:11:46 +0200
+Subject: [gennf-devel] cvs commit: gennf prototype/tests/test.sh prototype/backend-cvs.lisp
+ prototype/distribution.lisp prototype/configuration.lisp prototype/sbcl.lisp
+ prototype/gennf.lisp
+Message-ID: <200603281411.k2SEBkRp010214@sheep.berlios.de>
+
+sigsegv     2006/03/28 16:11:46 CEST
+
+  Modified files:
+    .                    prototype/tests/test.sh 
+                         prototype/backend-cvs.lisp 
+                         prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+                         prototype/sbcl.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  tests and smaller changes
+  
+  Revision  Changes    Path
+  1.2       +93 -53    gennf/prototype/tests/test.sh
+  1.39      +2 -2      gennf/prototype/backend-cvs.lisp
+  1.23      +1 -2      gennf/prototype/distribution.lisp
+  1.17      +2 -2      gennf/prototype/configuration.lisp
+  1.7       +13 -3     gennf/prototype/sbcl.lisp
+  1.44      +21 -42    gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Tue Mar 28 21:31:12 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Tue, 28 Mar 2006 21:31:12 +0200
+Subject: [gennf-devel] cvs commit: gennf prototype/NOTES prototype/merging.lisp
+ prototype/mapping.lisp
+Message-ID: <200603281931.k2SJVCLs011149@sheep.berlios.de>
+
+florenz     2006/03/28 21:31:12 CEST
+
+  Modified files:
+    .                    prototype/NOTES 
+                         prototype/merging.lisp 
+                         prototype/mapping.lisp 
+  Log:
+  Updated the notes. There is just one really important thing to do anymore
+  (besided bugs finding and killing).
+  
+  Revision  Changes    Path
+  1.17      +10 -10    gennf/prototype/NOTES
+  1.13      +5 -1      gennf/prototype/merging.lisp
+  1.23      +20 -4     gennf/prototype/mapping.lisp
+
+
+From florenz at berlios.de  Thu Mar 30 18:48:43 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Thu, 30 Mar 2006 18:48:43 +0200
+Subject: [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp
+ prototype/command-line.lisp prototype/access.lisp prototype/configuration.lisp
+ prototype/mapping.lisp prototype/Makefile prototype/gennf.asd
+ prototype/gennf.lisp
+Message-ID: <200603301648.k2UGmhOS011582@sheep.berlios.de>
+
+florenz     2006/03/30 18:48:41 CEST
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/branch.lisp 
+                         prototype/command-line.lisp 
+                         prototype/access.lisp 
+                         prototype/configuration.lisp 
+                         prototype/mapping.lisp 
+                         prototype/Makefile 
+                         prototype/gennf.asd 
+                         prototype/gennf.lisp 
+  Log:
+  1. Extended the command-line parser to accept flag arguments.
+  2. A simple version of the info command is available which displays all
+     available branches.
+  
+  Revision  Changes    Path
+  1.20      +15 -2     gennf/prototype/change.lisp
+  1.10      +27 -3     gennf/prototype/branch.lisp
+  1.7       +45 -21    gennf/prototype/command-line.lisp
+  1.11      +11 -2     gennf/prototype/access.lisp
+  1.18      +2 -2      gennf/prototype/configuration.lisp
+  1.24      +1 -20     gennf/prototype/mapping.lisp
+  1.5       +2 -2      gennf/prototype/Makefile
+  1.21      +3 -3      gennf/prototype/gennf.asd
+  1.45      +42 -9     gennf/prototype/gennf.lisp
+
+
+From florenz at berlios.de  Fri Mar 31 18:42:18 2006
+From: florenz at berlios.de (florenz at BerliOS)
+Date: Fri, 31 Mar 2006 18:42:18 +0200
+Subject: [gennf-devel] cvs commit: gennf prototype/change.lisp prototype/branch.lisp
+ prototype/gennf.lisp
+Message-ID: <200603311642.k2VGgIkX031818@sheep.berlios.de>
+
+florenz     2006/03/31 18:42:17 CEST
+
+  Modified files:
+    .                    prototype/change.lisp 
+                         prototype/branch.lisp 
+                         prototype/gennf.lisp 
+  Log:
+  A function to traverse the entire history of a branch is provided.
+  
+  Revision  Changes    Path
+  1.21      +17 -13    gennf/prototype/change.lisp
+  1.11      +1 -1      gennf/prototype/branch.lisp
+  1.46      +2 -10     gennf/prototype/gennf.lisp
+
+

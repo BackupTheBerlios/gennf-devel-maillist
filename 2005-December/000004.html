@@ -1,0 +1,764 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] CVSROOT log_accum.pl,NONE,1.1 loginfo,1.1,1.2
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2005-December/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20CVSROOT%20log_accum.pl%2CNONE%2C1.1%20loginfo%2C1.1%2C1.2&In-Reply-To=%3C200512021131.jB2BVfN10535%40bat.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000003.html">
+   <LINK REL="Next"  HREF="000005.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] CVSROOT log_accum.pl,NONE,1.1 loginfo,1.1,1.2</H1>
+    <B>florenz</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20CVSROOT%20log_accum.pl%2CNONE%2C1.1%20loginfo%2C1.1%2C1.2&In-Reply-To=%3C200512021131.jB2BVfN10535%40bat.berlios.de%3E"
+       TITLE="[gennf-devel] CVSROOT log_accum.pl,NONE,1.1 loginfo,1.1,1.2">nobody at sheep.berlios.de
+       </A><BR>
+    <I>Fri Dec  2 12:31:53 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000003.html">[gennf-devel] gennf F-30CE3B42F628E6E185661335E4018306.lisp,1.1,1.2
+</A></li>
+        <LI>Next message: <A HREF="000005.html">[gennf-devel] cvs commit: gennf F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Update of /cvsroot/gennf/CVSROOT
+In directory sheep:/tmp/cvs-serv29517
+
+Modified Files:
+	loginfo 
+Added Files:
+	log_accum.pl 
+Log Message:
+Added log_accum script for better commit mails.
+
+
+--- NEW FILE: log_accum.pl ---
+eval '(exit $?0)' &amp;&amp; eval 'exec perl -S $0 ${1+&quot;$@&quot;}' &amp;&amp; eval 'exec perl -S $0 $argv:q'
+        if 0;
+#!/usr/bin/perl
+# $Id: log_accum.pl,v 1.1 2005/12/02 11:31:37 florenz Exp $
+#
+# Perl filter to handle the log messages from the checkin of files in
+# a directory.  This script will group the lists of files by log
+# message, and mail a single consolidated log message at the end of
+# the commit.
+#
+# This file assumes a pre-commit checking program that leaves the
+# names of the first and last commit directories in a temporary file.
+#
+# Originally by David Hampton &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/gennf-devel">hampton at cisco.com</A>&gt;
+#
+# Extensively hacked for FreeBSD by Peter Wemm &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/gennf-devel">peter at dialix.com.au</A>&gt;,
+#  with parts stolen from Greg Woods &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/gennf-devel">woods at most.wierd.com</A>&gt; version.
+#
+# Small modification for ZEDV Physik FU-Berlin by Tobias Burnus &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/gennf-devel">burnus at net-b.de</A>&gt;
+
+require 5.003;		# might work with older perl5
+
+use Sys::Hostname;	# get hostname() function
+
+# Debug email:
+my $debugemail=&quot;tburnus&quot;;
+# Sendmail path
+my $sendmail=&quot;/usr/sbin/sendmail&quot;;
+
+############################################################
+#
+# Configurable options
+#
+############################################################
+#
+# Where do you want the RCS ID and delta info?
+# 0 = none,
+# 1 = in mail only,
+# 2 = rcsids in both mail and logs.
+#
+$rcsidinfo = 2;
+
+# Debug level, 0 = off
+$debug = 0;
+############################################################
+#
+# Constants
+#
+############################################################
+$STATE_NONE    = 0;
+$STATE_CHANGED = 1;
+$STATE_ADDED   = 2;
+$STATE_REMOVED = 3;
+$STATE_LOG     = 4;
+
+$FILE_PREFIX   = &quot;#cvs.files&quot;;
+$LAST_FILE     = &quot;/tmp/#cvs.files.lastdir&quot;;
+$CHANGED_FILE  = &quot;/tmp/#cvs.files.changed&quot;;
+$ADDED_FILE    = &quot;/tmp/#cvs.files.added&quot;;
+$REMOVED_FILE  = &quot;/tmp/#cvs.files.removed&quot;;
+$LOG_FILE      = &quot;/tmp/#cvs.files.log&quot;;
+$SUMMARY_FILE  = &quot;/tmp/#cvs.files.summary&quot;;
+$MAIL_FILE     = &quot;/tmp/#cvs.files.mail&quot;;
+$SUBJ_FILE     = &quot;/tmp/#cvs.files.subj&quot;;
+
+$CVSROOT       = &quot;$ENV{'CVSROOT'}&quot;;
+
+############################################################
+#
+# Subroutines
+#
+############################################################
+
+sub cleanup_tmpfiles {
+    local($wd, @files);
+
+    $wd = `pwd`;
+    chdir(&quot;/tmp&quot;);
+    opendir(DIR, &quot;.&quot;);
+    push(@files, grep(/^$FILE_PREFIX\..*$id$/, readdir(DIR)));
+    closedir(DIR);
+    foreach (@files) {
+	unlink $_;
+    }
+    chdir($wd);
+}
+
+sub append_to_logfile {
+    local($filename, @files) = @_;
+
+    open(FILE, &quot;&gt;&gt;$filename&quot;) || die (&quot;Cannot open for append file $filename.\n&quot;);
+    print(FILE join(&quot;\n&quot;, @lines), &quot;\n&quot;);
+    close(FILE);
+}
+
+sub append_line {
+    local($filename, $line) = @_;
+    open(FILE, &quot;&gt;&gt;$filename&quot;) || die(&quot;Cannot open for append file $filename.\n&quot;);
+    print(FILE $line, &quot;\n&quot;);
+    close(FILE);
+}
+
+sub read_line {
+    local($line);
+    local($filename) = @_;
+    open(FILE, &quot;&lt;$filename&quot;) || die(&quot;Cannot open for read file $filename.\n&quot;);
+    $line = &lt;FILE&gt;;
+    close(FILE);
+    chop($line);
+    $line;
+}
+
+sub read_logfile {
+    local(@text);
+    local($filename, $leader) = @_;
+    open(FILE, &quot;&lt;$filename&quot;);
+    while (&lt;FILE&gt;) {
+	chop;
+	push(@text, $leader.$_);
+    }
+    close(FILE);
+    @text;
+}
+
+sub write_logfile {
+    local($filename, @lines) = @_;
+
+    open(FILE, &quot;&gt;$filename&quot;) || die(&quot;Cannot open for write log file $filename.\n&quot;);
+    print FILE join(&quot;\n&quot;, @lines), &quot;\n&quot;;
+    close(FILE);
+}
+
+sub format_names {
+    local($dir, @files) = @_;
+    local(@lines, $indent);
+
+    $indent = length($dir);
+    if ($indent &lt; 20) {
+      $indent = 20;
+    }
+
+    $format = &quot;    %-&quot; . sprintf(&quot;%d&quot;, $indent) . &quot;s &quot;;
+
+    $lines[0] = sprintf($format, $dir);
+
+    if ($debug) {
+	print STDERR &quot;format_names(): dir = &quot;, $dir, &quot;; tag = &quot;, $tag, &quot;; files = &quot;, join(&quot;:&quot;, @files), &quot;.\n&quot;;
+    }
+    foreach $file (@files) {
+	if (length($lines[$#lines]) + length($file) &gt; 66) {
+	    $lines[++$#lines] = sprintf($format, &quot;&quot;, &quot;&quot;);
+	}
+	$lines[$#lines] .= $file . &quot; &quot;;
+    }
+
+    @lines;
+}
+
+sub format_lists {
+    local($header, @lines) = @_;
+    local(@text, @files, $lastdir, $lastsep, $tag);
+
+    if ($debug) {
+	print STDERR &quot;format_lists(): &quot;, join(&quot;:&quot;, @lines), &quot;\n&quot;;
+    }
+    @text = ();
+    @files = ();
+
+    $lastdir = '';
+    $lastsep = '';
+    foreach $line (@lines) {
+	if ($line =~ /.*\/$/) {
+	    if ($lastdir ne '') {
+	        push(@text, &amp;format_names($lastdir, @files));
+	    }
+	    $lastdir = $line;
+	    $lastdir =~ s,/$,,;
+	    $tag = &quot;&quot;;	# next thing is a tag
+	    @files = ();
+	} elsif ($tag eq '') {
+	    $tag = $line;
+	    next if ($header . $tag eq $lastsep);
+	    $lastsep = $header . $tag;
+	    if ($tag eq 'HEAD') {
+		push(@text, &quot;  $header files:&quot;);
+	    } else {
+		push(@text, sprintf(&quot;  %-22s (Branch: %s)&quot;, &quot;$header files:&quot;,
+			$tag));
+	    }
+	} else {
+	    push(@files, $line);
+	}
+    }
+    push(@text, &amp;format_names($lastdir, @files));
+
+    @text;
+}
+
+sub append_names_to_file {
+    local($filename, $dir, $tag, @files) = @_;
+
+    if (@files) {
+	open(FILE, &quot;&gt;&gt;$filename&quot;) || die(&quot;Cannot open for append file $filename.\n&quot;);
+	print FILE $dir, &quot;\n&quot;;
+	print FILE $tag, &quot;\n&quot;;
+	print FILE join(&quot;\n&quot;, @files), &quot;\n&quot;;
+	close(FILE);
+    }
+}
+
+#
+# do an 'cvs -Qn status' on each file in the arguments, and extract info.
+#
+
+sub change_summary_changed {
+    local($out, $tag, @filenames) = @_;
+    local(@revline);
+    local($file, $rev, $rcsfile, $line);
+
+    while (@filenames) {
+	$file = shift @filenames;
+
+	if (&quot;$file&quot; eq &quot;&quot;) {
+	    next;
+	}
+
+	open(RCS, &quot;-|&quot;) || exec 'cvs', '-Qn', 'status', $file;
+
+	$rev = &quot;&quot;;
+	$delta = &quot;&quot;;
+	$rcsfile = &quot;&quot;;
+
+
+	while (&lt;RCS&gt;) {
+	    if (/^[ \t]*Repository revision/) {
+		chop;
+		@revline = split(' ', $_);
+		$rev = $revline[2];
+		$rcsfile = $revline[3];
+		$rcsfile =~ s,^$CVSROOT/,,;
+		$rcsfile =~ s/,v$//;
+	    }
+	}
+	close(RCS);
+
+	if ($rev ne '' &amp;&amp; $rcsfile ne '') {
+	    open(RCS, &quot;-|&quot;) || exec 'cvs', '-Qn', 'log', &quot;-r$rev&quot;, $file;
+	    while (&lt;RCS&gt;) {
+		if (/^date:/) {
+		    chop;
+		    $delta = $_;
+		    $delta =~ s/^.*;//;
+		    $delta =~ s/^[\s]+<A HREF="lines://;">lines://;</A>
+		}
+	    }
+	    close(RCS);
+	}
+
+	&amp;append_line($out, sprintf(&quot;%-9s%-12s%s&quot;, $rev, $delta, $rcsfile));
+    }
+}
+
+# Write these one day.
+sub change_summary_added {
+}
+sub change_summary_removed {
+}
+
+sub build_header {
+    local($header, $datestr);
+    delete $ENV{'TZ'};
+
+    $datestr = `/bin/date +&quot;%Y/%m/%d %H:%M:%S %Z&quot;`;
+    chop($datestr);
+    $header = sprintf(&quot;%-8s    %s&quot;, $login, $datestr);
+}
+
+# !!! Mailing-list and history file mappings here !!!
+if (0){
+sub mlist_map {
+    local($dir) = @_;		# perl warns about this....
+   
+    return 'cvs-CVSROOT'      if($dir =~ /^CVSROOT\//);
+    return 'cvs-ports'        if($dir =~ /^ports\//);
+    return 'cvs-www'          if($dir =~ /^www\//);
+    return 'cvs-doc'          if($dir =~ /^doc\//);
+    return 'cvs-distrib'      if($dir =~ /^distrib\//);
+
+    return 'cvs-other'        unless($dir =~ /^src\//);
+
+    $dir =~ s,^src/,,;
+
+    return 'cvs-bin'          if($dir =~ /^bin\//);
+    return 'cvs-contrib'      if($dir =~ /^contrib\//);
+    return 'cvs-eBones'       if($dir =~ /^eBones\//);
+    return 'cvs-etc'          if($dir =~ /^etc\//);
+    return 'cvs-games'        if($dir =~ /^games\//);
+    return 'cvs-gnu'          if($dir =~ /^gnu\//);
+    return 'cvs-include'      if($dir =~ /^include\//);
+    return 'cvs-kerberosIV'   if($dir =~ /^kerberosIV\//);
+    return 'cvs-lib'          if($dir =~ /^lib\//);
+    return 'cvs-libexec'      if($dir =~ /^libexec\//);
+    return 'cvs-lkm'          if($dir =~ /^lkm\//);
+    return 'cvs-release'      if($dir =~ /^release\//);
+    return 'cvs-sbin'         if($dir =~ /^sbin\//);
+    return 'cvs-share'        if($dir =~ /^share\//);
+    return 'cvs-sys'          if($dir =~ /^sys\//);
+    return 'cvs-tools'        if($dir =~ /^tools\//);
+    return 'cvs-usrbin'       if($dir =~ /^usr\.bin\//);
+    return 'cvs-usrsbin'      if($dir =~ /^usr\.sbin\//);
+
+    return 'cvs-user';
+}    
+}
+
+sub mlist_map {
+    local($dir) = @_;		# perl warns about this....
+    return undef;
+}
+
+sub do_changes_file {
+    local($changes,$<A HREF="https://lists.berlios.de/mailman/listinfo/gennf-devel">category, at mailaddrs</A>);
+    local(@text) = @_;
+    local(%unique);
+
+    %unique = ();
+    @mailaddrs = &amp;read_logfile(&quot;$MAIL_FILE.$id&quot;, &quot;&quot;);
+    foreach $category (@mailaddrs) {
+	next if ($unique{$category});
+	$unique{$category} = 1;
+	if ($category =~ /^cvs-/) {
+	    # convert mailing list name back to category
+	    $category =~ s,\n,,;
+	    $category =~ s/^cvs-//;
+	    $changes = &quot;$CVSROOT/CVSROOT/commitlogs/$category&quot;;
+
+	    open(CHANGES, &quot;&gt;&gt;$changes&quot;) || die(&quot;Cannot open $changes.\n&quot;);
+	    print(CHANGES join(&quot;\n&quot;, @text), &quot;\n\n&quot;);
+	    close(CHANGES);
+	}
+    }
+}
+
+sub mail_notification {
+    local(@text) = @_;
+    local($line, $word, $subjlines, $subjwords, @mailaddrs, $host, $dom);
+    local(%unique);
+
+#    $host = hostname();
+#    if ($host =~ /\.lcse\.umn\.edu$/i) {
+#	$dom = '@raid.com';
+#    } else {
+#	$dom = '';
+#    }
+    $dom = '@lists.berlios.de';
+
+    print &quot;Mailing the commit message...\n&quot;;
+
+    %unique = ();
+
+    @mailaddrs = &amp;read_logfile(&quot;$MAIL_FILE.$id&quot;, &quot;&quot;);
+
+    if ($debug) { 
+	open(MAIL, &quot;| $sendmail $debugemail&quot;) || die &quot;Fuck couldn't open mail\n&quot;;
+    } else {
+	open(MAIL, &quot;| $sendmail -t&quot;) || die &quot;Fuck couldn't open mail\n&quot;;
+    }
+
+#    print(MAIL 'To: gennf-devel' . $dom);
+    print(MAIL 'To: <A HREF="https://lists.berlios.de/mailman/listinfo/gennf-devel">florenz at cs.tu-berlin.de</A>');
+#    foreach $line (@mailaddrs) {
+#	next if ($unique{$line});
+#	$unique{$line} = 1;
+#	print(MAIL &quot;, &quot; . $line . $dom);
+#    }
+    print(MAIL &quot;\n&quot;);
+#    print(MAIL &quot;From: cvsusers\@tddft.org\n&quot;);
+
+    $subject = 'Subject: cvs commit:';
+    @subj = &amp;read_logfile(&quot;$SUBJ_FILE.$id&quot;, &quot;&quot;);
+    $subjlines = 0;
+    $subjwords = 0;	# minimum of two &quot;words&quot; per line
+    LINE: foreach $line (@subj) {
+	foreach $word (split(/ /, $line)) {
+	    if ($subjwords &gt; 2 &amp;&amp; length($subject . &quot; &quot; . $word) &gt; 75) {
+		if ($subjlines &gt; 2) {
+		    $subject .= &quot; ...&quot;;
+		}
+		print(MAIL $subject, &quot;\n&quot;);
+		if ($subjlines &gt; 2) {
+		    $subject = &quot;&quot;;
+		    last LINE;
+		}
+		$subject = &quot;        &quot;;		# rfc822 continuation line
+		$subjwords = 0;
+		$subjlines++;
+	    }
+	    $subject .= &quot; &quot; . $word;
+	    $subjwords++;
+	}
+    }
+    
+    if ($subject ne &quot;&quot;) {
+	print(MAIL $subject, &quot;\n&quot;);
+    }
+    print (MAIL &quot;\n&quot;);
+
+    print(MAIL join(&quot;\n&quot;, @text));
+    close(MAIL);
+}
+
+#############################################################
+#
+# Main Body
+#
+############################################################
+
+#
+# Setup environment
+#
+umask (002);
+
+#
+# Initialize basic variables
+#
+$id = getpgrp();
+$state = $STATE_NONE;
+$tag = '';
+$login = $ENV{'USER'} || getlogin || (getpwuid($&lt;))[0] || sprintf(&quot;uid#%d&quot;,$&lt;);
+@files = split(' ', $ARGV[0]);
+@path = split('/', $files[0]);
+if ($#path == 0) {
+    $dir = &quot;.&quot;;
+} else {
+    $dir = join('/', @path[1..$#path]);
+}
+$dir = $dir . &quot;/&quot;;
+
+if ($debug) {
+  print(&quot;ARGV  - &quot;, join(&quot;:&quot;, @ARGV), &quot;\n&quot;);
+  print(&quot;files - &quot;, join(&quot;:&quot;, @files), &quot;\n&quot;);
+  print(&quot;path  - &quot;, join(&quot;:&quot;, @path), &quot;\n&quot;);
+  print(&quot;dir   - &quot;, $dir, &quot;\n&quot;);
+  print(&quot;id    - &quot;, $id, &quot;\n&quot;);
+}
+
+&amp;append_line(&quot;$MAIL_FILE.$id&quot;, &amp;mlist_map($files[0] . &quot;/&quot;));
+&amp;append_line(&quot;$SUBJ_FILE.$id&quot;, $ARGV[0]);
+
+#
+# Check for a new directory first.  This will always appear as a
+# single item in the argument list, and an empty log message.
+#
+if ($ARGV[0] =~ /New directory/) {
+    $header = &amp;build_header();
+    @text = ();
+    push(@text, $header);
+    push(@text, &quot;&quot;);
+    push(@text, &quot;  &quot;.$ARGV[0]);
+    &amp;do_changes_file(@text);
+    #&amp;mail_notification(@text);
+    &amp;cleanup_tmpfiles();
+    exit 0;
+}
+
+#
+# Check for an import command.  This will always appear as a
+# single item in the argument list, and a log message.
+#
+if ($ARGV[0] =~ /Imported sources/) {
+    $header = &amp;build_header();
+
+    @text = ();
+    push(@text, $header);
+    push(@text, &quot;&quot;);
+
+    push(@text, &quot;  &quot;.$ARGV[0]);
+    &amp;do_changes_file(@text);
+
+    while (&lt;STDIN&gt;) {
+	chop;                   # Drop the newline
+	push(@text, &quot;  &quot;.$_);
+    }
+
+    &amp;mail_notification(@text);
+    &amp;cleanup_tmpfiles();
+    exit 0;
+}    
+
+#
+# Iterate over the body of the message collecting information.
+#
+$tag = &quot;HEAD&quot;;
+while (&lt;STDIN&gt;) {
+    s/[ \t\n]+$//;		# delete trailing space
+    if (/^Revision\/Branch:/) {
+	s,^Revision/Branch:,,;
+	$tag = $_;
+	next;
+    }
+    if (/^[ \t]+Tag:/) {
+	s,^[ \t]+Tag: ,,;
+	$tag = $_;
+	next;
+    }
+    if (/^[ \t]+No tag$/) {
+	$tag = &quot;HEAD&quot;;
+	next;
+    }
+    if (/^Modified Files/) { $state = $STATE_CHANGED; next; }
+    if (/^Added Files/)    { $state = $STATE_ADDED;   next; }
+    if (/^Removed Files/)  { $state = $STATE_REMOVED; next; }
+    if (/^Log Message/)    { $state = $STATE_LOG;     next; }
+    
+    push (@{ $changed_files{$tag} }, split) if ($state == $STATE_CHANGED);
+    push (@{ $added_files{$tag} },   split) if ($state == $STATE_ADDED);
+    push (@{ $removed_files{$tag} }, split) if ($state == $STATE_REMOVED);
+    if ($state == $STATE_LOG) {
+	if (/^PR:$/i ||
+	    /^Reviewed by:$/i ||
+	    /^Submitted by:$/i ||
+	    /^Obtained from:$/i) {
+	    next;
+	}
+	push (@log_lines,     $_);
+    }
+}
+
+#
+# Strip leading and trailing blank lines from the log message.  Also
+# compress multiple blank lines in the body of the message down to a
+# single blank line.
+# (Note, this only does the mail and changes log, not the rcs log).
+#
+while ($#log_lines &gt; -1) {
+    last if ($log_lines[0] ne &quot;&quot;);
+    shift(@log_lines);
+}
+while ($#log_lines &gt; -1) {
+    last if ($log_lines[$#log_lines] ne &quot;&quot;);
+    pop(@log_lines);
+}
+for ($l = $#log_lines; $l &gt; 0; $l--) {
+    if (($log_lines[$l - 1] eq &quot;&quot;) &amp;&amp; ($log_lines[$l] eq &quot;&quot;)) {
+	splice(@log_lines, $l, 1);
+    }
+}
+
+#
+# Find the log file that matches this log message
+#
+for ($i = 0; ; $i++) {
+    last if (! -e &quot;$LOG_FILE.$i.$id&quot;);
+    @text = &amp;read_logfile(&quot;$LOG_FILE.$i.$id&quot;, &quot;&quot;);
+    last if ($#text == -1);
+    last if (join(&quot; &quot;, @log_lines) eq join(&quot; &quot;, @text));
+}
+
+#
+# Spit out the information gathered in this pass.
+#
+foreach $tag ( keys %added_files ) {
+    &amp;append_names_to_file(&quot;$ADDED_FILE.$i.$id&quot;,   $dir, $tag,
+	@{ $added_files{$tag} });
+}
+foreach $tag ( keys %changed_files ) {
+    &amp;append_names_to_file(&quot;$CHANGED_FILE.$i.$id&quot;, $dir, $tag,
+	@{ $changed_files{$tag} });
+}
+foreach $tag ( keys %removed_files ) {
+    &amp;append_names_to_file(&quot;$REMOVED_FILE.$i.$id&quot;, $dir, $tag,
+	@{ $removed_files{$tag} });
+}
+&amp;write_logfile(&quot;$LOG_FILE.$i.$id&quot;, @log_lines);
+
+if ($rcsidinfo) {
+    foreach $tag ( keys %added_files ) {
+	&amp;change_summary_added(&quot;$SUMMARY_FILE.$i.$id&quot;, $tag,
+	    @{ $added_files{$tag} });
+    }
+    foreach $tag ( keys %changed_files ) {
+	&amp;change_summary_changed(&quot;$SUMMARY_FILE.$i.$id&quot;, $tag,
+	    @{ $changed_files{$tag} });
+    }
+    foreach $tag ( keys %removed_files ) {
+	&amp;change_summary_removed(&quot;$SUMMARY_FILE.$i.$id&quot;, $tag,
+	    @{ $removed_files{$tag} });
+    }
+}
+
+#
+# Check whether this is the last directory.  If not, quit.
+#
+if (-e &quot;$LAST_FILE.$id&quot;) {
+   $_ = &amp;read_line(&quot;$LAST_FILE.$id&quot;);
+   $tmpfiles=$files[0];
+   $tmpfiles =~ s,([^a-zA-Z0-9_/]),\\$1,g;
+   if (! grep(/$tmpfiles$/, $_)) {
+	print &quot;More commits to come...\n&quot;;
+	exit 0
+   }
+}
+
+#
+# This is it.  The commits are all finished.  Lump everything together
+# into a single message, fire a copy off to the mailing list, and drop
+# it on the end of the Changes file.
+#
+$header = &amp;build_header();
+
+#
+# Produce the final compilation of the log messages
+#
+@text = ();
+push(@text, $header);
+push(@text, &quot;&quot;);
+for ($i = 0; ; $i++) {
+    last if (! -e &quot;$LOG_FILE.$i.$id&quot;);
+    @lines = &amp;read_logfile(&quot;$CHANGED_FILE.$i.$id&quot;, &quot;&quot;);
+    if ($#lines &gt;= 0) {
+	push(@text, &amp;format_lists(&quot;Modified&quot;, @lines));
+    }
+    @lines = &amp;read_logfile(&quot;$ADDED_FILE.$i.$id&quot;, &quot;&quot;);
+    if ($#lines &gt;= 0) {
+	push(@text, &amp;format_lists(&quot;Added&quot;, @lines));
+    }
+    @lines = &amp;read_logfile(&quot;$REMOVED_FILE.$i.$id&quot;, &quot;&quot;);
+    if ($#lines &gt;= 0) {
+	push(@text, &amp;format_lists(&quot;Removed&quot;, @lines));
+    }
+
+    @lines = &amp;read_logfile(&quot;$LOG_FILE.$i.$id&quot;, &quot;  &quot;);
+    if ($#lines &gt;= 0) {
+        push(@text, &quot;  Log:&quot;);
+	push(@text, @lines);
+    }
+    if ($rcsidinfo == 2) {
+	if (-e &quot;$SUMMARY_FILE.$i.$id&quot;) {
+	    push(@text, &quot;  &quot;);
+	    push(@text, &quot;  Revision  Changes    Path&quot;);
+	    push(@text, &amp;read_logfile(&quot;$SUMMARY_FILE.$i.$id&quot;, &quot;  &quot;));
+	}
+    }
+    push(@text, &quot;&quot;);
+}
+#
+# Put the log message at the beginning of the Changes file
+#
+&amp;do_changes_file(@text);
+
+#
+# Now generate the extra info for the mail message..
+#
+if ($rcsidinfo == 1) {
+    $revhdr = 0;
+    for ($i = 0; ; $i++) {
+	last if (! -e &quot;$LOG_FILE.$i.$id&quot;);
+	if (-e &quot;$SUMMARY_FILE.$i.$id&quot;) {
+	    if (!$revhdr++) {
+		push(@text, &quot;Revision  Changes    Path&quot;);
+	    }
+	    push(@text, &amp;read_logfile(&quot;$SUMMARY_FILE.$i.$id&quot;, &quot;&quot;));
+	}
+    }
+    if ($revhdr) {
+	push(@text, &quot;&quot;);	# consistancy...
+    }
+}
+
+#
+# Mail out the notification.
+#
+&amp;mail_notification(@text);
+&amp;cleanup_tmpfiles();
+exit 0;
+
+Index: loginfo
+===================================================================
+RCS file: /cvsroot/gennf/CVSROOT/loginfo,v
+retrieving revision 1.1
+retrieving revision 1.2
+diff -C2 -d -r1.1 -r1.2
+*** loginfo	7 Nov 2005 19:29:05 -0000	1.1
+--- loginfo	2 Dec 2005 11:31:37 -0000	1.2
+***************
+*** 25,26 ****
+--- 25,27 ----
+  # or
+  #DEFAULT (echo &quot;&quot;; id; echo %{sVv}; date; cat) &gt;&gt; $CVSROOT/CVSROOT/commitlog
++ DEFAULT $CVSROOT/CVSROOT/log_accum.pl %s
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000003.html">[gennf-devel] gennf F-30CE3B42F628E6E185661335E4018306.lisp,1.1,1.2
+</A></li>
+	<LI>Next message: <A HREF="000005.html">[gennf-devel] cvs commit: gennf F-BB223D44B63BE9E1F84D89EE7FDDFB69.tex
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

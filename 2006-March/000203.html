@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] cvs commit: gennf prototype/checkpoint.lisp prototype/merge.lisp prototype/distribution.lisp prototype/configuration.lisp prototype/merging.lisp prototype/mapping.lisp prototype/gennf.asd prototype/gennf.lisp MAP
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2006-March/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/checkpoint.lisp%20prototype/merge.lisp%0A%20prototype/distribution.lisp%20prototype/configuration.lisp%20prototype/merging.lisp%0A%20prototype/mapping.lisp%20prototype/gennf.asd%20prototype/gennf.lisp%0A%20MAP&In-Reply-To=%3C200603241410.k2OEAa4j004365%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000202.html">
+   <LINK REL="Next"  HREF="000204.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] cvs commit: gennf prototype/checkpoint.lisp prototype/merge.lisp prototype/distribution.lisp prototype/configuration.lisp prototype/merging.lisp prototype/mapping.lisp prototype/gennf.asd prototype/gennf.lisp MAP</H1>
+    <B>sigsegv at BerliOS</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20cvs%20commit%3A%20gennf%20prototype/checkpoint.lisp%20prototype/merge.lisp%0A%20prototype/distribution.lisp%20prototype/configuration.lisp%20prototype/merging.lisp%0A%20prototype/mapping.lisp%20prototype/gennf.asd%20prototype/gennf.lisp%0A%20MAP&In-Reply-To=%3C200603241410.k2OEAa4j004365%40sheep.berlios.de%3E"
+       TITLE="[gennf-devel] cvs commit: gennf prototype/checkpoint.lisp prototype/merge.lisp prototype/distribution.lisp prototype/configuration.lisp prototype/merging.lisp prototype/mapping.lisp prototype/gennf.asd prototype/gennf.lisp MAP">sigsegv at berlios.de
+       </A><BR>
+    <I>Fri Mar 24 15:10:36 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000202.html">[gennf-devel] cvs commit: gennf prototype/command-line.lisp prototype/gennf.lisp
+</A></li>
+        <LI>Next message: <A HREF="000204.html">[gennf-devel] cvs commit: gennf prototype/tests/test.sh prototype/distribution.lisp prototype/mapping.lisp prototype/gennf.lisp MAP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#203">[ date ]</a>
+              <a href="thread.html#203">[ thread ]</a>
+              <a href="subject.html#203">[ subject ]</a>
+              <a href="author.html#203">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>sigsegv     2006/03/24 15:10:36 CET
+
+  Modified files:
+    .                    prototype/merge.lisp 
+                         prototype/distribution.lisp 
+                         prototype/configuration.lisp 
+                         prototype/merging.lisp 
+                         prototype/mapping.lisp 
+                         prototype/gennf.asd 
+                         prototype/gennf.lisp 
+                         MAP 
+  Added files:
+    .                    prototype/checkpoint.lisp 
+  Log:
+  - new class CHECKPOINT
+  
+  - broken merge save now status in CHECKPOINT file.
+  
+  - new subcommand sync tollerates CHECKPOINT files
+  
+  - broken mapfiles throw malformed-map-file-error
+  
+  Revision  Changes    Path
+  1.6       +9 -8      gennf/prototype/merge.lisp
+  1.21      +10 -11    gennf/prototype/distribution.lisp
+  1.16      +5 -1      gennf/prototype/configuration.lisp
+  1.12      +1 -3      gennf/prototype/merging.lisp
+  1.21      +59 -25    gennf/prototype/mapping.lisp
+  1.20      +4 -2      gennf/prototype/gennf.asd
+  1.42      +86 -14    gennf/prototype/gennf.lisp
+  1.34      +3 -0      gennf/MAP
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000202.html">[gennf-devel] cvs commit: gennf prototype/command-line.lisp prototype/gennf.lisp
+</A></li>
+	<LI>Next message: <A HREF="000204.html">[gennf-devel] cvs commit: gennf prototype/tests/test.sh prototype/distribution.lisp prototype/mapping.lisp prototype/gennf.lisp MAP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#203">[ date ]</a>
+              <a href="thread.html#203">[ thread ]</a>
+              <a href="subject.html#203">[ subject ]</a>
+              <a href="author.html#203">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

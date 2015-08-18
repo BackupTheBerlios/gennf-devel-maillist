@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] distributed repository
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2006-January/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20distributed%20repository&In-Reply-To=%3C43C664E4.4010803%40mehnert.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000050.html">
+   <LINK REL="Next"  HREF="000051.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] distributed repository</H1>
+    <B>Hannes Mehnert</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20distributed%20repository&In-Reply-To=%3C43C664E4.4010803%40mehnert.org%3E"
+       TITLE="[gennf-devel] distributed repository">hannes at mehnert.org
+       </A><BR>
+    <I>Thu Jan 12 15:17:08 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000050.html">[gennf-devel] distributed repository
+</A></li>
+        <LI>Next message: <A HREF="000051.html">[gennf-devel] Locking Problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#53">[ date ]</a>
+              <a href="thread.html#53">[ thread ]</a>
+              <a href="subject.html#53">[ subject ]</a>
+              <a href="author.html#53">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hallo,
+
+Florian Lorenzen wrote:
+|<i> Hannes Anmerkung ist richtig, dass Sandboxes, die nur Unterverzeichnisse
+</I>|<i> enthalten, nicht beruecksichtigt sind. Meta-CVS kann das von Haus aus:
+</I>|<i>
+</I>|<i> $ mcvs -d repo co project subdir/subsubdir
+</I>|<i>
+</I>|<i> erzeugt ein Verezeichnis subsubdir, mit den entsprechenden Dateien.
+</I>|<i> Allerdings ist das CVS sandbox im MCVS-Unterverzeichnis nach wie vor
+</I>|<i> komplett. Das entspricht dann nicht ganz dem, was Hannes meint.
+</I>
+Genau, bei einem beliebig grossen Repository muss man immernoch das
+komplette uebertragen ;).
+
+
+|<i> Ich glaube aber, dass Auschecken von Unterverzeichnissen sich einfach
+</I>|<i> dadurch aufbauen laesst, dass eben nur der entsprechende Teil der
+</I>|<i> F-Files ausgecheckt wird, der einen entsprechenden Pfad hat.
+</I>|<i> Ich wuerde naemlich ungerne Unterverzeichnisse im Repository haben, auch
+</I>|<i> nicht fuer Branches. Ich kann das nicht genau begruenden, habe nur das
+</I>|<i> Gefuehl, dass wir mit nur einer Indirektionsstufe besser fahren.
+</I>
+Ich finde Unterverzeichnisse fuer Branches auch unelegant, allerdings
+finde ich Unterverzeichnisse fuer die F-Files, wie sie real im
+Repository vorliegen, sinnvoll, da es (meinem Gefuehl nach) Komplexitaet
+aus der Implementierung nimmt, da zB das Erzeugen eines Branches einfach
+auf einem Unterverzeichnis passiert, und man kein DISPLACED-File
+braucht. Ich finde die Abbildung einer Verzeichnisstruktur zu einem
+flat-Verzeichnis im Repository deutlich aufwendiger, schon allein bei
+Operationen, die nicht rekursiv passieren sollen (die, wenn man das als
+flat-Verzeichnis abbildet, diejenigen Dateien, die in einem
+Unterverzeichnis der Verzeichnisses sind, rausfiltern muss).
+
+
+|<i> Zum Thema Branches auf Unterverzeichnisse wurde ich sagen, dass man das
+</I>|<i> durch eine Art Lazy-Branching erledigen koennte: Ein Branch wird ueber
+</I>|<i> das gesamte Repository angelegt, es werden aber nur fuer die Files
+</I>|<i> tatsaechlich F-Files angelegt, die veraendert werden, fuer alle anderen
+</I>|<i> wird dies verzoegert und bei Bedarf nachgeholt (mglw. bringt uns das
+</I>|<i> allerdings die Links wieder hinein, die eigentlich nicht benoetigt sind
+</I>|<i> -- sozusagen als eine Art QUOTE). Auch hier denke ich, dass wir
+</I>|<i> konzeptionell nicht so eingeengt sind, das wir das nachher nicht mehr
+</I>|<i> unter bekommen.
+</I>
+Ja, ich denke, all das kann man auch spaeter noch aendern, und erstmal
+so lassen, wie meta-cvs das gerade tut.
+
+
+Hannes
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (FreeBSD)
+Comment: Using GnuPG with Thunderbird - <A HREF="http://enigmail.mozdev.org">http://enigmail.mozdev.org</A>
+
+iD8DBQFDxmTjRcuNlziBjRwRAqj1AJ4pDqP/jTsjaRZ59spTDMWoEMH0zACfYTwA
+Gn8P/KZUobc+ToQNFP4nnro=
+=6vE6
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000050.html">[gennf-devel] distributed repository
+</A></li>
+	<LI>Next message: <A HREF="000051.html">[gennf-devel] Locking Problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#53">[ date ]</a>
+              <a href="thread.html#53">[ thread ]</a>
+              <a href="subject.html#53">[ subject ]</a>
+              <a href="author.html#53">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gennf-devel] setenv/unsetenv auf Solaris?a
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gennf-devel/2006-January/index.html" >
+   <LINK REL="made" HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20setenv/unsetenv%20auf%20Solaris%3Fa&In-Reply-To=%3C20060105100014.GB2871%40alchiba.ni.cs.tu-berlin.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000037.html">
+   <LINK REL="Next"  HREF="000041.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gennf-devel] setenv/unsetenv auf Solaris?a</H1>
+    <B>Fabian Otto</B> 
+    <A HREF="mailto:gennf-devel%40lists.berlios.de?Subject=Re%3A%20%5Bgennf-devel%5D%20setenv/unsetenv%20auf%20Solaris%3Fa&In-Reply-To=%3C20060105100014.GB2871%40alchiba.ni.cs.tu-berlin.de%3E"
+       TITLE="[gennf-devel] setenv/unsetenv auf Solaris?a">sigsegv at alchiba.ni.cs.tu-berlin.de
+       </A><BR>
+    <I>Thu Jan  5 11:00:14 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000037.html">[gennf-devel] setenv/unsetenv auf Solaris?
+</A></li>
+        <LI>Next message: <A HREF="000041.html">[gennf-devel] setenv/unsetenv auf Solaris?a
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#39">[ date ]</a>
+              <a href="thread.html#39">[ thread ]</a>
+              <a href="subject.html#39">[ subject ]</a>
+              <a href="author.html#39">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>* Florian Lorenzen &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/gennf-devel">florenz at cs.tu-berlin.de</A>&gt; [060103 19:15]:
+&gt;<i> Hallo zusammen,
+</I>
+Hallo Florian, 
+
+&gt;<i> faellt einem von Euch was zu dem Problem ein, dass ich auf Solaris keine
+</I>&gt;<i> setenv, unsetenv Funktionen ueber stdlib.h kriege?
+</I>
+Es sieht so aus, dasz setenv und unsetenv nicht portabel (linux) sind, aber leider
+das bessere/einfache interface haben. Wenn du eine Variable loeschen willst,
+musst du den wert entfernen. Zumindest so habe ich diesen Code[1] verstanden.
+
+&gt;<i>  Im apropos habe ich auch nichts gefunden. Gibt es die nicht oder finde ich die in einem
+</I>&gt;<i> anderen Header-File? Ich habe jetzt keine Lust im Uni-Chaos alles
+</I>&gt;<i> durchzuwuehlen. Aber ohne diese beiden Funktionen funktioniert der Port
+</I>&gt;<i> leider nicht.
+</I>
+Die Funktionen gibt es schlicht nicht.  Ich habe auch noch mal kurz in der zsh
+nachgeschaut, und auch die *scheinen* (der code ist viel groesser als sh) eine
+eigene Liste zu unterhalten, in den die Variablen stehen.  Somit muesste man
+das wrappen.  
+
+Kannst du mal bitte genauere Koordinaten zu (un)setenv geben?
+
+&gt;<i> Gruesse,
+</I>&gt;<i> 
+</I>&gt;<i> Florian
+</I>
+Otto
+
+
+[1]:<A HREF="http://cvs.opensolaris.org/source/xref/on/usr/src/cmd/sh/name.c#unset_name">http://cvs.opensolaris.org/source/xref/on/usr/src/cmd/sh/name.c#unset_name</A>
+[2]:<A HREF="http://cvs.opensolaris.org/source/xref/on/usr/src/cmd/sh/builtin.c#422">http://cvs.opensolaris.org/source/xref/on/usr/src/cmd/sh/builtin.c#422</A>
+
+-- 
+Bookmarks: <A HREF="http://del.icio.us/sigsegv">http://del.icio.us/sigsegv</A>
+jabber: <A HREF="https://lists.berlios.de/mailman/listinfo/gennf-devel">sigsegv at jabber.ccc.de</A>
+wiki/blog: <A HREF="http://blog.jotpee.de">http://blog.jotpee.de</A>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 185 bytes
+Desc: not available
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/gennf-devel/attachments/20060105/d922f964/attachment.pgp">https://lists.berlios.de/pipermail/gennf-devel/attachments/20060105/d922f964/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000037.html">[gennf-devel] setenv/unsetenv auf Solaris?
+</A></li>
+	<LI>Next message: <A HREF="000041.html">[gennf-devel] setenv/unsetenv auf Solaris?a
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#39">[ date ]</a>
+              <a href="thread.html#39">[ thread ]</a>
+              <a href="subject.html#39">[ subject ]</a>
+              <a href="author.html#39">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gennf-devel">More information about the gennf-devel
+mailing list</a><br>
+</body></html>
